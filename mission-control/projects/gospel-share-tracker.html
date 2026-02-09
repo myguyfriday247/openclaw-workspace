@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gospel Share Tracker - Product Brief</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
+        
+        /* Header */
+        header { background: #1a1a2e; color: white; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+        header a { color: white; text-decoration: none; font-size: 14px; }
+        header a:hover { text-decoration: underline; }
+        header h1 { font-size: 18px; font-weight: 600; }
+        
+        /* Main Content */
+        .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+        
+        /* Breadcrumb */
+        .breadcrumb { margin-bottom: 16px; font-size: 13px; color: #666; }
+        .breadcrumb a { color: #1565c0; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        
+        /* Project Header */
+        .project-header { background: linear-gradient(135deg, #1a1a2e 0%, #2d2d4a 100%); color: white; border-radius: 12px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        .project-title { font-size: 28px; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 12px; }
+        .project-meta { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; font-size: 14px; opacity: 0.9; }
+        .project-meta strong { color: #5cbe80; }
+        .project-tags { display: flex; gap: 8px; margin-top: 16px; }
+        .tag { display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        .tag-beta { background: #5cbe80; color: white; }
+        .tag-pastor { background: rgba(255,255,255,0.2); color: white; border: 1px solid rgba(255,255,255,0.3); }
+        
+        /* Sections */
+        .section { background: white; border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .section h2 { font-size: 18px; font-weight: 600; color: #1a1a2e; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid #5cbe80; display: flex; align-items: center; gap: 8px; }
+        
+        /* Overview Grid */
+        .overview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .overview-card { background: #f8f9fa; border-radius: 8px; padding: 16px; }
+        .overview-card h3 { font-size: 14px; font-weight: 600; color: #1a1a2e; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .overview-card ul { list-style: none; font-size: 14px; }
+        .overview-card li { padding: 4px 0; padding-left: 20px; position: relative; }
+        .overview-card li::before { content: '•'; position: absolute; left: 0; color: #5cbe80; font-weight: bold; }
+        
+        /* Phases */
+        .phases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+        .phase-card { background: #f8f9fa; border-radius: 10px; padding: 20px; border-left: 4px solid #5cbe80; }
+        .phase-card.completed { opacity: 0.7; border-left-color: #4caf50; }
+        .phase-card.current { border-left-color: #2196f3; background: #e3f2fd; }
+        .phase-number { font-size: 11px; font-weight: 700; text-transform: uppercase; color: #888; margin-bottom: 4px; }
+        .phase-title { font-size: 15px; font-weight: 600; color: #1a1a2e; margin-bottom: 8px; }
+        .phase-card.completed .phase-title { color: #4caf50; }
+        .phase-card.current .phase-title { color: #1976d2; }
+        .phase-items { font-size: 13px; color: #666; }
+        .phase-items li { margin-bottom: 4px; }
+        
+        /* Feature Table */
+        .feature-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .feature-table th { text-align: left; padding: 12px; background: #f5f5f5; border-bottom: 2px solid #ddd; font-weight: 600; color: #1a1a2e; }
+        .feature-table td { padding: 12px; border-bottom: 1px solid #eee; }
+        .feature-table tr:hover { background: #fafafa; }
+        .feature-badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+        .badge-done { background: #e8f5e9; color: #2e7d32; }
+        .badge-todo { background: #fff3e0; color: #e65100; }
+        
+        /* Tech Stack */
+        .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+        .tech-category { background: #f8f9fa; border-radius: 8px; padding: 16px; }
+        .tech-category h3 { font-size: 13px; font-weight: 600; color: #1a1a2e; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .tech-items { font-size: 13px; color: #555; }
+        .tech-item { padding: 2px 0; }
+        
+        /* Data Model */
+        .schema-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .schema-table th { text-align: left; padding: 10px; background: #1a1a2e; color: white; font-weight: 600; }
+        .schema-table td { padding: 10px; border-bottom: 1px solid #eee; }
+        .schema-table tr:nth-child(even) { background: #f8f9fa; }
+        
+        /* URLs */
+        .url-card { background: linear-gradient(135deg, #5cbe80 0%, #4caf50 100%); color: white; border-radius: 10px; padding: 24px; text-align: center; }
+        .url-label { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9; margin-bottom: 8px; }
+        .url-link { font-size: 20px; font-weight: 700; color: white; text-decoration: none; }
+        .url-link:hover { text-decoration: underline; }
+        
+        /* Code Review Summary */
+        .review-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; text-align: center; }
+        .review-stat { padding: 16px; background: #f8f9fa; border-radius: 8px; }
+        .review-stat-value { font-size: 28px; font-weight: 700; color: #5cbe80; }
+        .review-stat-label { font-size: 12px; color: #666; text-transform: uppercase; }
+        
+        /* Checklist */
+        .checklist { list-style: none; }
+        .checklist li { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+        .checklist li:last-child { border-bottom: none; }
+        .check-icon { width: 20px; height: 20px; background: #5cbe80; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; flex-shrink: 0; }
+        .check-text { font-size: 14px; color: #333; }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .overview-grid { grid-template-columns: 1fr; }
+            .review-summary { grid-template-columns: 1fr; }
+            .project-meta { flex-direction: column; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">← Back to Dashboard</a>
+        <h1>📋 Product Brief</h1>
+    </header>
+    
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">Mission Control</a> / <strong>Gospel Share Tracker</strong>
+        </div>
+        
+        <!-- Project Header -->
+        <div class="project-header">
+            <div class="project-title">📱 Gospel Share Tracker</div>
+            <div class="project-meta">
+                <span><strong>Version:</strong> 1.0</span>
+                <span><strong>Status:</strong> ✅ Ready for Beta Launch</span>
+                <span><strong>Date:</strong> February 9, 2026</span>
+            </div>
+            <div class="project-tags">
+                <span class="tag tag-beta">🧪 Beta Testing</span>
+                <span class="tag tag-pastor">Pastor Ministry</span>
+            </div>
+        </div>
+        
+        <!-- Live URL -->
+        <div class="url-card" style="margin-bottom: 24px;">
+            <div class="url-label">🚀 Live Beta URL</div>
+            <a href="https://gospel-share-tracker-tekc.vercel.app" class="url-link" target="_blank">gospel-share-tracker-tekc.vercel.app</a>
+        </div>
+        
+        <!-- Overview -->
+        <div class="section">
+            <h2>📋 Overview</h2>
+            <p>Gospel Share Tracker is a web application for tracking personal evangelism efforts. Users log gospel-sharing encounters, view analytics, and administrators manage the community data.</p>
+            
+            <div class="overview-grid" style="margin-top: 20px;">
+                <div class="overview-card">
+                    <h3>👤 Standard User</h3>
+                    <ul>
+                        <li>Log gospel shares (invite, conversation, story, presentation)</li>
+                        <li>Track number of people reached per encounter</li>
+                        <li>Record gospel responses</li>
+                        <li>View personal dashboard with analytics</li>
+                        <li>Export personal data</li>
+                    </ul>
+                </div>
+                <div class="overview-card">
+                    <h3>👑 Administrator</h3>
+                    <ul>
+                        <li>All standard user capabilities</li>
+                        <li>Access admin dashboard with community-wide analytics</li>
+                        <li>Manage all user profiles</li>
+                        <li>Export community data</li>
+                        <li>Import new users via CSV</li>
+                        <li>Toggle user admin roles</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Phases -->
+        <div class="section">
+            <h2>📅 Development Phases</h2>
+            <div class="phases-grid">
+                <div class="phase-card completed">
+                    <div class="phase-number">Phase 1</div>
+                    <div class="phase-title">Foundation (MVP)</div>
+                    <ul class="phase-items">
+                        <li>User authentication (signup, login, logout)</li>
+                        <li>Basic user profile management</li>
+                        <li>Core data model setup</li>
+                        <li>Row Level Security (RLS) policies</li>
+                        <li>Basic share entry creation</li>
+                    </ul>
+                </div>
+                <div class="phase-card completed">
+                    <div class="phase-number">Phase 2</div>
+                    <div class="phase-title">Core Features</div>
+                    <ul class="phase-items">
+                        <li>Dashboard with personal analytics</li>
+                        <li>Share entry management (create, edit, delete)</li>
+                        <li>Reusable share form component</li>
+                        <li>Recent shares display</li>
+                        <li>Date range filtering</li>
+                    </ul>
+                </div>
+                <div class="phase-card completed">
+                    <div class="phase-number">Phase 3</div>
+                    <div class="phase-title">Analytics & Visualization</div>
+                    <ul class="phase-items">
+                        <li>Personal analytics with charts (Recharts)</li>
+                        <li>Time-series visualization</li>
+                        <li>Share type breakdowns</li>
+                        <li>Data export (CSV)</li>
+                    </ul>
+                </div>
+                <div class="phase-card completed">
+                    <div class="phase-number">Phase 4</div>
+                    <div class="phase-title">Admin Capabilities</div>
+                    <ul class="phase-items">
+                        <li>Admin dashboard with community metrics</li>
+                        <li>User management (people list, search, pagination)</li>
+                        <li>Role-based access control</li>
+                        <li>Admin/user toggle functionality</li>
+                    </ul>
+                </div>
+                <div class="phase-card completed">
+                    <div class="phase-number">Phase 5</div>
+                    <div class="phase-title">Data Management</div>
+                    <ul class="phase-items">
+                        <li>CSV import functionality</li>
+                        <li>Bulk user import</li>
+                        <li>Advanced data export</li>
+                        <li>Entry records management</li>
+                    </ul>
+                </div>
+                <div class="phase-card current">
+                    <div class="phase-number">Phase 6</div>
+                    <div class="phase-title">Polish & Beta Prep</div>
+                    <ul class="phase-items">
+                        <li>Responsive UI refinements</li>
+                        <li>Mobile navigation (hamburger menu)</li>
+                        <li>Accessibility improvements</li>
+                        <li>Error handling & loading states</li>
+                        <li>🧪 Beta testing & bug fixes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Core Features -->
+        <div class="section">
+            <h2>⚡ Core Features</h2>
+            <table class="feature-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Status</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Authentication</strong></td>
+                        <td><span class="feature-badge badge-done">Done</span></td>
+                        <td>Email/password signup, login, session persistence</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Share Entry System</strong></td>
+                        <td><span class="feature-badge badge-done">Done</span></td>
+                        <td>Create, edit, delete gospel share entries</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Personal Dashboard</strong></td>
+                        <td><span class="feature-badge badge-done">Done</span></td>
+                        <td>Analytics with charts, date filtering, recent shares</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Admin Dashboard</strong></td>
+                        <td><span class="feature-badge badge-done">Done</span></td>
+                        <td>Community-wide metrics and user leaderboard</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Admin Portal</strong></td>
+                        <td><span class="feature-badge badge-done">Done</span></td>
+                        <td>People management, CSV import/export</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mobile Responsive</strong></td>
+                        <td><span class="feature-badge badge-done">Done</span></td>
+                        <td>Mobile-first design with hamburger menu</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Email Notifications</strong></td>
+                        <td><span class="feature-badge badge-todo">Future</span></td>
+                        <td>Password reset, notifications (v2.0)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Advanced Analytics</strong></td>
+                        <td><span class="feature-badge badge-todo">Future</span></td>
+                        <td>PDF export, advanced reporting (v2.0)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Technical Stack -->
+        <div class="section">
+            <h2>🛠️ Technical Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h3>Frontend</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">Next.js 16</div>
+                        <div class="tech-item">React 19</div>
+                        <div class="tech-item">TypeScript</div>
+                        <div class="tech-item">Tailwind CSS</div>
+                        <div class="tech-item">shadcn/ui</div>
+                        <div class="tech-item">Recharts</div>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Backend</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">Supabase (PostgreSQL)</div>
+                        <div class="tech-item">Supabase Auth</div>
+                        <div class="tech-item">Row Level Security</div>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Infrastructure</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">Vercel (hosting)</div>
+                        <div class="tech-item">GitHub (version control)</div>
+                        <div class="tech-item">npm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Data Model -->
+        <div class="section">
+            <h2>💾 Data Model</h2>
+            <h3 style="font-size: 14px; color: #1a1a2e; margin-bottom: 12px;">People Table</h3>
+            <table class="schema-table">
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>id</td><td>uuid</td><td>Primary key, matches auth.users.id</td></tr>
+                    <tr><td>email</td><td>text</td><td>User email</td></tr>
+                    <tr><td>full_name</td><td>text</td><td>Display name</td></tr>
+                    <tr><td>role</td><td>text</td><td>'admin' or 'user'</td></tr>
+                    <tr><td>created_at</td><td>timestamptz</td><td>Record creation</td></tr>
+                </tbody>
+            </table>
+            
+            <h3 style="font-size: 14px; color: #1a1a2e; margin: 20px 0 12px;">Gospel Share Entries Table</h3>
+            <table class="schema-table">
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>id</td><td>uuid</td><td>Primary key</td></tr>
+                    <tr><td>person_id</td><td>uuid</td><td>FK to people.id</td></tr>
+                    <tr><td>entry_date</td><td>date</td><td>Date of share</td></tr>
+                    <tr><td>number_reached</td><td>int</td><td>People reached</td></tr>
+                    <tr><td>church_invite</td><td>bool</td><td>Invite type</td></tr>
+                    <tr><td>spiritual_conversation</td><td>bool</td><td>Conversation type</td></tr>
+                    <tr><td>story_share</td><td>bool</td><td>Story type</td></tr>
+                    <tr><td>gospel_presentation</td><td>bool</td><td>Gospel type</td></tr>
+                    <tr><td>gospel_response</td><td>bool</td><td>Response received</td></tr>
+                    <tr><td>number_response</td><td>int</td><td>Number responding</td></tr>
+                    <tr><td>notes</td><td>text</td><td>Description</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Code Review Summary -->
+        <div class="section">
+            <h2>✅ Code Review Status</h2>
+            <div class="review-summary">
+                <div class="review-stat">
+                    <div class="review-stat-value">✅</div>
+                    <div class="review-stat-label">All Items Complete</div>
+                </div>
+                <div class="review-stat">
+                    <div class="review-stat-value">0</div>
+                    <div class="review-stat-label">Blocking Issues</div>
+                </div>
+                <div class="review-stat">
+                    <div class="review-stat-value">⚠️</div>
+                    <div class="review-stat-label">1 Manual Step</div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h3 style="font-size: 14px; color: #1a1a2e; margin-bottom: 12px;">Completed Items</h3>
+                <ul class="checklist">
+                    <li><span class="check-icon">✓</span><span class="check-text">Deleted unused files (_starter-home, EditEntryForm, migrations, legacy folders)</span></li>
+                    <li><span class="check-icon">✓</span><span class="check-text">Removed all debug logging (admin/layout.tsx, dashboard/page.tsx)</span></li>
+                    <li><span class="check-icon">✓</span><span class="check-text">Deleted orphaned pages (admin/users/page.tsx)</span></li>
+                    <li><span class="check-icon">✓</span><span class="check-text">Added GST_Logo.png to login page</span></li>
+                    <li><span class="check-icon">✓</span><span class="check-text">Created display_name_available migration file</span></li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 20px; padding: 16px; background: #fff3e0; border-radius: 8px; border-left: 4px solid #ff9800;">
+                <strong style="color: #e65100;">⚠️ Manual Step Required:</strong>
+                <p style="font-size: 14px; color: #666; margin-top: 8px;">Run the migration in Supabase SQL Editor:</p>
+                <pre style="background: white; padding: 12px; border-radius: 4px; font-size: 12px; margin-top: 8px; overflow-x: auto;">DROP FUNCTION IF EXISTS display_name_available(text);
+
+CREATE OR REPLACE FUNCTION display_name_available(p_name text)
+RETURNS boolean AS $$
+BEGIN
+  RETURN NOT EXISTS (
+    SELECT 1 FROM people WHERE LOWER(full_name) = LOWER(p_name)
+  );
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+GRANT EXECUTE ON FUNCTION display_name_available(text) TO authenticated;</pre>
+            </div>
+        </div>
+        
+        <!-- Next Steps -->
+        <div class="section">
+            <h2>🎯 Beta Testing Checklist</h2>
+            <ul class="checklist">
+                <li><span class="check-icon">☐</span><span class="check-text"><strong>Run Supabase migration</strong> - Execute display_name_available function SQL</span></li>
+                <li><span class="check-icon">☐</span><span class="check-text"><strong>Test user signup</strong> - Verify new users can create accounts</span></li>
+                <li><span class="check-icon">☐</span><span class="check-text"><strong>Test share creation</strong> - Add gospel share entries</span></li>
+                <li><span class="check-icon">☐</span><span class="check-text"><strong>Test admin features</strong> - Verify admin dashboard and user management</span></li>
+                <li><span class="check-icon">☐</span><span class="check-text"><strong>Collect feedback</strong> - Share URL with beta testers</span></li>
+            </ul>
+        </div>
+        
+        <!-- GitHub Link -->
+        <div class="section" style="text-align: center;">
+            <h2>🔗 Resources</h2>
+            <p style="margin-bottom: 16px;">View the source code and contribute on GitHub.</p>
+            <a href="https://github.com/myguyfriday247/gospel-share-tracker" target="_blank" style="display: inline-block; padding: 12px 24px; background: #1a1a2e; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">
+                → View on GitHub
+            </a>
+        </div>
+    </div>
+</body>
+</html>
