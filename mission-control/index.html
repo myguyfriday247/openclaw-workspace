@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Control</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #333; height: 100vh; display: flex; flex-direction: column; }
+        
+        /* Header */
+        header { background: #1a1a2e; color: white; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+        header h1 { font-size: 20px; font-weight: 600; }
+        .header-controls { display: flex; align-items: center; gap: 16px; }
+        .refresh-btn { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 8px 12px; border-radius: 6px; cursor: pointer; font-size: 13px; transition: all 0.2s; }
+        .refresh-btn:hover { background: rgba(255,255,255,0.2); }
+        .refresh-btn.loading { opacity: 0.6; pointer-events: none; }
+        .nav-tabs { display: flex; gap: 8px; }
+        .nav-tab { background: transparent; border: none; color: rgba(255,255,255,0.6); padding: 8px 16px; cursor: pointer; border-radius: 6px; font-size: 14px; transition: all 0.2s; }
+        .nav-tab:hover { color: white; background: rgba(255,255,255,0.1); }
+        .nav-tab.active { background: rgba(255,255,255,0.2); color: white; }
+        
+        /* Tab Content */
+        .tab-content { flex: 1; overflow: hidden; display: none; }
+        .tab-content.active { display: flex; }
+        
+        /* ==================== DASHBOARD ==================== */
+        #dashboard { display: none; flex-direction: column; padding: 24px; overflow-y: auto; }
+        #dashboard.active { display: flex; }
+        .dashboard-header { margin-bottom: 20px; }
+        .dashboard-header h2 { font-size: 20px; font-weight: 600; color: #1a1a2e; margin-bottom: 4px; }
+        .dashboard-header p { font-size: 14px; color: #666; }
+        
+        .kanban-container { display: grid; grid-template-columns: 1fr; gap: 24px; min-width: 0; }
+        
+        .kanban-board { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .kanban-board h3 { font-size: 14px; font-weight: 600; color: #1a1a2e; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+        
+        /* Kanban Stages - Horizontal Layout */
+        .stages-container { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 12px; }
+        .stage { min-width: 180px; flex-shrink: 0; }
+        .stage-header { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
+        .stage-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+        .stage-title { font-size: 11px; font-weight: 500; color: #666; white-space: nowrap; }
+        .stage-count { font-size: 10px; color: #999; background: #f0f0f0; padding: 1px 5px; border-radius: 8px; }
+        
+        .stage-ideas { --stage-color: #9e9e9e; }
+        .stage-ideas .stage-dot { background: #9e9e9e; }
+        
+        .stage-dev { --stage-color: #2196f3; }
+        .stage-dev .stage-dot { background: #2196f3; }
+        
+        .stage-brief { --stage-color: #ff9800; }
+        .stage-brief .stage-dot { background: #ff9800; }
+        
+        .stage-progress { --stage-color: #4caf50; }
+        .stage-progress .stage-dot { background: #4caf50; }
+        
+        .stage-troubleshoot { --stage-color: #f44336; }
+        .stage-troubleshoot .stage-dot { background: #f44336; }
+        
+        .stage-deploy { --stage-color: #00bcd4; }
+        .stage-deploy .stage-dot { background: #00bcd4; }
+        
+        .stage-complete { --stage-color: #4caf50; }
+        .stage-complete .stage-dot { background: #4caf50; }
+        
+        .stage-request { --stage-color: #607d8b; }
+        .stage-request .stage-dot { background: #607d8b; }
+        
+        .stage-confirm { --stage-color: #795548; }
+        .stage-confirm .stage-dot { background: #795548; }
+        
+        .stage-review { --stage-color: #3f51b5; }
+        .stage-review .stage-dot { background: #3f51b5; }
+        
+        .stage-cards { display: flex; flex-direction: column; gap: 6px; min-height: 60px; }
+        .kanban-card { background: #fafafa; border: 1px solid #e8e8e8; border-radius: 6px; padding: 10px; cursor: pointer; transition: all 0.15s; }
+        .kanban-card:hover { background: #f0f0f0; border-color: #ddd; transform: translateY(-1px); }
+        .kanban-card-title { font-size: 12px; font-weight: 500; color: #333; margin-bottom: 3px; }
+        .kanban-card-meta { font-size: 10px; color: #888; }
+        .kanban-card-tags { display: flex; gap: 4px; margin-top: 8px; flex-wrap: wrap; }
+        .tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 500; }
+        .tag-pastor { background: #e3f2fd; color: #1565c0; }
+        .tag-writer { background: #fff3e0; color: #e65100; }
+        .tag-personal { background: #fce4ec; color: #c62828; }
+        .tag-entrepreneur { background: #e8f5e9; color: #2e7d32; }
+        
+        /* ==================== DOCS ==================== */
+        #docs { display: none; height: 100%; }
+        #docs.active { display: flex; }
+        .docs-sidebar { width: 280px; background: white; border-right: 1px solid #e0e0e0; display: flex; flex-direction: column; }
+        .sidebar-search { padding: 16px; border-bottom: 1px solid #eee; }
+        .sidebar-search input { width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; outline: none; }
+        .sidebar-search input:focus { border-color: #1a1a2e; }
+        .sidebar-list { flex: 1; overflow-y: auto; padding: 8px; }
+        .sidebar-group { margin-bottom: 16px; }
+        .sidebar-group-title { font-size: 11px; font-weight: 600; color: #888; text-transform: uppercase; padding: 8px; letter-spacing: 0.5px; }
+        .sidebar-item { display: block; padding: 10px 12px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #333; transition: background 0.15s; }
+        .sidebar-item:hover { background: #f5f5f5; }
+        .sidebar-item.active { background: #1a1a2e; color: white; }
+        .sidebar-item .date { font-size: 12px; opacity: 0.6; display: block; margin-top: 2px; }
+        .docs-content { flex: 1; overflow-y: auto; padding: 32px; background: #fafafa; }
+        .doc-viewer { background: white; border-radius: 12px; padding: 32px; max-width: 900px; margin: 0 auto; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .doc-viewer h1 { font-size: 24px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #eee; }
+        .doc-viewer h2 { font-size: 18px; margin: 24px 0 12px; }
+        .doc-viewer h3 { font-size: 15px; margin: 20px 0 8px; }
+        .doc-viewer p { line-height: 1.7; margin-bottom: 12px; color: #444; }
+        .doc-viewer ul, .doc-viewer ol { margin: 12px 0 12px 24px; }
+        .doc-viewer li { margin-bottom: 8px; line-height: 1.6; }
+        .doc-viewer code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+        .doc-viewer pre { background: #1a1a2e; color: #eee; padding: 16px; border-radius: 8px; overflow-x: auto; margin: 16px 0; }
+        .doc-viewer table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .doc-viewer th, .doc-viewer td { border: 1px solid #ddd; padding: 10px 12px; text-align: left; }
+        .doc-viewer th { background: #f5f5f5; font-weight: 600; }
+        .doc-viewer blockquote { border-left: 3px solid #1a1a2e; padding-left: 16px; margin: 16px 0; color: #666; }
+        
+        /* ==================== IDEAS ==================== */
+        #ideas { display: none; flex-direction: column; padding: 24px; overflow-y: auto; }
+        #ideas.active { display: flex; }
+        .ideas-header { margin-bottom: 20px; }
+        .ideas-header h2 { font-size: 20px; font-weight: 600; color: #1a1a2e; margin-bottom: 4px; }
+        .ideas-header p { font-size: 14px; color: #666; margin-bottom: 16px; }
+        .ideas-list { display: flex; flex-direction: column; gap: 12px; max-width: 800px; }
+        .idea-card { background: white; border-radius: 12px; padding: 16px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); display: flex; align-items: flex-start; gap: 16px; }
+        .idea-icon { font-size: 24px; flex-shrink: 0; }
+        .idea-content { flex: 1; }
+        .idea-title { font-size: 15px; font-weight: 500; color: #1a1a2e; margin-bottom: 4px; }
+        .idea-description { font-size: 13px; color: #666; line-height: 1.5; margin-bottom: 8px; }
+        .idea-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+        .idea-actions { display: flex; gap: 8px; flex-shrink: 0; }
+        .idea-btn { padding: 8px 16px; border: none; border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.15s; }
+        .idea-btn:hover { transform: translateY(-1px); }
+        .btn-approve { background: #4caf50; color: white; }
+        .btn-approve:hover { background: #43a047; }
+        .btn-defer { background: #ff9800; color: white; }
+        .btn-defer:hover { background: #f57c00; }
+        .btn-reject { background: #f44336; color: white; }
+        .btn-reject:hover { background: #e53935; }
+        
+        /* Empty States */
+        .empty-state { text-align: center; padding: 60px 20px; color: #888; }
+        .empty-state h3 { margin-bottom: 8px; color: #555; }
+        
+        /* Project Link */
+        .project-link { color: #1565c0; text-decoration: none; }
+        .project-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🚀 Mission Control</h1>
+        <div class="header-controls">
+            <button class="refresh-btn" onclick="refreshAll()" title="Refresh connection">🔄 Refresh</button>
+            <nav class="nav-tabs">
+                <button class="nav-tab active" data-tab="dashboard">Dashboard</button>
+                <button class="nav-tab" data-tab="docs">Docs</button>
+                <button class="nav-tab" data-tab="ideas">Ideas</button>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- ==================== DASHBOARD ==================== -->
+    <div id="dashboard" class="tab-content active">
+        <div class="dashboard-header">
+            <h2>📊 Dashboard</h2>
+            <p>Track projects and tasks across all areas</p>
+        </div>
+        
+        <div class="kanban-container">
+            <!-- Projects Kanban -->
+            <div class="kanban-board">
+                <h3>📁 Projects</h3>
+                <div class="stages-container">
+                
+                <div class="stage stage-ideas">
+                    <div class="stage-header">
+                        <span class="stage-dot"></span>
+                        <span class="stage-title">Ideas</span>
+                        <span class="stage-count">1</span>
+                    </div>
+                    <div class="stage-cards" data-stage="ideas">
+                        <div class="kanban-card">
+                            <div class="kanban-card-title">The Simple Disciple - Book</div>
+                            <div class="kanban-card-meta">Book on discipleship</div>
+                            <div class="kanban-card-tags">
+                                <span class="tag tag-writer">Writer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stage stage-dev">
+                    <div class="stage-header">
+                        <span class="stage-dot"></span>
+                        <span class="stage-title">Ideas in Dev</span>
+                        <span class="stage-count">0</span>
+                    </div>
+                    <div class="stage-cards" data-stage="dev"></div>
+                </div>
+                
+                <div class="stage stage-brief">
+                    <div class="stage-header">
+                        <span class="stage-dot"></span>
+                        <span class="stage-title">Brief</span>
+                        <span class="stage-count">0</span>
+                    </div>
+                    <div class="stage-cards" data-stage="brief"></div>
+                </div>
+                
+                <div class="stage stage-progress">
+                    <div class="stage-header">
+                        <span class="stage-dot"></span>
+                        <span class="stage-title">In Progress</span>
+                        <span class="stage-count">1</span>
+                    </div>
+                    <div class="stage-cards" data-stage="progress">
+                        <div class="kanban-card" onclick="openProject('gospel-share-tracker')">
+                            <div class="kanban-card-title">Gospel Share Tracker</div>
+                            <div class="kanban-card-meta">Active development</div>
+                            <div class="kanban-card-tags">
+                                <span class="tag tag-pastor">Pastor</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stage stage-troubleshoot">
+                    <div class="stage-header">
+                        <span class="stage-dot"></span>
+                        <span class="stage-title">Troubleshoot</span>
+                        <span class="stage-count">0</span>
+                    </div>
+                    <div class="stage-cards" data-stage="troubleshoot"></div>
+                </div>
+                
+                <div class="stage stage-deploy">
+                    <div class="stage-header">
+                        <span class="stage-dot"></span>
+                        <span class="stage-title">Deploy</span>
+                        <span class="stage-count">0</span>
+                    </div>
+                    <div class="stage-cards" data-stage="deploy"></div>
+                </div>
+                
+                <div class="stage stage-complete">
+                    <div class="stage-header">
+                        <span class="stage-dot"></span>
+                        <span class="stage-title">Complete</span>
+                        <span class="stage-count">0</span>
+                    </div>
+                    <div class="stage-cards" data-stage="complete"></div>
+                </div>
+                
+                </div>
+            </div>
+            
+            <!-- Tasks Kanban -->
+            <div class="kanban-board">
+                <h3>✅ Tasks</h3>
+                <div class="stages-container">
+                
+                <div class="stage stage-request">
+                    <div class="stage-header">
+                        <span class="stage-dot"></span>
+                        <span class="stage-title">Request</span>
+                        <span class="stage-count">1</span>
+                    </div>
+                    <div class="stage-cards" data-stage="task-request">
+                        <div class="kanban-card">
+                            <div class="kanban-card-title">Mission Control - Docs refinement</div>
+                            <div class="kanban-card-meta">Improve Docs tab</div>
+                            <div class="kanban-card-tags">
+                                <span class="tag tag-personal">Personal</span>
+                            </div>
+                        </div>
+                        <div class="kanban-card">
+                            <div class="kanban-card-title">Voice Agent Setup - GoHighLevel</div>
+                            <div class="kanban-card-meta">Research & create instructions</div>
+                            <div class="kanban-card-tags">
+                                <span class="tag tag-writer">Writer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stage stage-confirm">
+                    <div class="stage-header">
+                        <span class="stage-dot"></span>
+                        <span class="stage-title">Confirm</span>
+                        <span class="stage-count">0</span>
+                    </div>
+                    <div class="stage-cards" data-stage="task-confirm"></div>
+                </div>
+                
+                <div class="stage stage-progress">
+                    <div class="stage-header">
+                        <span class="stage-dot"></span>
+                        <span class="stage-title">In Progress</span>
+                        <span class="stage-count">0</span>
+                    </div>
+                    <div class="stage-cards" data-stage="task-progress"></div>
+                </div>
+                
+                <div class="stage stage-review">
+                    <div class="stage-header">
+                        <span class="stage-dot"></span>
+                        <span class="stage-title">Review</span>
+                        <span class="stage-count">0</span>
+                    </div>
+                    <div class="stage-cards" data-stage="task-review"></div>
+                </div>
+                
+                <div class="stage stage-complete">
+                    <div class="stage-header">
+                        <span class="stage-dot"></span>
+                        <span class="stage-title">Complete</span>
+                        <span class="stage-count">0</span>
+                    </div>
+                    <div class="stage-cards" data-stage="task-complete"></div>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ==================== DOCS ==================== -->
+    <div id="docs" class="tab-content">
+        <aside class="docs-sidebar">
+            <div class="sidebar-search">
+                <input type="text" id="docSearch" placeholder="Search docs...">
+            </div>
+            <div class="sidebar-list" id="docList"></div>
+        </aside>
+        <main class="docs-content">
+            <div class="doc-viewer" id="docViewer">
+                <div class="empty-state">
+                    <h3>Select a document</h3>
+                    <p>Choose a journal entry from the sidebar</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- ==================== IDEAS ==================== -->
+    <div id="ideas" class="tab-content">
+        <div class="ideas-header">
+            <h2>💡 Ideas</h2>
+            <p>Suggested tasks awaiting your decision</p>
+        </div>
+        <div class="ideas-list" id="ideasList"></div>
+    </div>
+    
+    <script>
+        // ==================== TAB NAVIGATION ====================
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+        
+        // ==================== IDEAS DATA ====================
+        const ideasData = [
+            {
+                id: 'gst-phase4',
+                title: 'Gospel Share Tracker - Phase 4: Invitations',
+                description: 'Build the invitations feature allowing church members to send personalized gospel invitations to friends and family.',
+                icon: '📨',
+                tags: ['tag-pastor', 'Pastor']
+            },
+            {
+                id: 'playbook',
+                title: 'Working Together Playbook - Review & finalize',
+                description: 'Complete the final review of the Working Together Playbook document and publish it.',
+                icon: '📋',
+                tags: ['tag-pastor', 'Pastor']
+            },
+            {
+                id: 'gst-phase3-review',
+                title: 'Review Gospel Share Tracker Phase 3 progress',
+                description: 'Assess the completed Phase 3 features (People, Users, Export, Import) and plan Phase 4.',
+                icon: '🔍',
+                tags: ['tag-pastor', 'Pastor']
+            },
+            {
+                id: 'feb-sermons',
+                title: 'Plan sermon series for February',
+                description: 'Develop the preaching calendar and sermon outlines for February.',
+                icon: '📖',
+                tags: ['tag-pastor', 'Pastor']
+            },
+            {
+                id: 'newsletter',
+                title: 'Draft newsletter for church',
+                description: 'Write and design the monthly church newsletter.',
+                icon: '📰',
+                tags: ['tag-pastor', 'Pastor']
+            },
+            {
+                id: 'podcast-research',
+                title: 'Research discipleship content for podcast',
+                description: 'Explore topics and guests for upcoming discipleship podcast episodes.',
+                icon: '🎙️',
+                tags: ['tag-writer', 'Writer']
+            },
+            {
+                id: 'social-calendar',
+                title: 'Content calendar for social media',
+                description: 'Plan and schedule social media content for the next month.',
+                icon: '📅',
+                tags: ['tag-entrepreneur', 'Entrepreneur']
+            },
+            {
+                id: 'email-automation',
+                title: 'Email automation workflow',
+                description: 'Set up automated email sequences for ministry communications.',
+                icon: '✉️',
+                tags: ['tag-pastor', 'Pastor']
+            },
+            {
+                id: 'speaking-pipeline',
+                title: 'Speaking engagement pipeline',
+                description: 'Develop a system for tracking and managing speaking opportunities.',
+                icon: '🎤',
+                tags: ['tag-writer', 'Writer']
+            },
+            {
+                id: 'discipleship-course',
+                title: 'Discipleship course outline',
+                description: 'Create the curriculum structure for a new discipleship course.',
+                icon: '🎓',
+                tags: ['tag-writer', 'Writer']
+            }
+        ];
+        
+        // ==================== RENDER IDEAS ====================
+        function renderIdeas() {
+            const list = document.getElementById('ideasList');
+            if (ideasData.length === 0) {
+                list.innerHTML = '<div class="empty-state"><h3>No pending ideas</h3><p>All ideas have been processed!</p></div>';
+                return;
+            }
+            
+            list.innerHTML = ideasData.map(idea => `
+                <div class="idea-card" data-id="${idea.id}">
+                    <div class="idea-icon">${idea.icon}</div>
+                    <div class="idea-content">
+                        <div class="idea-title">${idea.title}</div>
+                        <div class="idea-description">${idea.description}</div>
+                        <div class="idea-tags">
+                            ${idea.tags.map(tag => `<span class="tag ${tag.split('-')[0] === 'tag' ? tag : 'tag-' + tag.toLowerCase()}">${idea.tags.indexOf(tag) % 2 === 0 ? tag : ''}</span>`).join('')}
+                        </div>
+                    </div>
+                    <div class="idea-actions">
+                        <button class="idea-btn btn-approve" onclick="approveIdea('${idea.id}')">Approve</button>
+                        <button class="idea-btn btn-defer" onclick="deferIdea('${idea.id}')">Defer</button>
+                        <button class="idea-btn btn-reject" onclick="rejectIdea('${idea.id}')">Reject</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function approveIdea(id) {
+            const idea = ideasData.find(i => i.id === id);
+            if (idea) {
+                // Add to Projects kanban - Ideas stage
+                addProjectToKanban(idea);
+                // Remove from ideas
+                removeIdea(id);
+            }
+        }
+        
+        function addProjectToKanban(idea) {
+            const container = document.querySelector('[data-stage="ideas"]');
+            if (container) {
+                const card = document.createElement('div');
+                card.className = 'kanban-card';
+                card.innerHTML = `
+                    <div class="kanban-card-title">${idea.title}</div>
+                    <div class="kanban-card-meta">New idea</div>
+                    <div class="kanban-card-tags">
+                        <span class="tag ${idea.tags[0]}">${idea.tags[1]}</span>
+                    </div>
+                `;
+                container.appendChild(card);
+                updateStageCounts();
+            }
+        }
+        
+        function updateStageCounts() {
+            document.querySelectorAll('.stage').forEach(stage => {
+                const cards = stage.querySelectorAll('.kanban-card').length;
+                const countEl = stage.querySelector('.stage-count');
+                if (countEl) {
+                    countEl.textContent = cards;
+                }
+            });
+        }
+        
+        function deferIdea(id) {
+            const idea = ideasData.find(i => i.id === id);
+            if (idea) {
+                alert(`⏳ "${idea.title}" deferred.`);
+            }
+        }
+        
+        function rejectIdea(id) {
+            const idea = ideasData.find(i => i.id === id);
+            if (idea) {
+                if (confirm(`Remove "${idea.title}"?`)) {
+                    removeIdea(id);
+                }
+            }
+        }
+        
+        function removeIdea(id) {
+            const index = ideasData.findIndex(i => i.id === id);
+            if (index > -1) {
+                ideasData.splice(index, 1);
+                renderIdeas();
+            }
+        }
+        
+        // ==================== PROJECT NAVIGATION ====================
+        function openProject(projectId) {
+            window.open(`/mission-control/projects/${projectId}.html`, '_blank');
+        }
+        
+        // ==================== REFRESH ====================
+        async function refreshAll() {
+            const btn = document.querySelector('.refresh-btn');
+            btn.classList.add('loading');
+            btn.textContent = '🔄 Refreshing...';
+            
+            try {
+                // Refresh docs
+                await loadDoc(getCurrentDocName() || '2026-02-04.md', document.querySelector('.sidebar-item.active'));
+                
+                // Refresh projects
+                updateStageCounts();
+                
+                // Refresh ideas
+                renderIdeas();
+                
+                btn.textContent = '✅ Done';
+                setTimeout(() => {
+                    btn.classList.remove('loading');
+                    btn.textContent = '🔄 Refresh';
+                }, 2000);
+            } catch (e) {
+                btn.textContent = '❌ Error';
+                setTimeout(() => {
+                    btn.classList.remove('loading');
+                    btn.textContent = '🔄 Refresh';
+                }, 2000);
+            }
+        }
+        
+        function getCurrentDocName() {
+            const active = document.querySelector('.sidebar-item.active');
+            return active ? active.dataset.doc : null;
+        }
+        
+        // ==================== DOCS ====================
+        const docsData = {
+            daily: [
+                { name: '2026-02-09.md', title: 'February 9, 2026', date: '2026-02-09' },
+                { name: '2026-02-08.md', title: 'February 8, 2026', date: '2026-02-08' },
+                { name: '2026-02-07.md', title: 'February 7, 2026', date: '2026-02-07' },
+                { name: '2026-02-06.md', title: 'February 6, 2026', date: '2026-02-06' },
+                { name: '2026-02-05.md', title: 'February 5, 2026', date: '2026-02-05' },
+                { name: '2026-02-04.md', title: 'February 4, 2026', date: '2026-02-04' },
+                { name: '2026-02-02.md', title: 'February 2, 2026', date: '2026-02-02' }
+            ],
+            topics: [
+                { name: 'Tasks.md', title: 'Tasks Overview', date: '' },
+                { name: 'Reimage-Church.md', title: 'Reimage Church', date: '' },
+                { name: 'Author-Speaker.md', title: 'Author & Speaker', date: '' },
+                { name: 'Chris-Personal.md', title: 'Chris Personal', date: '' },
+                { name: 'Entrepreneur.md', title: 'Entrepreneur', date: '' },
+                { name: 'Dev-Environment-Plan.md', title: 'Dev Environment Plan', date: '' },
+                { name: 'Email-Cleanup-Plan.md', title: 'Email Cleanup Plan', date: '' },
+                { name: 'Daily-Digest-2026-02-03.md', title: 'Daily Digest (Feb 3)', date: '2026-02-03' },
+                { name: 'Voice-Interview-Agent-Setup-Guide.md', title: '🎙️ Voice Interview Agent', date: '' },
+                { name: 'Project-Task-Framework.md', title: '📋 Project & Task Framework', date: '' },
+                { name: 'Mission-Control-Design-Questions.md', title: '💡 Mission Control Questions', date: '' },
+                { name: 'Mission-Control-Changelog.md', title: '🚀 Mission Control Changelog', date: '2026-02-06' }
+            ],
+            briefs: [
+                { name: 'Project-Brief-Gospel-Share-Tracker.md', title: '🎯 Gospel Share Tracker', date: '2026-02-05' }
+            ]
+        };
+        
+        function renderDocs(filter = '') {
+            const list = document.getElementById('docList');
+            const filterLower = filter.toLowerCase();
+            
+            const filteredDaily = docsData.daily.filter(d => d.title.toLowerCase().includes(filterLower) || d.name.toLowerCase().includes(filterLower));
+            
+            // Separate guides from topics
+            const allTopics = docsData.topics;
+            const guides = allTopics.filter(d => /[🎙️📋💡📖🚀]/.test(d.title));  // Guide indicators
+            const regularTopics = allTopics.filter(d => !/[🎙️📋💡📖🚀]/.test(d.title));
+            const filteredGuides = guides.filter(d => d.title.toLowerCase().includes(filterLower) || d.name.toLowerCase().includes(filterLower));
+            const filteredRegular = regularTopics.filter(d => d.title.toLowerCase().includes(filterLower) || d.name.toLowerCase().includes(filterLower));
+            const filteredBriefs = docsData.briefs.filter(d => d.title.toLowerCase().includes(filterLower) || d.name.toLowerCase().includes(filterLower));
+            
+            let html = '';
+            
+            if (filteredDaily.length > 0) {
+                html += `<div class="sidebar-group"><div class="sidebar-group-title">📓 Daily Logs</div>`;
+                html += filteredDaily.map(d => `
+                    <div class="sidebar-item" data-doc="${d.name}">
+                        ${d.title}
+                        ${d.date ? `<span class="date">${d.date}</span>` : ''}
+                    </div>
+                `).join('');
+                html += `</div>`;
+            }
+            
+            if (filteredGuides.length > 0) {
+                html += `<div class="sidebar-group"><div class="sidebar-group-title">📚 Guides & Frameworks</div>`;
+                html += filteredGuides.map(d => `
+                    <div class="sidebar-item" data-doc="${d.name}">
+                        ${d.title}
+                        ${d.date ? `<span class="date">${d.date}</span>` : ''}
+                    </div>
+                `).join('');
+                html += `</div>`;
+            }
+            
+            if (filteredRegular.length > 0) {
+                html += `<div class="sidebar-group"><div class="sidebar-group-title">📁 Topic Docs</div>`;
+                html += filteredRegular.map(d => `
+                    <div class="sidebar-item" data-doc="${d.name}">
+                        ${d.title}
+                        ${d.date ? `<span class="date">${d.date}</span>` : ''}
+                    </div>
+                `).join('');
+                html += `</div>`;
+            }
+            
+            // Project Briefs section
+            if (filteredBriefs.length > 0) {
+                html += `<div class="sidebar-group"><div class="sidebar-group-title">📋 Project Briefs</div>`;
+                html += filteredBriefs.map(d => `
+                    <div class="sidebar-item" data-doc="${d.name}">
+                        ${d.title}
+                        ${d.date ? `<span class="date">${d.date}</span>` : ''}
+                    </div>
+                `).join('');
+                html += `</div>`;
+            } else if (filterLower === '') {
+                html += `<div class="sidebar-group"><div class="sidebar-group-title">📋 Project Briefs</div>`;
+                html += `<div style="padding: 10px; color: #999; font-size: 13px;">No briefs yet</div>`;
+                html += `</div>`;
+            }
+            
+            if (filteredDaily.length === 0 && filteredGuides.length === 0 && filteredRegular.length === 0 && filteredBriefs.length === 0) {
+                html = '<div style="padding: 20px; text-align: center; color: #888;">No results</div>';
+            }
+            
+            list.innerHTML = html;
+            
+            list.querySelectorAll('.sidebar-item').forEach(item => {
+                item.addEventListener('click', () => loadDoc(item.dataset.doc, item));
+            });
+        }
+        
+        async function loadDoc(docName, activeItem) {
+            document.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
+            if (activeItem) activeItem.classList.add('active');
+            
+            const viewer = document.getElementById('docViewer');
+            viewer.innerHTML = '<div class="empty-state"><h3>Loading ' + docName + '...</h3></div>';
+            
+            try {
+                const response = await fetch('/memory/' + docName);
+                if (!response.ok) throw new Error('File not found: ' + response.status);
+                const content = await response.text();
+                const html = convertMarkdown(content);
+                viewer.innerHTML = `<div class="doc-content">${html}</div>`;
+            } catch (e) {
+                viewer.innerHTML = `<div class="empty-state"><h3>Error loading document</h3><p>${e.message}</p><p>Path: /memory/${docName}</p></div>`;
+            }
+        }
+        
+        function convertMarkdown(text) {
+            let html = text;
+            html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+            html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+            html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+            html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+            html = html.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank">$1</a>');
+            html = html.replace(/^- (.+)$/gm, '<li>$1</li>');
+            html = html.replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>');
+            html = html.replace(/\|(.+)\|/g, (match) => {
+                const cells = match.split('|').filter(c => c.trim());
+                return `<td>${cells.join('</td><td>')}</td>`;
+            });
+            html = html.replace(/(<td>.*<\/td>\n?)+/g, '<tr>$&</tr>');
+            html = html.replace(/(<tr>.*<\/tr>\n?)+/g, '<table>$&</table>');
+            html = html.replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>');
+            html = html.replace(/`(.+?)`/g, '<code>$1</code>');
+            html = html.replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>');
+            html = html.replace(/\n\n/g, '</p><p>');
+            html = '<p>' + html + '</p>';
+            html = html.replace(/<p><\/p>/g, '');
+            html = html.replace(/<p>(<h[1-6]>)/g, '$1');
+            html = html.replace(/(<\/h[1-6]>)<\/p>/g, '$1');
+            return html;
+        }
+        
+        document.getElementById('docSearch').addEventListener('input', (e) => {
+            renderDocs(e.target.value);
+        });
+        
+        // ==================== INITIALIZE ====================
+        renderIdeas();
+        renderDocs();
+        updateStageCounts();
+    </script>
+</body>
+</html>
