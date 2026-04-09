@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{SERIES_TITLE}} - Notes</title>
+  <style>
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 40px;
+      max-width: 800px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .series-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+    .key-verse {
+      font-style: italic;
+      margin-bottom: 30px;
+      color: #333;
+      text-align: left;
+    }
+    .section {
+      margin-bottom: 25px;
+      text-align: left;
+    }
+    .section-num {
+      font-size: 18px;
+      font-weight: bold;
+      display: inline;
+      margin-right: 4px;
+    }
+    .section-title {
+      font-size: 16px;
+      font-weight: bold;
+      display: inline;
+    }
+    .section-content {
+      margin-bottom: 12px;
+    }
+    .reflection {
+      font-weight: bold;
+      margin-top: 10px;
+      margin-bottom: 4px;
+    }
+    .application {
+      font-weight: bold;
+      margin-top: 10px;
+      margin-bottom: 4px;
+    }
+    .line {
+      border-bottom: 1px solid #333;
+      height: 24px;
+      margin-bottom: 8px;
+    }
+    .final-reflection {
+      margin-top: 30px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <p class="series-title">{{SERIES_TITLE}}</p>
+  <h1>{{WEEK_TITLE}}</h1>
+  <p class="key-verse">Key Verse: {{KEY_VERSE}}</p>
+
+  {{SECTIONS}}
+
+  <div class="final-reflection">
+    <div class="reflection">Final Reflection:</div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,330 @@
+# God Says I Am His Child — Edit 1
+
+**Series:** Defined — Who God Says You Are
+**Week:** Week 1
+**Passage:** Romans 8:1-17
+**Editor:** Priscilla
+
+*ReImage Church — Pastor Chris*
+
+*Core Truth: You are not an orphan trying to earn a home — you are a child who's already home. Stop performing for identity. Start living from it.*
+
+---
+
+How many of you grew up thinking Christianity was about trying harder? Trying to be good enough. Trying to pray enough. Trying to read your Bible enough. Trying to not mess up enough. If you raised your hand, you're not alone — and this series is for you.
+
+Come on, I'm not the only one. I know some of y'all are sitting there thinking, "I didn't raise my hand," but I'm looking at you. I'm looking at myself too. Most of us came into this Christian life thinking it was about effort. About performance. About getting it right. And honestly? A lot of us are tired.
+
+I want to be honest with you this morning. I've been a Christian for a long time. I grew up in the church. My dad was a pastor. I've been in ministry for decades. And there are still days — there are still weeks — where I feel like I'm on a performance treadmill. Where I feel like I have to prove something. Where I wake up and think, "Did I pray enough yesterday? Did I read my Bible enough? Did I do enough for the kingdom? Is God happy with me?"
+
+And I know I'm not alone. How many of you have woken up and thought, "I'm not sure God is pleased with me today"? How many of you have had that thought? Come on, don't be shy. I've had it this week.
+
+We sin, we feel guilty. We pray, we feel briefly better. We read our Bible, we feel like we did our homework. And then we mess up again, and the cycle starts over. And somewhere deep down, we feel like we're on the outside looking in. Like we have to keep earning something. Like we're orphans banging on the door hoping someone will let us in.
+
+But here's what God wants you to know this week. You're not an orphan trying to earn a home. You're a child who's already home.
+
+This is Week 1 of our new series called "Defined" — and we're going to spend four weeks talking about who God says you are. Not who you think you are. Not who other people say you are. Not who the world says you are. Who God says you are. And it starts with this: you are His child.
+
+Now, I want you to have your spiritual growth plan card ready. If you don't have one, grab one on your way out. We're going to reference it throughout the message. When you write something down, it becomes real — it becomes personal. So keep that card handy.
+
+Let's pray quickly, and then we'll read the Scripture.
+
+Father, we thank you that you have called us your children. God, open our eyes to see who you say we are. Remove the lies we've believed about ourselves and replace them with your truth. Lord, we want to hear from you today. We want to be changed by your Word. In Jesus' name, amen.
+
+[SCRIPTURE READING: Romans 8:1-17]
+
+---
+
+Now, let me tell you something. I used to think forgiveness was the big deal. You know what I mean? I thought the gospel was: "God forgives your sins, and if you're good enough, you get to go to heaven." And that's true — but it's not the whole truth. It's not even the best part.
+
+See, here's what happens when forgiveness is your primary understanding of the Christian life. You wake up every day trying not to sin. You try to be good. You try to pray enough. You try to read your Bible enough. You try to serve enough. And every time you fail — and you will fail, because you're human — you feel like you've lost something. Like your account balance went down. Like God is looking at you with disappointment. Like you have to earn back what you lost.
+
+But that is not the full picture. That is not the good news.
+
+God doesn't just save us FROM sin. He brings us INTO His family.
+
+Now, I know what some of you are thinking. "Pastor Chris, are you saying forgiveness isn't enough? Are you saying I need something more?" No, I'm not saying that. I'm saying forgiveness deals with guilt, but adoption deals with identity. They are different things.
+
+Think about it this way. When you forgive someone, you clear a debt. That's powerful. That's necessary. That's amazing. If somebody owed you money and you said, "You know what? We're even. I forgive you," that's a huge deal. The debt is gone.
+
+But when you adopt someone, you do something different. You give them your name. You give them your inheritance. You give them your family. You bring them in. You say, "You belong here now. This is your home. You are mine. You have my last name. You have my resources. You have my future."
+
+That's adoption. And that's what God did for us.
+
+God didn't just clear our sin debt — He made us His children. He didn't just say "you're even" — He said "you're family."
+
+Look at what Romans 8:14-17 says. "All who are led by the Spirit are sons of God." Sons. Children. Not employees. Not contractors. Not people trying to earn a paycheck. Children. That's the word. Children.
+
+And then it says this: "You received the Spirit of adoption by whom we cry out, 'Abba, Father.'"
+
+Abba. That's intimate. That's not formal. That's not "Oh great and powerful God in the heavens" or "Lord God Almighty." That's "Daddy." That's the word a little kid uses when they run to their papa. "Daddy, Daddy, Daddy." That's the relationship God wants.
+
+And here's where it gets good, y'all. When you are a child, you don't earn your way into the family. You don't have to apply. You don't have to interview. You don't have to prove yourself. You are born into it. Or in our case, you are adopted into it. You receive it. You didn't produce it. You didn't earn it. You just got it. It was given to you.
+
+[ILLUSTRATION]
+
+Here's something to think about. We are influenced by our culture so much. And our culture is all about the self-made person. "I'm a self-made millionaire." Really? No — your daddy gave you his company. "I'm a self-taught superstar." Really? No — someone trained you. Someone made YouTube videos you watched. Someone wrote a book you read. "I'm self-made." But here's the thing — you've never heard anybody say, "That's a self-made child."
+
+Come on. That's not a thing. You never hear somebody say, "Yeah, she's a self-made child. She really worked hard to be born into that family. She earned it."
+
+No. A child doesn't earn being born into a family. They just are. They receive it. The parents chose them. The parents brought them in. The parents said, "You belong here. You are our child. This is your home."
+
+That's adoption. That's what God did for us.
+
+Now, some of you came from really hard backgrounds. I know that. Some of you didn't have a good father. Some of you had a father who was absent, or abusive, or just... not there. And the word "father" might be complicated for you. It might bring up pain. It might bring up anger or sadness or confusion.
+
+But here's the good news: God is not like your earthly father. God is the perfect Father. And when He adopts you, He doesn't do it halfway. He gives you everything. His name. His inheritance. His family. His future. His presence. His Spirit. All of it. He doesn't hold back.
+
+And here's the thing about adoption in the ancient world — it was absolute. In Roman law, when you adopted someone, they had all the rights of a biological child. They couldn't be disinherited. They couldn't be kicked out. Once you were adopted, you were in. Forever. That was true in the Roman world, and it's even more true in the Kingdom of God.
+
+[APPLICATION]
+
+So here's what I want you to understand. If God just forgave you, you'd still be outside the family looking in. You'd be like someone who got their debt cleared but still isn't allowed in the house. "Okay, we're even now. You can go. We're cool. But this isn't your home. You don't really belong here."
+
+But that's not what happened. He adopted you. You're in. You're His. And that changes everything.
+
+You have an inheritance. You have a Father. You have a future. You have a name. You are not an orphan anymore. You have a home.
+
+Now, I want to give you a few things to think about this week. I want you to write these down on your card if they resonate with you. These are suggestions — not because writing it down magically makes it happen, but because God uses those moments of reflection. When you write something down, it becomes real. It becomes personal. But more than that, I want to encourage you to listen. God may be speaking to you about something different. So keep that card handy, and hear these as ideas you might use — but mostly, pay attention to what God is saying to you.
+
+First, this week, try praying using the word "Father" — and notice the intimacy. When you pray, don't just say "God" or "Lord." Say "Father." Let it sink in. He is your Dad. He's not some distant cosmic being who's keeping score. He's your Daddy. Talk to Him like that. Maybe He wants you to try that. Maybe He has something else for you. Listen for what He may be saying.
+
+Second, when you fail — and you will, because you're human — try saying "I'm still His child" out loud. Fight the orphan voice. That voice that says "You've blown it. You're not good enough. God is disappointed in you. You're on thin ice." Fight that lie. Speak the truth over yourself. You're still His child. Maybe that's what God wants you to do this week. Or maybe He wants you to fight that lie in a different way. Listen for His voice.
+
+Third, consider thanking God for your adoption in a prayer this week. Just thank Him. "Thank you, Father, that you chose me. Thank you that I belong to you. Thank you that I'm not an orphan anymore." Maybe that's what He wants from you this week. Or maybe He wants you to thank Him for something else entirely. Listen.
+
+[TRANSITION]
+
+But here's the thing — and I know some of you are already thinking this — "Pastor Chris, are you saying that if I'm already adopted, if I'm already a child of God, then why do I feel like I have to keep earning it? Why do I feel like I have to perform? Why do I feel like I'm on the outside looking in even though you're telling me I'm in?"
+
+Good question. That's exactly what we're talking about next. Because I know that's real. I feel it too. And we need to understand why.
+
+---
+
+[POINT 2: CHOSEN BEFORE WE WERE WORTHY]
+
+Let me ask you something. How many of you were alive when Jesus was on earth?
+
+No, I know you weren't. I'm making a point.
+
+When did God choose you? Was it when you walked down the aisle? Was it when you said the sinner's prayer? Was it when you got baptized? Was it when you started going to church?
+
+No.
+
+Here's the thing — God gave His Son before you were born. Before you did anything good or bad. Before you could accept or reject Him. Before you could do anything to earn it or mess it up.
+
+Now, listen to what Romans 8 says. Romans 8:30 says, "He also predestined to be conformed to the image of His Son." Before you were even born, God had plans for you. Before you could choose Him, He had already chosen you.
+
+And then listen to what Ephesians 1:4-5 says. "He chose us in Him before the foundation of the world... predestined us to adoption."
+
+Before the foundation of the world. Before you were born. Before you could accept or reject Him. Before you could do anything good or bad. Before you could pray or read your Bible or be good enough. He chose you.
+
+Now, here's where we have to be careful, because this can trip people up. God didn't choose you because He foresaw that you'd be good enough. He didn't look down the corridor of time and say, "Oh, she's going to be a good Christian. She's going to pray enough and read her Bible enough and be a good person. I'll pick her."
+
+No. He chose you because He wanted to. Because He loved you. Because that's who He is. Because He is a giving God. Because He is a loving Father who wants His children with Him.
+
+That is not because of your worth. It is because of His love.
+
+Come on, y'all. Let that sink in. Before you did anything — before you were born, before you could choose Him — He said yes. He picked you. He wanted you. He said, "That's my kid. I want that one. I choose that one."
+
+Now, here's what that means. It means your adoption doesn't depend on your performance. It was decided before you were born. Before you could do anything to earn it or mess it up. If it depended on you, you'd mess it up. But it depends on Him. And He doesn't mess up.
+
+[ILLUSTRATION]
+
+Let me give you an illustration. Imagine someone comes up to you and says, "I want to give you a million dollars. No strings attached. Here it is. It's yours. I'm giving it to you as a gift."
+
+And you're like, "What? Really? Why? What did I do?"
+
+And they say, "Because I want to. Because I love you. Because you're worth it to me."
+
+And you're stunned. A million dollars! No strings! This is amazing!
+
+But then they say, "But wait — you have to keep earning it. Every day, prove to me you deserve it. If you mess up, I'm taking some of it back. You have to maintain your million-dollar status."
+
+Wait, what? I thought it was a gift? I thought it was mine? I thought you said no strings?
+
+That's what we do with God. He gives us everything — adoption, inheritance, the Holy Spirit, eternal life — and we keep trying to earn it. We keep trying to prove we deserve it. We keep performing.
+
+But here's the thing about this illustration I want to make sure lands: The problem isn't the giver. The problem is the receiver. Even when someone says "it's yours, no strings," we still feel like we have to earn it. We can't accept the gift. We keep trying to prove we deserve what was already given.
+
+And here's what I want you to understand: you can't earn what was already given. If it was given as a gift, you can't earn it back. That's what makes it a gift.
+
+If you have to earn it, it's not a gift. It's wages. And the Bible is clear — we don't earn salvation. We receive it. It's a gift. It's adoption. It's being chosen before we could ever be worthy.
+
+[APPLICATION]
+
+Let me say that again so it lands. You cannot earn what was already given.
+
+Stop trying to earn what you already possess. The adoption is already done. The inheritance is already yours. The Father already said yes. He chose you before you could do anything to deserve it. And He's not going to un-choose you because you messed up.
+
+When you understand this, something shifts. You stop trying to earn God's love because you already have it. You stop performing for acceptance because you're already accepted. You belong. You are chosen. Not because of what you did, but because of what He did.
+
+Now, here's a few things to think about for this point. Here's some ideas you might use — but more than that, I want to encourage you to listen. God may be speaking to you about something different this week.
+
+First, consider reading Ephesians 1:3-14 this week. Just read it. Don't just skim it — read it slowly. And highlight every spiritual blessing you have. There are a lot of them. You are blessed in Christ with every spiritual blessing in the heavenly places. You have an inheritance. You were chosen. You were predestined. You were redeemed. You were forgiven. You were adopted. Read that and let it wash over you. Let God speak to you through His Word. Maybe that's what He wants you to do this week. Or maybe He has a different passage for you. Listen.
+
+Second, when you're tempted to earn God's love — and you will be, because that's what the world teaches, that's what the devil whispers — remember: the adoption is already done. You can't lose what was given before you were born. That's not how it works. It's not a reward for good behavior. It's a gift. Maybe that's what you need to remember this week. Or maybe God wants to remind you of something else. Listen for His voice.
+
+Third, consider thanking God that your adoption doesn't depend on your performance. Thank Him that you don't have to earn what He already gave. Thank Him that it's secure. Thank Him that it's permanent. Thank Him that it's based on His love, not your goodness. Maybe that's your prayer this week. Or maybe He wants you to thank Him for something else. Listen.
+
+[TRANSITION]
+
+But here's the thing — and I want to name what some of you are thinking right now. I want to say the quiet part out loud, because that's what I do. You're thinking, "Okay, Pastor Chris, I hear you. I understand the theology. I understand that I'm chosen and adopted. But I don't feel like a child of God. I feel like an orphan. I feel like I'm on the outside looking in. I feel like I have to prove myself. I feel like God is disappointed in me. I feel like I'm never going to be good enough."
+
+Yeah. I know. That's what we're talking about next. Because that's real. That's the spiritual orphan mindset. And a lot of us live there.
+
+---
+
+[POINT 3: THE SPIRITUAL ORPHAN MINDSET]
+
+How many of you have ever felt like you have to prove yourself to God? Like your worth depends on how well you're performing? Like if you don't pray enough, read your Bible enough, serve enough, witness enough — God's not going to love you?
+
+Yeah. Me too.
+
+That's the orphan mindset. An orphan always feels like they have to prove themselves. A child knows they belong.
+
+Let me describe the orphan for you. The orphan thinks: "If I don't perform, I won't be loved." The orphan thinks: "I have to earn my place." The orphan thinks: "My worth is based on what I do. My value is based on my performance."
+
+And here's the thing — most Christians live like orphans. And they don't even know it. They think they're living the Christian life, but really they're living the orphan life. They're performing. They're striving. They're trying so hard to be good enough.
+
+They base their worth on: Did I pray enough today? Did I read my Bible? Did I go to church? Did I serve? Did I witness? Did I give? Did I do enough? Their self-worth is contingent on performance. And they never feel like they've done enough. They never feel like they've arrived. They're always striving. Always trying. Always performing.
+
+And here's the honest truth — that is exhausting. And it's not the Christian life. That's the orphan life. That's not what God called us to.
+
+But listen to what Romans 8 says. "You received the Spirit of adoption by whom we cry out, 'Abba, Father.'" Not "you might receive" or "you'll receive if you're good enough." You received. It's done. It's past tense. It's already happened.
+
+The Spirit itself bears witness with our spirit that we are children of God. Romans 8:16. The Holy Spirit Himself tells you that you're a child of God. That's not based on your feelings. That's not based on your performance. That's based on the Spirit of God living inside of you.
+
+[ILLUSTRATION]
+
+I want to bring in some research here, because this is real and it's important. Psychologists call this "contingent self-worth." That's when your sense of value depends on meeting conditions. When your worth is conditional — on performance, on achievement, on what others think of you.
+
+And here's what the research shows: people with high contingent self-esteem experience more anxiety, more shame, more fear of failure. Their identity is always on the line. They're always performing. They're always trying to prove something. They're always comparing themselves to others and coming up short.
+
+Now, here's what's crazy — a lot of Christians live like this. They're Christians, they believe in Jesus, they've been saved — but they live like orphans. They're constantly trying to earn what they already have. They're constantly performing for a Father who already loves them. They're constantly trying to prove themselves to a God who already said yes.
+
+That's not freedom. That's not the gospel. That's the orphan mindset. And it's killing us. It's exhausting. It's not what Jesus died for.
+
+But here's the good news: you don't have to live like that anymore. You are a child. You belong. And that identity is not based on your performance. It's based on what Christ did. It's based on the Spirit living inside of you. It's based on the Father's love.
+
+[APPLICATION]
+
+So here's my question for you. Which one are you living like?
+
+Are you living like an orphan — always trying to prove yourself, always feeling like you haven't done enough, always performing for a God who already loves you? Always feeling like you're on the outside looking in? Always wondering if God is pleased with you?
+
+Or are you living like a child — resting in the fact that you belong, knowing that your identity is secure, serving from overflow instead of obligation? Knowing that you're loved not because of what you do, but because of whose you are?
+
+I want to challenge you this week to notice: when do you feel like you have to prove yourself to God? Is it when you mess up? Is it when you skip your quiet time? Is it when you fail? Is it when you sin? That's the orphan voice. Fight it.
+
+Here's some ideas for you this week. I want you to write down three truths about who you are in Christ. Just three. "I am loved. I am chosen. I am adopted. I am an heir. I am a child of God. I am secure. I belong." Write those down. Put them somewhere you'll see them every day. Put them on your mirror. Put them in your phone. Put them on your desk. And when the orphan voice starts talking, replace it with the truth.
+
+And when you mess up this week — because you will, because you're human — fight the lie. Say it out loud: "I'm still His child." That's not permission to sin. That's just the truth. You're still His child. His love for you doesn't fluctuate based on your performance. It's constant. It's secure. It's forever.
+
+But here's the thing — maybe God wants to do something different in your life this week. Maybe He's not asking you to do any of these things. Maybe He's just asking you to listen. To be still. To hear His voice. I want to encourage you: don't just do the tasks. Listen for what God is actually saying to you. He's your Father. He knows what you need. Maybe what you need this week is just to rest in that. To be with Him. To listen.
+
+[TRANSITION]
+
+But now here's the question. If we're already adopted, if we're already children of God, if we don't have to earn it — then what do we do? Do we just sit around? Do we just coast? Is it all just free grace and no obedience? Can we just do whatever we want?
+
+No. That's not what I'm saying. And that's not what the Bible says. Here's what comes next. Because here's the thing — when you know whose you are, you know who you are. And that changes everything about how you live.
+
+---
+
+[POINT 5: LIVING FROM OUR IDENTITY]
+
+Now, I know Point 5 seems out of order. But that's how the outline came. Don't overthink it. Sometimes we number things different in the planning and then we preach them in order. It's fine. That's just how it goes.
+
+Here's the thing. Once you know whose you are, you know who you are. You stop performing — and you start being.
+
+Listen to me. You don't try to become a child of God. You already are one. That's not the goal. That's the starting point. That's the foundation. Once you know that — really know it, in your bones — now you join what your Dad is doing.
+
+It's not about adding God to your life. It's about joining His work. It's not about trying to earn His approval. It's about partnering with Him in what He's already doing.
+
+When you know you're an heir, you can stop performing. You can rest. You can serve from overflow instead of obligation. You can say, "I don't have to prove anything. I'm already in. I'm already loved. I'm already an heir. Now what is my Dad doing that I get to be part of?"
+
+That's the shift. That's the change. That's what living from your identity looks like.
+
+[ILLUSTRATION]
+
+Let me give you an illustration. You know LeBron James, right? Arguably one of the greatest basketball players ever. He's 40 now. His numbers are down. He's not leading in scoring anymore. The Lakers aren't relying on him to carry the team like he used to.
+
+But here's what's interesting. The Lakers are winning. And LeBron? He's thriving. He's playing a different role. He's defending. He's facilitating. He's being the connector. He's being the "glue guy." He's doing the things that don't show up in the stats but help the team win. He's doing the little things that matter.
+
+Why? Because he already knows who he is.
+
+He doesn't need to score 40 points to prove he's great. He's already the greatest. His identity isn't on trial. He's already proven. He's already established. He's already earned his place. So he can play differently. He can sacrifice. He can thrive in a role that's not about him. He can do the unglamorous work that helps the team win.
+
+That's what happens when you know you're a child of God. You don't have to earn His love every day. You don't have to perform to prove your worth. You already have it. So now you can join what He's doing. You can serve from overflow. You can give without expecting anything back. You can love people without keeping score. Because you know whose you are.
+
+And here's the thing — when you serve from overflow, it's different. It's not burdensome. It's not obligatory. It's not "I have to" — it's "I get to." It's not "God is going to be mad at me if I don't" — it's "God is my Father and I want to join what He's doing."
+
+That's the difference between performance and overflow. That's the difference between the orphan and the child.
+
+[APPLICATION]
+
+So here's my question for you. Are you trying to earn through performance what you already possess through identity?
+
+If you're constantly trying to prove yourself to God, you're living like an orphan. If you're constantly trying to earn what was already given, you're missing the point. You're still on the porch trying to earn your way inside when the Father has already opened the door and said "come in."
+
+LeBron knows he's great — so he doesn't have to prove it every game. He doesn't have to score 40 every night to validate his identity. He's already the greatest. His legacy is secure. So he can play differently.
+
+You know you're God's child — so you don't have to earn His love every day. You don't have to perform to prove your worth. Your identity is secure. Your adoption is done. Your inheritance is waiting. So stop scoring to prove your worth. Join what your Dad is doing.
+
+Here's some ideas for this week:
+
+First, ask this question: "What is God doing that I get to be part of?" Not "What can I do for God?" That's the orphan question. That's the performance question. That's the "I have to earn God's love" question. The child question is: "What is my Dad doing that I get to be part of?" That's a different question. That's a question that flows from identity, not obligation.
+
+But maybe God is asking you something different this week. Maybe He's not asking you to serve at all. Maybe He's asking you to rest. To receive. To be still. I want to encourage you: listen for what He's actually saying. Don't just do things because you think you should. Listen to your Father. He knows what you need.
+
+Second, consider choosing one thing to stop trying to earn this week. What's one area where you've been performing trying to earn God's love or approval? What's one area where you've been striving, trying to be good enough? Just stop. You already have it. Rest in that. You're already adopted. You already belong. You don't have to earn what was given to you.
+
+Third, look for one opportunity to serve from overflow, not obligation. You don't have to serve because you owe God something. You don't have to serve because you're trying to earn points. You get to serve because you're already His kid and you want to join what He's doing. You get to serve because you love your Dad and you want to be part of what He's doing in the world.
+
+But here's the thing — maybe that's not what God wants for you this week. Maybe He wants you to receive instead of serve. Maybe He wants you to be still instead of do. Listen for His voice. He knows what you need.
+
+---
+
+[CONCLUSION]
+
+I want to close with something that's been on my heart.
+
+I do a lot of things because I'm supposed to. I share the gospel because that's what we do. I serve because that's what Christians do. I've been saved, I've been redeemed, I've been rescued — that's what we should do. So I do it.
+
+But here's the problem. Because I am a child of God, I want it to be who I am — not something I do out of service or even out of love and gratitude. I want it to be my identity. I want to share the gospel because that's who I am, not because I'm supposed to. I want to serve because that's what a son does — because it's who my Father has raised me to be.
+
+That's what a son does. He does what his father does because that's who his father has raised him to be. It's not about obligation. It's not about earning. It's about identity. It's about being.
+
+And here's the question I want to leave you with. Are you doing things because you're supposed to? Or are you doing things because that's who you are?
+
+Are you performing for a God who already loves you? Or are you living from the identity you've already been given?
+
+You are God's child. Not because of what you've done. Because of what Christ has done.
+
+Now, I want to land on obedience here, because that's what we do. That's who we are as a church at ReImage. We don't just want to know the truth — we want to do the truth. We don't just want to hear a good message — we want to obey. That's the heartbeat of everything we do.
+
+So here's the bottom line this morning. Stop performing for identity. Start living from it.
+
+You are God's beloved child — not because of what you've done, but because of what Christ has done.
+
+Now, if you're here today and you've never trusted Jesus as your Lord and Savior, I want to invite you into this family. You don't have to earn it. You just have to receive it. Jesus died on the cross for your sins, He rose again, and He's inviting you into His family. That's not a reward for being good enough. That's a gift. Will you receive it today? Would you pray with me?
+
+And if you're already a Christian — if you've already been adopted — then I want to challenge you this week. Stop living like an orphan. Start living like a child. You already belong. Now join what your Dad is doing. Stop trying to earn what you already have. Start living from the identity you already possess.
+
+But more than anything this week — listen. Don't just do things because you think you should. Don't just check boxes. Listen to your Father. He knows what He wants to do in your life. Maybe this week, He just wants you to be still. To receive. To rest in who you are.
+
+Let's pray.
+
+Father, thank you for adopting us into your family. Thank you that we don't have to earn what you already gave. Thank you that you chose us before we were born. Thank you that you called us your children. Thank you that we belong to you.
+
+God, forgive us for the times we've lived like orphans, trying to perform, trying to earn your love. Forgive us for the times we've believed the lie that we have to be good enough. Forgive us for the times we've based our worth on our performance.
+
+Help us to rest in who we are in Christ. Help us to live from our identity, not for our identity. Help us to stop performing and start being. Help us to join what you're doing in the world.
+
+And God, use us this week. Use us to love people. Use us to serve people. Use us to share the gospel. Use us to be your children in this world.
+
+In Jesus' name, amen.
+
+Now, as you leave today, take your spiritual growth plan card. Write one thing down that God's speaking to you this morning. Just one thing. And do it this week. Don't just hear it — do it. That's what we do here. We hear, and we obey. That's the ReImage way. That's the disciple path.
+
+I'll see you next week. God bless you.

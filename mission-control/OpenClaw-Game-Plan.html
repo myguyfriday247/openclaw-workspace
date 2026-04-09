@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenClaw Game Plan | Strategic Overview</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5; color: #333; min-height: 100vh;
+    }
+    .header {
+      background: white;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 20px 24px;
+    }
+    .header h1 { font-size: 20px; font-weight: 600; color: #1a1a2e; }
+    .header p { font-size: 14px; color: #666; margin-top: 4px; }
+    
+    .content { padding: 24px; max-width: 1200px; margin: 0 auto; }
+    
+    h2 { font-size: 18px; font-weight: 600; color: #1a1a2e; margin: 30px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #6366f1; }
+    h3 { font-size: 15px; font-weight: 600; color: #1a1a2e; margin: 20px 0 12px; }
+    h4 { font-size: 14px; font-weight: 600; color: #333; margin: 15px 0 10px; }
+    
+    .section {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+    @media (max-width: 900px) {
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    }
+    
+    .card {
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .card h4 { margin-top: 0; color: #6366f1; }
+    .card p { font-size: 13px; color: #666; line-height: 1.5; }
+    
+    ul { margin-left: 20px; }
+    li { margin-bottom: 8px; line-height: 1.5; }
+    
+    .priority-high { border-left: 4px solid #dc2626; }
+    .priority-medium { border-left: 4px solid #d97706; }
+    .priority-low { border-left: 4px solid #16a34a; }
+    
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-right: 6px;
+    }
+    .badge-agent { background: #e0e7ff; color: #4338ca; }
+    .badge-mc { background: #fef3c7; color: #92400e; }
+    .badge-file { background: #d1fae5; color: #065f46; }
+    .badge-discord { background: #ede9fe; color: #6d28d9; }
+    .badge-cron { background: #fee2e2; color: #991b1b; }
+    
+    table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+    th { background: #f9fafb; font-weight: 600; font-size: 13px; }
+    td { font-size: 13px; }
+    
+    .toc { background: #f0f9ff; border: 1px solid #bae6fd; padding: 16px; border-radius: 8px; margin-bottom: 24px; }
+    .toc h4 { margin-top: 0; color: #0369a1; }
+    .toc a { color: #0284c7; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    
+    .phase {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .phase-num {
+      width: 32px;
+      height: 32px;
+      background: #6366f1;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .phase-title { font-weight: 600; }
+    .phase-desc { font-size: 13px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🎯 OpenClaw Game Plan</h1>
+    <p>Strategic roadmap for multi-area AI-assisted life management</p>
+  </div>
+
+  <div class="content">
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc">
+      <h4>📋 Table of Contents</h4>
+      <ul style="columns: 2;">
+        <li><a href="#overview">1. Overview & Vision</a></li>
+        <li><a href="#current">2. Current State Assessment</a></li>
+        <li><a href="#agents">3. Agent Architecture</a></li>
+        <li><a href="#missioncontrol">4. Mission Control Tabs</a></li>
+        <li><a href="#discord">5. Discord Setup</a></li>
+        <li><a href="#files">6. File Structure</a></li>
+        <li><a href="#implementation">7. Implementation Roadmap</a></li>
+      </ul>
+    </div>
+
+    <!-- 1. OVERVIEW -->
+    <div class="section" id="overview">
+      <h2>1. Overview & Vision</h2>
+      <p style="margin-bottom: 16px;">Based on the expert's system and our current setup, here's a comprehensive game plan for managing 5 distinct areas:</p>
+      
+      <div class="grid-3">
+        <div class="card">
+          <h4>🏠 Personal Life</h4>
+          <p>Calendar, reminders, personal tasks, finances, health, family</p>
+        </div>
+        <div class="card">
+          <h4>💻 App Development</h4>
+          <p>CommTracker, Gospel Share Tracker, future SaaS projects</p>
+        </div>
+        <div class="card">
+          <h4>📈 Marketing Agency</h4>
+          <p>Client work, content creation, research, automation</p>
+        </div>
+        <div class="card">
+          <h4>✝️ Discipleship Influence</h4>
+          <p>Content, speaking, writing, disciple-making systems</p>
+        </div>
+        <div class="card">
+          <h4>⛪ Pastor Work</h4>
+          <p>SermonDev, semester/series planning, church leadership</p>
+        </div>
+        <div class="card">
+          <h4>🤖 Personal Assistant</h4>
+          <p>Research, scheduling, reminders, information retrieval</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. CURRENT STATE -->
+    <div class="section" id="current">
+      <h2>2. Current State Assessment</h2>
+      
+      <h3>✅ What We Have</h3>
+      <ul>
+        <li><strong>Mission Control</strong> - Main dashboard with sidebar navigation</li>
+        <li><strong>SermonDev</strong> - Full process docs + dashboard for sermon/series/semester planning</li>
+        <li><strong>CommTracker</strong> - React/Next.js app for church communications tracking</li>
+        <li><strong>Cron Jobs</strong> - Scheduled tasks (daily digest, receipt scanning, semester planning)</li>
+        <li><strong>Memory System</strong> - Daily logs, progress tracking, project docs</li>
+      </ul>
+
+      <h3>⚠️ What Needs Improvement</h3>
+      <ul>
+        <li>No centralized Task Board - can't see what agent is working on</li>
+        <li>No visual Calendar view of scheduled tasks</li>
+        <li>No Projects dashboard for major initiatives</li>
+        <li>Documents get lost in chat history</li>
+        <li>No Team/Agent architecture visualization</li>
+        <li>Not using Discord (still on webchat)</li>
+        <li>Memory is fragmented across files</li>
+      </ul>
+
+      <h3>🎯 Key Insights from Expert</h3>
+      <ul>
+        <li><strong>Task Board</strong> - Full visibility into agent work</li>
+        <li><strong>Multi-channel Discord</strong> - Separate channels for each project/area</li>
+        <li><strong>Sub-agents</strong> - Specialized agents for specific tasks</li>
+        <li><strong>Reverse prompting</strong> - Ask AI what tools to build</li>
+        <li><strong>Documents screen</strong> - All generated docs organized and searchable</li>
+      </ul>
+    </div>
+
+    <!-- 3. AGENT ARCHITECTURE -->
+    <div class="section" id="agents">
+      <h2>3. Agent Architecture</h2>
+      <p style="margin-bottom: 16px;">Based on the 5 focus areas, here's a proposed agent structure:</p>
+
+      <table>
+        <tr>
+          <th>Agent</th>
+          <th>Role</th>
+          <th>Focus Areas</th>
+          <th>Type</th>
+        </tr>
+        <tr>
+          <td><strong>Main (Chris)</strong></td>
+          <td>Orchestrator / Brain</td>
+          <td>All - coordinates sub-agents</td>
+          <td><span class="badge badge-agent">Anthropic</span></td>
+        </tr>
+        <tr>
+          <td><strong>Pastor Assistant</strong></td>
+          <td>Sermon development</td>
+          <td>Pastor Work, Discipleship</td>
+          <td><span class="badge badge-agent">Sub-agent</span></td>
+        </tr>
+        <tr>
+          <td><strong>Dev Agent</strong></td>
+          <td>App building</td>
+          <td>App Development</td>
+          <td><span class="badge badge-agent">Sub-agent</span></td>
+        </tr>
+        <tr>
+          <td><strong>Research Agent</strong></td>
+          <td>Content research</td>
+          <td>Marketing, Discipleship</td>
+          <td><span class="badge badge-agent">Sub-agent</span></td>
+        </tr>
+        <tr>
+          <td><strong>Content Agent</strong></td>
+          <td>Writing / Scripts</td>
+          <td>Discipleship, Marketing</td>
+          <td><span class="badge badge-agent">Sub-agent</span></td>
+        </tr>
+        <tr>
+          <td><strong>Personal Assistant</strong></td>
+          <td>Life management</td>
+          <td>Personal Life</td>
+          <td><span class="badge badge-agent">Sub-agent</span></td>
+        </tr>
+      </table>
+
+      <h3>Mission Statement</h3>
+      <div class="card" style="background: #f0f9ff; border-color: #bae6fd;">
+        <p><em>"Build an autonomous system that amplifies pastoral leadership, creates disciple-making content, manages personal life efficiently, and enables ministry multiplication 24/7."</em></p>
+      </div>
+    </div>
+
+    <!-- 4. MISSION CONTROL -->
+    <div class="section" id="missioncontrol">
+      <h2>4. Mission Control Tabs</h2>
+      <p style="margin-bottom: 16px;">Proposed tab structure for the left sidebar:</p>
+
+      <div class="grid-2">
+        <div class="card priority-high">
+          <h4>🔴 Priority: Task Board</h4>
+          <p>Kanban board showing all tasks across all areas. Who (me/agent) owns each task. Live activity feed. Drag to move, review column for my approval.</p>
+        </div>
+        <div class="card priority-high">
+          <h4>🔴 Priority: Calendar</h4>
+          <p>Visual calendar showing all cron jobs, scheduled tasks, upcoming sermons, deadlines. Verify agent is actually scheduling things.</p>
+        </div>
+        <div class="card priority-medium">
+          <h4>🟡 Projects</h4>
+          <p>Major initiatives tracked: CommTracker v2, Sermon Series, Discipleship Book, etc. Progress, related docs, tasks per project.</p>
+        </div>
+        <div class="card priority-medium">
+          <h4>🟡 Documents</h4>
+          <p>All generated documents organized: sermons, plans, research, content. Searchable. Every doc AI creates goes here.</p>
+        </div>
+        <div class="card priority-low">
+          <h4>🟢 Memories</h4>
+          <p>Organized memory interface. Browse by day. Long-term memory section for persistent knowledge.</p>
+        </div>
+        <div class="card priority-low">
+          <h4>🟢 Team</h4>
+          <p>Visual org chart of all agents. Their roles. Mission statement. Direct lines to each sub-agent.</p>
+        </div>
+      </div>
+
+      <h3>Existing Tabs to Retain/Improve</h3>
+      <ul>
+        <li><strong>Dashboard</strong> - Keep as overview</li>
+        <li><strong>Docs</strong> - CommTracker docs, keep</li>
+        <li><strong>Ideas</strong> - CommTracker suggestions, keep</li>
+        <li><strong>SermonDev</strong> - Rebuild with new structure</li>
+      </ul>
+    </div>
+
+    <!-- 5. DISCORD SETUP -->
+    <div class="section" id="discord">
+      <h2>5. Discord Setup</h2>
+      <p style="margin-bottom: 16px;">Multi-channel structure for organized workflows:</p>
+
+      <h3>Proposed Channel Structure</h3>
+      <table>
+        <tr>
+          <th>Channel</th>
+          <th>Purpose</th>
+          <th>Automation</th>
+        </tr>
+        <tr>
+          <td>#main</td>
+          <td>Direct line to main agent</td>
+          <td>Always on</td>
+        </tr>
+        <tr>
+          <td>#task-board</td>
+          <td>Task updates, completions</td>
+          <td>On task changes</td>
+        </tr>
+        <tr>
+          <td>#alerts</td>
+          <td>Trending content, research</td>
+          <td>Daily or periodic</td>
+        </tr>
+        <tr>
+          <td>#pastor-work</td>
+          <td>SermonDev specific</td>
+          <td>On sermon stage changes</td>
+        </tr>
+        <tr>
+          <td>#app-dev</td>
+          <td>CommTracker development</td>
+          <td>Daily digest of work</td>
+        </tr>
+        <tr>
+          <td>#discipleship</td>
+          <td>Content ideas, research</td>
+          <td>Weekly</td>
+        </tr>
+        <tr>
+          <td>#personal</td>
+          <td>Life management</td>
+          <td>Reminders, tasks</td>
+        </tr>
+        <tr>
+          <td>#daily-digest</td>
+          <td>Everything agent did today</td>
+          <td>Daily evening</td>
+        </tr>
+      </table>
+
+      <h3>Direct Agent Lines</h3>
+      <p>Each sub-agent gets their own channel for direct communication:</p>
+      <ul>
+        <li>@PastorAssistant - Sermon work</li>
+        <li>@DevAgent - Building apps</li>
+        <li>@ResearchAgent - Content research</li>
+        <li>@ContentAgent - Writing drafts</li>
+        <li>@PersonalAssistant - Life tasks</li>
+      </ul>
+    </div>
+
+    <!-- 6. FILE STRUCTURE -->
+    <div class="section" id="files">
+      <h2>6. File Structure Improvements</h2>
+      
+      <h3>Current Issues</h3>
+      <ul>
+        <li>Files scattered across workspace</li>
+        <li>No centralized documents repo</li>
+        <li>Memory fragmented</li>
+        <li>Process docs in multiple places</li>
+      </ul>
+
+      <h3>Proposed Structure</h3>
+      <pre style="background: #f5f5f5; padding: 16px; border-radius: 8px; overflow-x: auto; font-size: 12px;">
+openclaw/workspace/
+├── .claw/                 # OpenClaw config
+├── memory/                # Daily logs, long-term memory
+│   ├── 2026-01-*.md
+│   ├── 2026-02-*.md
+│   ├── 2026-03-*.md
+│   └── MEMORY.md          # Curated long-term
+├── documents/             # ALL generated documents
+│   ├── sermons/
+│   │   ├── nahum-god-who-wont-look-away/
+│   │   └── [future series]/
+│   ├── content/
+│   │   ├── articles/
+│   │   ├── scripts/
+│   │   └── research/
+│   ├── plans/
+│   │   ├── semester-planning/
+│   │   └── series-planning/
+│   └── apps/
+│       ├── commtracker/
+│       └── gospel-share-tracker/
+├── mission-control/       # Dashboard UI
+├── processes/              # Process definitions
+├── scripts/                # Automation scripts
+└── templates/              # Document templates
+      </pre>
+    </div>
+
+    <!-- 7. IMPLEMENTATION ROADMAP -->
+    <div class="section" id="implementation">
+      <h2>7. Implementation Roadmap</h2>
+      
+      <h3>Phase 1: Foundation (Week 1)</h3>
+      <div class="phase">
+        <div class="phase-num">1</div>
+        <div>
+          <div class="phase-title">Set up Discord integration</div>
+          <div class="phase-desc">Connect OpenClaw to Discord per expert's method</div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">2</div>
+        <div>
+          <div class="phase-title">Create channel structure</div>
+          <div class="phase-desc">#main, #pastor-work, #app-dev, #discipleship, #personal, #alerts, #daily-digest</div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">3</div>
+        <div>
+          <div class="phase-title">Define sub-agents</div>
+          <div class="phase-desc">Create agent definitions with roles and focus areas</div>
+        </div>
+      </div>
+
+      <h3>Phase 2: Mission Control (Week 2)</h3>
+      <div class="phase">
+        <div class="phase-num">4</div>
+        <div>
+          <div class="phase-title">Build Task Board tab</div>
+          <div class="phase-desc">Kanban with owner, status, activity feed</div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">5</div>
+        <div>
+          <div class="phase-title">Build Calendar tab</div>
+          <div class="phase-desc">Visual display of all cron jobs and scheduled tasks</div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">6</div>
+        <div>
+          <div class="phase-title">Build Documents tab</div>
+          <div class="phase-desc">Searchable repository of all generated docs</div>
+        </div>
+      </div>
+
+      <h3>Phase 3: Optimization (Week 3)</h3>
+      <div class="phase">
+        <div class="phase-num">7</div>
+        <div>
+          <div class="phase-title">Add Team tab</div>
+          <div class="phase-desc">Agent org chart with mission statement</div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">8</div>
+        <div>
+          <div class="phase-title">Improve Memories tab</div>
+          <div class="phase-desc">Better organization, long-term section</div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">9</div>
+        <div>
+          <div class="phase-title">Reorganize file structure</div>
+          <div class="phase-desc">Move docs to centralized /documents folder</div>
+        </div>
+      </div>
+
+      <h3>Phase 4: Advanced (Week 4+)</h3>
+      <div class="phase">
+        <div class="phase-num">10</div>
+        <div>
+          <div class="phase-title">Multi-agent workflows</div>
+          <div class="phase-desc">Research → Content → Approve → Publish pipelines</div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">11</div>
+        <div>
+          <div class="phase-title">Custom automations</div>
+          <div class="phase-desc">Reverse prompt for new use cases</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPEN QUESTIONS -->
+    <div class="section">
+      <h2>8. Open Questions for Discussion</h2>
+      <ul>
+        <li><strong>Should we start with Discord or build Mission Control first?</strong></li>
+        <li><strong>Which focus area should get the first sub-agent?</strong> (Recommend: Pastor Assistant for SermonDev)</li>
+        <li><strong>Do you want to keep webchat as primary or move to Discord?</strong></li>
+        <li><strong>Local models?</strong> Expert recommends Mac Mini for entry-level local running</li>
+        <li><strong>What's the priority order?</strong> 1) Pastor Work, 2) Discipleship, 3) Apps, 4) Marketing, 5) Personal?</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <p style="text-align: center; color: #999; font-size: 12px; padding: 20px;">
+    Last updated: March 4, 2026
+  </p>
+</body>
+</html>

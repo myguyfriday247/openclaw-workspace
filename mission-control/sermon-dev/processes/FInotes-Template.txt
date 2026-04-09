@@ -1,0 +1,24 @@
+# {{SERIES_TITLE}}
+# Week {{WEEK_NUM}}: {{WEEK_TITLE}}
+Key Verse: {{KEY_VERSE}}
+
+------
+**{{POINT_NUM}}. {{POINT_TITLE}}**
+{{POINT_SUMMARY}}
+
+**Reflection:**
+{{REFLECTION_QUESTION}}
+
+**Application:**
+{{APPLICATION_PROMPT}}
+
+____
+
+------
+{{REPEAT_FOR_EACH_POINT}}
+
+------
+**Final Reflection:**
+{{FINAL_REFLECTION_Q1}}
+{{FINAL_REFLECTION_Q2}}
+{{FINAL_REFLECTION_Q3}}

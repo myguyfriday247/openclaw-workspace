@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receipts Tracker - Pastor Work</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; min-height: 100vh; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    h1 { color: #333; margin-bottom: 20px; }
+    .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px; }
+    .card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .card h3 { color: #666; font-size: 14px; margin-bottom: 8px; }
+    .card .amount { font-size: 28px; font-weight: bold; color: #333; }
+    table { width: 100%; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    th { background: #eae6f6; padding: 15px; text-align: left; font-weight: 600; color: #333; }
+    td { padding: 15px; border-top: 1px solid #eee; }
+    .category { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; }
+    .category.travel { background: #e3f2fd; color: #1565c0; }
+    .category.supplies { background: #e8f5e9; color: #2e7d32; }
+    .category.equipment { background: #fff3e0; color: #ef6c00; }
+    .category.books { background: #f3e5f5; color: #7b1fa2; }
+    .category.meals { background: #fce4ec; color: #c2185b; }
+    .category.other { background: #eceff1; color: #546e7a; }
+    .add-btn { position: fixed; bottom: 30px; right: 30px; background: #667eea; color: white; border: none; padding: 15px 25px; border-radius: 30px; font-size: 16px; cursor: pointer; box-shadow: 0 4px 15px rgba(102,126,234,0.4); }
+    .add-btn:hover { background: #5a6fd6; }
+    .status { display: inline-block; padding: 4px 10px; border-radius: 4px; font-size: 12px; }
+    .status.pending { background: #fff3e0; color: #ef6c00; }
+    .status.approved { background: #e8f5e9; color: #2e7d32; }
+    .status.deducted { background: #e3f2fd; color: #1565c0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🧾 Receipts Tracker - Pastor Work</h1>
+    
+    <div class="summary">
+      <div class="card">
+        <h3>Total This Month</h3>
+        <div class="amount">$13.34</div>
+      </div>
+      <div class="card">
+        <h3>Pending Review</h3>
+        <div class="amount">$13.34</div>
+      </div>
+      <div class="card">
+        <h3>Tax Deductible</h3>
+        <div class="amount">$0.87</div>
+      </div>
+      <div class="card">
+        <h3>Receipts This Month</h3>
+        <div class="amount">1</div>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Vendor</th>
+          <th>Category</th>
+          <th>Amount</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="receipts-list">
+        <tr>
+          <td>03/07/2026</td>
+          <td>Pastoral MMT (Code: 6330?)</td>
+          <td>Wendy's</td>
+          <td><span class="category meals">Meals</span></td>
+          <td>$13.34</td>
+          <td><span class="status pending">Pending</span></td>
+        </tr>
+        <tr>
+          <td colspan="6" style="text-align: center; color: #999; padding: 40px;">
+            No receipts yet. Click + to add one.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button class="add-btn" onclick="addReceipt()">+ Add Receipt</button>
+  </div>
+
+  <script>
+    function addReceipt() {
+      alert('To add a receipt: Forward the receipt email to me or drop it in #pastor-work with details!');
+    }
+  </script>
+</body>
+</html>

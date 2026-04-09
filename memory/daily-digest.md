@@ -1,27 +1,51 @@
-# Daily Discipleship Digest Log
+# Daily Discipleship Digest
+**Tuesday, March 31st, 2026**
 
-## Feb 7, 2026
+---
 
-**Sent to:** Chris via Telegram
+## ✝️ INSIGHTS FOR TODAY
 
-**Items:**
-1. 12 Ministry Trends for 2026 (Lifeway Research) - https://research.lifeway.com/2026/01/15/12-ministry-trends-for-2026/
-2. Gen Z Is Leading the Church Attendance Surge (Carey Nieuwhof) - https://careynieuwhof.com/church-trends-2026/
-3. 2026 National Disciple Making Forum (Discipleship.org) - https://www.eventbrite.com/e/2026-national-disciple-making-forum-tickets-1351187441009
-4. Discipleship Without a Plan (Lifeway) - https://research.lifeway.com/2025/08/21/discipleship-is-a-priority-without-a-plan-for-many-churches/
-5. Missional Trends 2026 (Evangelical Alliance UK) - https://www.eauk.org/what-we-do/initiatives/missional-trends-2026
+### 1. The Gospel Coalition — Intergenerational Discipleship
+*"God used life-on-life discipleship to grow my faith. He placed an older and wiser man in my life who somehow knew everything I needed to hear, even when I didn't want to hear it."*
 
-**Notes:** Ran manually after morning cron job failed due to config error (agentTurn vs systemEvent mismatch). Fixed the cron job configuration.
+**Key Insight:** Intergenerational discipleship integrates younger believers into relationships with older saints—not just for ministry, but for intentional life-on-life mentorship. Every church member is called to make disciples, and churches should provide clear paths for all to pass on their faith to the next generation.
 
-## Feb 8, 2026
+→ [Implement Intergenerational Discipleship in Your Church](https://www.thegospelcoalition.org/article/intergenerational-discipleship-church/)
 
-**Sent to:** Chris via Telegram
+---
 
-**Items:**
-1. Heart-Focused Discipleship Conference (Deeper Walk) - https://deeperwalk.com/product/heart-focused-discipleship-conference-2026/
-2. 2026 National Disciple Making Forum (Discipleship.org) - https://discipleship.org/2026-national-disciple-making-forum/
-3. Youth Ministry Conclave Recap - https://www.baptistpress.com/resource-library/news/youth-ministry-conclave-equips-connects-encourages-leaders-serving-the-next-generation/
-4. Biblical Financial Discipleship Conference - https://compassfinancialministry.org/your-money-counts-conference-2026/
-5. Faith Lens: Salt, Light & Discipleship - https://www.gcsynod.org/news/faith-lens-salt-light-and-the-life-of-discipleship
+### 2. DMMs Frontier Movements — Beyond 4G
+*"4G is not a magic number. The real aim is to see rapid, organic, sustained growth where disciples naturally make more disciples, and churches start new churches without heavy top-down involvement."*
 
-**Notes:** Ran manually. Cron scheduler showing lastRunAtMs as Feb 7 despite Feb 8 8am event firing. Investigating scheduler timing drift.
+**Key Insight:** When movements plateau, refocus on six key areas: organic growth, church functions, leadership training, apostolic passion, release vs. control, and belief barriers. The goal isn't generational milestones—it's Spirit-led transformation that reaches entire regions.
+
+→ [Beyond 4G: Refocusing on What Truly Drives Movement Growth](https://www.dmmsfrontiermissions.com/rapid-organic-multiplication/)
+
+---
+
+### 3. Ken Adams / Impact Discipleship Ministries
+*"Impact Discipleship Ministries exists to inspire people and churches to be and build disciples of Jesus Christ."*
+
+**Key Insight:** Ken Adams hosts one of the top disciple-making podcasts, providing practical tools, skills, and strategies for multiplying disciples. His co-hosts include Ron Cansler, Mike Keaton, and Lance Summer—equipping leaders with actionable disciple-making frameworks.
+
+→ [60 Best Disciple Podcasts to Listen to in 2026](https://podcast.feedspot.com/disciple_podcasts/)
+
+---
+
+### 4. Multiply Movements — 2026 National Disciple Making Forum
+*"You won't just hear theory—you'll learn from practitioners who are living out Jesus-style disciple making every day."*
+
+**Key Insight:** The 2026 National Disciple Making Forum features breakout tracks focused on multiplying disciples in local churches and communities. Movement leaders are gathering to share practitioner insights, not just theory.
+
+→ [Discipleship.org](https://discipleship.org/blog/get-an-early-look-at-the-breakout-tracks-at-the-2026-national-disciple-making-forum/)
+
+---
+
+## 📖 CLOSING THOUGHT
+
+*"Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you."*
+— **Matthew 28:19-20**
+
+---
+
+*Daily Digest • March 31, 2026*

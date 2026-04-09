@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sermon Development Process</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      min-height: 100vh; color: white; padding: 40px;
+    }
+    h1 { font-size: 2rem; margin-bottom: 10px; color: #a5b4fc; }
+    h2 { font-size: 1.3rem; margin: 30px 0 15px; color: #a5b4fc; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; }
+    h3 { font-size: 1.1rem; margin: 20px 0 10px; color: #c4b5fd; }
+    .subtitle { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 30px; }
+    .section { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; margin-bottom: 20px; }
+    .stage { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 20px; margin-bottom: 15px; border-left: 4px solid #f59e0b; }
+    .stage-num { font-size: 0.85rem; color: #f59e0b; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    .stage-name { font-size: 1.2rem; font-weight: 600; margin: 5px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    th { color: #a5b4fc; font-weight: 600; }
+    .owner-me { background: rgba(239, 68, 68, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }
+    .owner-you { background: rgba(59, 130, 246, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }
+    .owner-both { background: rgba(168, 85, 247, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }
+    .owner-ai { background: rgba(34, 197, 94, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }
+    .owner-unsure { background: rgba(251, 191, 36, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }
+    .input-output { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-top: 10px; }
+    .input-output h4 { color: #c4b5fd; font-size: 0.9rem; margin-bottom: 8px; }
+    .questions { background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 8px; padding: 15px; margin-top: 20px; }
+    .questions h4 { color: #fbbf24; margin-bottom: 10px; }
+    .questions ul { margin-left: 20px; }
+    .questions li { margin-bottom: 8px; color: rgba(255,255,255,0.9); }
+    .nav { margin-bottom: 30px; }
+    .nav a { color: rgba(255,255,255,0.7); text-decoration: none; margin-right: 20px; }
+    .nav a:hover { color: white; }
+    .note { background: rgba(59, 130, 246, 0.1); border-left: 3px solid #3b82f6; padding: 12px 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+    .warning { background: rgba(239, 68, 68, 0.1); border-left: 3px solid #ef4444; padding: 12px 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+    ul { margin-left: 20px; }
+    li { margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <a href="../sermon-dev/">← Back to SermonDev</a>
+  </div>
+  
+  <h1>🎙️ Sermon Development Process</h1>
+  <p class="subtitle">How we develop individual sermons week to week (11 stages)</p>
+
+  <div class="section">
+    <h2>1. Overview</h2>
+    <p>Sermon Development takes a confirmed week from the Series Teaching Map and develops it into a finalized manuscript ready for delivery. This follows the fixed 11-stage process below.</p>
+    <p style="margin-top: 15px;"><strong>Goal:</strong> Create a disciple-forming sermon that follows the sermon flow (Intro → Scripture → Points with Observation, Application, Next Steps → Conclusion with Decision, "I Will", Share, Prayer).</p>
+    <div class="note">
+      <strong>My role:</strong> I am not the source of sermon content. I do research, take your thoughts, structure outlines, draft and edit documents, and generate the final manuscript. You provide the vision, direction, and final approval.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>2. Stages</h2>
+    <p><em>These 11 stages are fixed and cannot be changed.</em></p>
+    
+    <div class="stage">
+      <div class="stage-num">Stage 1</div>
+      <div class="stage-name">Research</div>
+      <p>I compile the raw materials: scholarly sources, theological commentary, key themes, structure, and quotes.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num">Stage 2</div>
+      <div class="stage-name">Points</div>
+      <p>I ask you questions, offer 5 suggestions, you confirm the points to be used, I build out a summary.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num">Stage 3</div>
+      <div class="stage-name">Application/Illustration</div>
+      <p>I ask how you will apply each point, offer suggestions, you confirm direction, I create a summary document.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num">Stage 4</div>
+      <div class="stage-name">Bookends</div>
+      <p>I ask for your thoughts on the intro and conclusion, you confirm and then write the intro/conclusion.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num">Stage 5</div>
+      <div class="stage-name">Outline</div>
+      <p>Build from Bookends + Points. Includes intro, points (observation, application, next step actions).</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num">Stage 6</div>
+      <div class="stage-name">First Draft</div>
+      <p>We send to Claude to write in your voice. Read voice profile, use outline structure, generate manuscript.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num">Stage 7</div>
+      <div class="stage-name">Edit 1</div>
+      <p>Run through Claude Opus 4.6. I present suggestions, you approve/deny each, I incorporate approved edits.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num">Stage 8</div>
+      <div class="stage-name">Final Draft</div>
+      <p>You review, make any edits, and approve.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num">Stage 9</div>
+      <div class="stage-name">Edit 2</div>
+      <p>Run through Claude Opus 4.6 again with different prompt. I present suggestions, you approve/deny each, I incorporate.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num">Stage 10</div>
+      <div class="stage-name">Completed</div>
+      <p>Manuscript is ready. All edits finished. Ready for delivery.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num">Stage 11</div>
+      <div class="stage-name">Generate</div>
+      <p>Create deliverable files: slides/presentation, handouts, any other preaching aids.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>3. Tasks Per Stage</h2>
+
+    <h3>Stage 1: Research</h3>
+    <table>
+      <tr><th>Task</th><th>Who</th></tr>
+      <tr><td>Confirm passage, title, and week number from Series Teaching Map</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td>Web search for scholarly sources and current voices on the passage</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>Read/compendium theological commentary</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>Identify key themes, structure, cross-references</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>Export to Research Brief markdown document</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>You review Research Brief and ask for edits</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td>I make edits and you confirm</td><td><span class="owner-both">Both</span></td></tr>
+    </table>
+
+    <h3>Stage 2: Points</h3>
+    <table>
+      <tr><th>Task</th><th>Who</th></tr>
+      <tr><td>I ask you questions about the passage and its main ideas</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>You provide thoughts and direction</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td>I offer 5 point suggestions</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>You confirm which points to use</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td>I build out a summary of each point with biblical foundation</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td><strong>[NEW] I include 2-3 quotable/key lines per point for punchy language</strong></td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>You approve the Points summary</td><td><span class="owner-you">You</span></td></tr>
+    </table>
+
+    <h3>Stage 3: Application/Illustration</h3>
+    <table>
+      <tr><th>Task</th><th>Who</th></tr>
+      <tr><td>I ask how you will apply each point to daily life</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>You provide application direction</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td>I offer suggestions on how we might approach application</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>You confirm the application direction</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td>I create 3 specific, quantifiable "Next Step Actions" per point (not sequential - each is standalone act of obedience)</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>You edit/confirm the next step actions</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td>I suggest illustration ideas</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>You select illustrations to use</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td><strong>[NEW] I create "Illustration Selection Summary" - which illustrations selected, why, and how they connect to each point</strong></td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td><strong>[NEW] I create "Point-by-Point Application Specifics" - specific scenarios and situations for each point's application</strong></td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>I create the Summary Document (deliverable for this phase)</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>You edit/confirm the Summary Document</td><td><span class="owner-you">You</span></td></tr>
+    </table>
+
+    <h3>Stage 4: Bookends</h3>
+    <table>
+      <tr><th>Task</th><th>Who</th></tr>
+      <tr><td>I ask for your thoughts on the introduction (framework for Claude to write)</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>You share your ideas for the intro</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td>I ask for your thoughts on the conclusion (framework for Claude to write)</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>You share your ideas for the conclusion</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td>You confirm the direction</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td>I create a summary of the bookends with illustrations based on your feedback (framework for Claude)</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>You approve the bookend summary</td><td><span class="owner-you">You</span></td></tr>
+    </table>
+    <div class="note">
+      <strong>Note:</strong> The actual intro/conclusion are written by Claude in Stage 6 (First Draft). Stage 4 provides the framework and ideas for Claude to work from.
+    </div>
+
+    <h3>Stage 5: Outline</h3>
+    <table>
+      <tr><th>Task</th><th>Who</th></tr>
+      <tr><td>I incorporate Bookends (intro/conclusion) into structure</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>I structure each point with: Observation, Application, Next Step Actions</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td><strong>[NEW] I preemptively address common objections/"But what about..." questions for each point</strong></td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>You review the complete outline</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td>You approve the outline</td><td><span class="owner-you">You</span></td></tr>
+    </table>
+
+    <h3>Stage 6: First Draft</h3>
+    <table>
+      <tr><th>Task</th><th>Who</th></tr>
+      <tr><td>I read your Voice Profile</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>I read the Outline and Summary Document</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>Together, we send to Claude to write in your voice</td><td><span class="owner-both">Both</span></td></tr>
+      <tr><td>Claude generates First Draft manuscript</td><td><span class="owner-ai">AI</span></td></tr>
+      <tr><td>I present First Draft to you</td><td><span class="owner-me">Me</span></td></tr>
+    </table>
+
+    <h3>Stage 7: Edit 1</h3>
+    <table>
+      <tr><th>Task</th><th>Who</th></tr>
+      <tr><td>You provide Edit 1 prompt for Claude Opus 4.6</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td>I run the manuscript through Claude Opus 4.6 with your prompt</td><td><span class="owner-ai">AI</span></td></tr>
+      <tr><td>I present Claude's suggestions to you</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>You approve or deny each suggestion (with context for each)</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td>I send your approval/denial feedback back to Claude to incorporate</td><td><span class="owner-ai">AI</span></td></tr>
+      <tr><td>Claude generates updated manuscript with approved edits</td><td><span class="owner-ai">AI</span></td></tr>
+      <tr><td>Move to Stage 8</td><td><span class="owner-both">Both</span></td></tr>
+    </table>
+    <div class="note">
+      <strong>What I send to Claude for Edit 1:</strong>
+      <ul>
+        <li>Current manuscript</li>
+        <li>Your Edit 1 prompt (from your .md file in Downloads)</li>
+        <li>Claude's previous suggestions</li>
+        <li>Your approval/denial for each suggestion (with reasoning for denials)</li>
+        <li>Voice Profile (for consistency)</li>
+      </ul>
+    </div>
+
+    <h3>Stage 8: Final Draft</h3>
+    <table>
+      <tr><th>Task</th><th>Who</th></tr>
+      <tr><td>You review the manuscript with Edit 1 changes</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td>You make any additional edits</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td>You approve the Final Draft</td><td><span class="owner-you">You</span></td></tr>
+    </table>
+
+    <h3>Stage 9: Edit 2</h3>
+    <table>
+      <tr><th>Task</th><th>Who</th></tr>
+      <tr><td>You provide a different Edit 2 prompt for Claude Opus 4.6</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td>I run the manuscript through Claude Opus 4.6 with the new prompt</td><td><span class="owner-ai">AI</span></td></tr>
+      <tr><td>I present Claude's suggestions to you</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>You approve or deny each suggestion (with context for each)</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td>I send your approval/denial feedback back to Claude to incorporate</td><td><span class="owner-ai">AI</span></td></tr>
+      <tr><td>Claude generates updated manuscript with approved edits</td><td><span class="owner-ai">AI</span></td></tr>
+      <tr><td>Move to Stage 10</td><td><span class="owner-both">Both</span></td></tr>
+    </table>
+    <div class="note">
+      <strong>What I send to Claude for Edit 2:</strong>
+      <ul>
+        <li>Current manuscript (post-Edit 1)</li>
+        <li>Your Edit 2 prompt (from your .md file in Downloads)</li>
+        <li>Claude's previous suggestions</li>
+        <li>Your approval/denial for each suggestion (with reasoning for denials)</li>
+        <li>Voice Profile (for consistency)</li>
+      </ul>
+    </div>
+
+    <h3>Stage 10: Completed</h3>
+    <table>
+      <tr><th>Task</th><th>Who</th></tr>
+      <tr><td>All edits complete - manuscript ready for delivery</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>You do final review and make any minor edits</td><td><span class="owner-you">You</span></td></tr>
+      <tr><td>You confirm manuscript is complete</td><td><span class="owner-you">You</span></td></tr>
+    </table>
+
+    <h3>Stage 11: Generate</h3>
+    <table>
+      <tr><th>Task</th><th>Who</th></tr>
+      <tr><td>Create slides/presentation format</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>Create handout/paper copy</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>Create any other preaching aids</td><td><span class="owner-me">Me</span></td></tr>
+      <tr><td>You approve the generated files</td><td><span class="owner-you">You</span></td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>4. Who Does What</h2>
+    <p><span class="owner-me">Me</span> = I do the work | <span class="owner-you">You</span> = You do the work | <span class="owner-both">Both</span> = Collaborative | <span class="owner-ai">AI</span> = Claude does the work | <span class="owner-unsure">?</span> = Need clarity</p>
+
+    <table>
+      <tr><th>Stage</th><th>Key Decision Maker</th><th>My Role</th><th>Your Role</th></tr>
+      <tr><td>1. Research</td><td><span class="owner-you">You</span></td><td>Compile, present</td><td>Review, approve</td></tr>
+      <tr><td>2. Points</td><td><span class="owner-you">You</span></td><td>Ask questions, suggest, build summary</td><td>Confirm points</td></tr>
+      <tr><td>3. Application/Illustration</td><td><span class="owner-you">You</span></td><td>Ask questions, suggest, create summary</td><td>Confirm direction, select</td></tr>
+      <tr><td>4. Bookends</td><td><span class="owner-you">You</span></td><td>Ask questions</td><td>Write intro/conclusion</td></tr>
+      <tr><td>5. Outline</td><td><span class="owner-you">You</span></td><td>Build structure</td><td>Approve</td></tr>
+      <tr><td>6. First Draft</td><td><span class="owner-both">Both</span></td><td>Send to Claude, present</td><td>Trigger Claude</td></tr>
+      <tr><td>7. Edit 1</td><td><span class="owner-you">You</span></td><td>Run Claude, present, send feedback to Claude</td><td>Provide prompt, approve/deny</td></tr>
+      <tr><td>8. Final Draft</td><td><span class="owner-you">You</span></td><td>Present</td><td>Review, edit, approve</td></tr>
+      <tr><td>9. Edit 2</td><td><span class="owner-you">You</span></td><td>Run Claude, present, send feedback to Claude</td><td>Provide prompt, approve/deny</td></tr>
+      <tr><td>10. Completed</td><td><span class="owner-you">You</span></td><td>Finalize</td><td>Final review, confirm</td></tr>
+      <tr><td>11. Generate</td><td><span class="owner-you">You</span></td><td>Create files</td><td>Approve</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>5. Inputs / Outputs</h2>
+
+    <div class="input-output">
+      <h4>📥 Stage 1 (Research) Inputs</h4>
+      <ul>
+        <li>Confirmed week from Series Teaching Map (passage, title, focus)</li>
+        <li>Any specific research requests from you</li>
+      </ul>
+    </div>
+    <div class="input-output">
+      <h4>📤 Stage 1 (Research) Outputs</h4>
+      <ul>
+        <li>Research Brief markdown document</li>
+      </ul>
+    </div>
+
+    <div class="input-output">
+      <h4>📥 Stage 2 (Points) Inputs</h4>
+      <ul>
+        <li>Approved Research Brief</li>
+      </ul>
+    </div>
+    <div class="input-output">
+      <h4>📤 Stage 2 (Points) Outputs</h4>
+      <ul>
+        <li>Points Summary document</li>
+        <li><strong>[NEW] Key quotable lines per point</strong></li>
+      </ul>
+    </div>
+
+    <div class="input-output">
+      <h4>📥 Stage 3 (Application/Illustration) Inputs</h4>
+      <ul>
+        <li>Approved Points Summary</li>
+      </ul>
+    </div>
+    <div class="input-output">
+      <h4>📤 Stage 3 (Application/Illustration) Outputs</h4>
+      <ul>
+        <li>Summary Document (with Next Step Actions and Illustrations)</li>
+        <li><strong>[NEW] Illustration Selection Summary</strong></li>
+        <li><strong>[NEW] Point-by-Point Application Specifics</strong></li>
+      </ul>
+    </div>
+
+    <div class="input-output">
+      <h4>📥 Stage 4 (Bookends) Inputs</h4>
+      <ul>
+        <li>Summary Document</li>
+        <li>Series Teaching Map context</li>
+      </ul>
+    </div>
+    <div class="input-output">
+      <h4>📤 Stage 4 (Bookends) Outputs</h4>
+      <ul>
+        <li>Intro and Conclusion (written by you)</li>
+      </ul>
+    </div>
+
+    <div class="input-output">
+      <h4>📥 Stage 5 (Outline) Inputs</h4>
+      <ul>
+        <li>Points Summary</li>
+        <li>Summary Document</li>
+        <li>Bookends (intro/conclusion)</li>
+      </ul>
+    </div>
+    <div class="input-output">
+      <h4>📤 Stage 5 (Outline) Outputs</h4>
+      <ul>
+        <li>Complete Outline (Intro → Points → Conclusion)</li>
+      </ul>
+    </div>
+
+    <div class="input-output">
+      <h4>📥 Stage 6 (First Draft) Inputs</h4>
+      <ul>
+        <li>Approved Outline</li>
+        <li>Voice Profile</li>
+        <li>Summary Document</li>
+      </ul>
+    </div>
+    <div class="input-output">
+      <h4>📤 Stage 6 (First Draft) Outputs</h4>
+      <ul>
+        <li>First Draft Manuscript</li>
+      </ul>
+    </div>
+
+    <div class="input-output">
+      <h4>📥 Stage 7 (Edit 1) Inputs</h4>
+      <ul>
+        <li>First Draft Manuscript</li>
+        <li>Your Edit 1 prompt</li>
+      </ul>
+    </div>
+    <div class="input-output">
+      <h4>📤 Stage 7 (Edit 1) Outputs</h4>
+      <ul>
+        <li>Manuscript with approved Edit 1 changes</li>
+      </ul>
+    </div>
+
+    <div class="input-output">
+      <h4>📥 Stage 8 (Final Draft) Inputs</h4>
+      <ul>
+        <li>Manuscript with Edit 1</li>
+      </ul>
+    </div>
+    <div class="input-output">
+      <h4>📤 Stage 8 (Final Draft) Outputs</h4>
+      <ul>
+        <li>Approved Final Draft</li>
+      </ul>
+    </div>
+
+    <div class="input-output">
+      <h4>📥 Stage 9 (Edit 2) Inputs</h4>
+      <ul>
+        <li>Final Draft</li>
+        <li>Your Edit 2 prompt</li>
+      </ul>
+    </div>
+    <div class="input-output">
+      <h4>📤 Stage 9 (Edit 2) Outputs</h4>
+      <ul>
+        <li>Manuscript with approved Edit 2 changes</li>
+      </ul>
+    </div>
+
+    <div class="input-output">
+      <h4>📥 Stage 10 (Completed) Inputs</h4>
+      <ul>
+        <li>Manuscript with all edits</li>
+      </ul>
+    </div>
+    <div class="input-output">
+      <h4>📤 Stage 10 (Completed) Outputs</h4>
+      <ul>
+        <li>Completed Manuscript (final, ready for delivery)</li>
+      </ul>
+    </div>
+
+    <div class="input-output">
+      <h4>📥 Stage 11 (Generate) Inputs</h4>
+      <ul>
+        <li>Completed Manuscript</li>
+      </ul>
+    </div>
+    <div class="input-output">
+      <h4>📤 Stage 11 (Generate) Outputs</h4>
+      <ul>
+        <li><strong>Week #_Title_Manuscript.html</strong> - Final manuscript</li>
+        <li><strong>Week #_Title_Sermon Summary.pdf</strong> - 2-paragraph website summary with SEO keywords</li>
+        <li><strong>Week #_Title_PDFnotes.pdf</strong> - Printable notes sheet (template based on example from Nahum series)</li>
+        <li><strong>Week #_Title_FInotes.txt</strong> - Formatted for app (format: Title + Key Verse, then each Point with: bold heading, content, Reflection question, Application action)</li>
+        <li>All files saved to Google Drive: MyDrive > Sermons > #Series Name# > #Sermons#</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>6. Answers to Previous Questions</h2>
+    <div class="note">
+      <ul>
+        <li><strong>Voice Profile:</strong> ~/Downloads/Voice_Profile_Pastor_Chris (1).md - I will move to accessible location</li>
+        <li><strong>First Draft Prompt:</strong> ~/Downloads/Sermon_First_Draft_Prompt.md - I will move to accessible location</li>
+        <li><strong>Manuscript format:</strong> Save as .html, upload to Google Drive, convert to Google Doc</li>
+        <li><strong>Slides:</strong> Not creating slides</li>
+        <li><strong>Stage 11 files:</strong> 
+          <ul>
+            <li>Manuscript.html - full sermon manuscript</li>
+            <li>Sermon Summary.pdf - 2 paragraphs with SEO keywords</li>
+            <li>PDFnotes.pdf - printable notes (template from Nahum series example)</li>
+            <li>FInotes.txt - app format (Title + Key Verse, Points with Reflection + Application)</li>
+          </ul>
+        </li>
+        <li><strong>Google Drive:</strong> MyDrive > Sermons > #Series Name# > #Sermons#</li>
+        <li><strong>Edit prompts:</strong> Stored as .md files in Downloads - I will move to accessible location</li>
+        <li><strong>Templates:</strong> Based on examples: FInotes.txt format (see Nahum series), PDFnotes.pdf (see Nahum series)</li>
+        <li><strong>Next Step Actions:</strong> 3 different specific, quantifiable actions per point (not sequential). Must be observable/measurable - no subjective self-justification</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="margin-top: 40px; color: rgba(255,255,255,0.5); font-size: 0.9rem;">
+    Last updated: March 3, 2026
+  </p>
+</body>
+</html>

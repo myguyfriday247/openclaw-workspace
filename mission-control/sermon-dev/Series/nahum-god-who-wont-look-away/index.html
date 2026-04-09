@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nahum: The God Who Won't Look Away | SermonDev</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5; color: #333; min-height: 100vh;
+    }
+    .header {
+      background: white;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header h1 { font-size: 18px; font-weight: 600; color: #1a1a2e; }
+    .header-links { display: flex; gap: 16px; }
+    .header-links a { color: #666; text-decoration: none; font-size: 14px; }
+    .header-links a:hover { color: #1a1a2e; }
+    .content { padding: 24px; max-width: 900px; margin: 0 auto; }
+    .back-link { color: #666; text-decoration: none; font-size: 14px; margin-bottom: 20px; display: inline-block; }
+    .back-link:hover { color: #333; }
+    
+    h2 { font-size: 16px; font-weight: 600; color: #1a1a2e; margin-bottom: 16px; }
+    
+    .section {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    
+    .status-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .status-not-started { background: rgba(239, 68, 68, 0.15); color: #dc2626; }
+    .status-in-progress { background: rgba(251, 191, 36, 0.15); color: #d97706; }
+    .status-complete { background: rgba(34, 197, 94, 0.15); color: #16a34a; }
+    
+    .series-info {
+      background: #fafafa;
+      border: 1px solid #eee;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .series-info p { margin: 8px 0; font-size: 14px; }
+    .series-info strong { color: #333; }
+    
+    .sermon-link {
+      display: block;
+      padding: 12px 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #333;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    .sermon-link:hover { background: #f0f0f0; }
+    
+    /* Planning Stage Dropdown Styles */
+    .stage-item {
+      margin-bottom: 12px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .stage-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      cursor: pointer;
+      transition: background 0.15s;
+      background: #fafafa;
+    }
+    .stage-header:hover { background: #f0f0f0; }
+    .stage-header.complete { background: rgba(34, 197, 94, 0.1); }
+    .stage-header.in-progress { background: rgba(251, 191, 36, 0.1); }
+    .stage-title { font-weight: 500; font-size: 14px; }
+    .stage-status { font-size: 12px; color: #666; }
+    .stage-toggle {
+      font-size: 12px;
+      color: #666;
+      transition: transform 0.2s;
+    }
+    .stage-item.open .stage-toggle { transform: rotate(180deg); }
+    .stage-content {
+      display: none;
+      padding: 16px;
+      border-top: 1px solid #eee;
+      background: #fafafa;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .stage-item.open .stage-content { display: block; }
+    .stage-content a {
+      color: #4f46e5;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+    .stage-content a:hover { text-decoration: underline; }
+    .stage-empty {
+      color: #999;
+      font-style: italic;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>📚 Nahum: The God Who Won't Look Away</h1>
+    <div class="header-links">
+      <a href="../index.html">← SermonDev</a>
+    </div>
+  </div>
+  
+  <div class="content">
+    <a href="../index.html" class="back-link">← Back to SermonDev</a>
+
+    <div class="series-info">
+      <p><strong>Bucket:</strong> Bible / Self-Feeding (Expository)</p>
+      <p><strong>Strategy:</strong> Expository</p>
+      <p><strong>Weeks:</strong> 3</p>
+      <p><strong>Passage:</strong> Nahum</p>
+    </div>
+
+    <h2>PLANNING STAGES</h2>
+    <div class="section">
+      <div class="stage-item open">
+        <div class="stage-header complete" onclick="this.parentElement.classList.toggle('open')">
+          <div>
+            <div class="stage-title">✅ Church Research</div>
+            <div class="stage-status">Complete</div>
+          </div>
+          <span class="stage-toggle">▼</span>
+        </div>
+        <div class="stage-content">
+          <a href="#">📄 Church Research</a>
+        </div>
+      </div>
+      
+      <div class="stage-item open">
+        <div class="stage-header complete" onclick="this.parentElement.classList.toggle('open')">
+          <div>
+            <div class="stage-title">✅ Series Vision & Burden</div>
+            <div class="stage-status">Complete</div>
+          </div>
+          <span class="stage-toggle">▼</span>
+        </div>
+        <div class="stage-content">
+          <a href="#">📄 Burden Statement</a>
+        </div>
+      </div>
+      
+      <div class="stage-item open">
+        <div class="stage-header complete" onclick="this.parentElement.classList.toggle('open')">
+          <div>
+            <div class="stage-title">✅ Series Big Idea & Framing</div>
+            <div class="stage-status">Complete</div>
+          </div>
+          <span class="stage-toggle">▼</span>
+        </div>
+        <div class="stage-content">
+          <a href="#">📄 Big Idea</a>
+        </div>
+      </div>
+      
+      <div class="stage-item open">
+        <div class="stage-header complete" onclick="this.parentElement.classList.toggle('open')">
+          <div>
+            <div class="stage-title">✅ Series Arc Design</div>
+            <div class="stage-status">Complete</div>
+          </div>
+          <span class="stage-toggle">▼</span>
+        </div>
+        <div class="stage-content">
+          <a href="#">📄 Arc Description</a>
+        </div>
+      </div>
+      
+      <div class="stage-item open">
+        <div class="stage-header complete" onclick="this.parentElement.classList.toggle('open')">
+          <div>
+            <div class="stage-title">✅ Week-by-Week Map</div>
+            <div class="stage-status">Complete</div>
+          </div>
+          <span class="stage-toggle">▼</span>
+        </div>
+        <div class="stage-content">
+          <a href="#">📄 Week-by-Week Map</a>
+        </div>
+      </div>
+      
+      <div class="stage-item open">
+        <div class="stage-header complete" onclick="this.parentElement.classList.toggle('open')">
+          <div>
+            <div class="stage-title">✅ Series Teaching Map</div>
+            <div class="stage-status">Complete</div>
+          </div>
+          <span class="stage-toggle">▼</span>
+        </div>
+        <div class="stage-content">
+          <a href="#">📄 Teaching Map</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>SERMONS IN SERIES</h2>
+    <div class="section">
+      <a href="../Sermons/nahum-god-who-wont-look-away/Week-1-The-Heart-of-God/index.html" class="sermon-link" style="background: rgba(34, 197, 94, 0.1);">
+        <strong>Week 1:</strong> The Heart of God <span style="opacity: 0.6;">• Complete</span>
+      </a>
+      <a href="../Sermons/nahum-god-who-wont-look-away/Week-2_The-Leash-on-Chaos/index.html" class="sermon-link" style="background: rgba(34, 197, 94, 0.1);">
+        <strong>Week 2:</strong> The Leash on Chaos <span style="opacity: 0.6;">• Complete</span>
+      </a>
+      <a href="../Sermons/nahum-god-who-wont-look-away/Week-3_Coming-Soon/index.html" class="sermon-link" style="background: rgba(251, 191, 36, 0.1);">
+        <strong>Week 3:</strong> Coming Soon <span style="opacity: 0.6;">• Edit 2</span>
+      </a>
+    </div>
+  </div>
+
+  <p style="text-align: center; color: #999; font-size: 12px; padding: 20px;">
+    Last updated: March 3, 2026
+  </p>
+</body>
+</html>

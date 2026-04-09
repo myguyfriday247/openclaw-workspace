@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CommTracker Interface</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+      min-height: 100vh; color: white; padding: 40px;
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+    h1 { font-size: 2rem; margin-bottom: 8px; }
+    .subtitle { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 30px; }
+    
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .card h2 { font-size: 1.25rem; margin-bottom: 16px; color: #1e1b4b; }
+    .card h3 { font-size: 1rem; margin-bottom: 12px; color: #4b5563; }
+    
+    .btn { 
+      display: inline-block; padding: 12px 20px; border-radius: 8px; text-decoration: none;
+      font-weight: 500; margin-right: 10px; margin-bottom: 10px;
+    }
+    .btn-app { background: #4f46e5; color: white; }
+    .btn-app:hover { background: #4338ca; }
+    .btn-doc { background: #059669; color: white; }
+    .btn-doc:hover { background: #047857; }
+    .btn-progress { background: #f59e0b; color: white; }
+    .btn-progress:hover { background: #d97706; }
+    
+    .nav { margin-bottom: 30px; }
+    .nav a { color: rgba(255,255,255,0.7); text-decoration: none; margin-right: 20px; }
+    .nav a:hover { color: white; }
+    
+    .links { display: flex; flex-wrap: wrap; gap: 8px; }
+    .link {
+      display: inline-block;
+      padding: 8px 16px;
+      background: #4f46e5;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+    .link:hover { background: #4338ca; }
+    
+    .footer { margin-top: 30px; text-align: center; color: rgba(255,255,255,0.5); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <a href="/mission-control/">← Back to Mission Control</a>
+  </div>
+  
+  <div class="container">
+    <h1>📋 CommTracker Interface</h1>
+    <p class="subtitle">Church Communications Operations Platform</p>
+    
+    <!-- Main Actions -->
+    <div class="card">
+      <h2>🚀 Open CommTracker App</h2>
+      <a href="http://localhost:3000" class="btn btn-app" target="_blank">🌐 Launch Local App</a>
+    </div>
+    
+    <!-- Quick Links -->
+    <div class="card">
+      <h2>🔗 Quick Links</h2>
+      <div class="links">
+        <a href="http://localhost:3000/dashboard" class="link">📊 Dashboard</a>
+        <a href="http://localhost:3000/dashboard/events" class="link">📅 Events</a>
+        <a href="http://localhost:3000/dashboard/calendar" class="link">🗓️ Calendar</a>
+        <a href="http://localhost:3000/dashboard/reports" class="link">📈 Reports</a>
+        <a href="http://localhost:3000/dashboard/admin" class="link">⚙️ Admin</a>
+        <a href="http://localhost:3000/dashboard/ministries" class="link">⛪ Ministries</a>
+        <a href="http://localhost:3000/dashboard/pathways" class="link">🛤️ Pathways</a>
+        <a href="http://localhost:3000/dashboard/graphic-sizes" class="link">🖼️ Graphic Sizes</a>
+        <a href="http://localhost:3000/dashboard/settings" class="link">⚙️ Settings</a>
+      </div>
+    </div>
+    
+    <!-- Development Links -->
+    <div class="card">
+      <h2>🛠️ Development</h2>
+      <div class="links">
+        <a href="http://localhost:3000/dev/components" class="link">🎨 Component Demo</a>
+        <a href="CommTracker-Progress.html" class="link">📝 Progress Log</a>
+      </div>
+    </div>
+    
+    <!-- Documentation -->
+    <div class="card">
+      <h2>📚 Documentation</h2>
+      <div class="links">
+        <a href="../Projects/CommTracker/Project Overview/CommTracker_OpenClaw_Roadmap_v2.md" class="link">📋 Project Roadmap</a>
+      </div>
+    </div>
+    
+    <div class="footer">
+      Last updated: April 1, 2026 at 2:00 AM
+    </div>
+  </div>
+</body>
+</html>

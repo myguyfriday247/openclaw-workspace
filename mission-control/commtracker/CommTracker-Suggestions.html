@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CommTracker - Suggestions</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f8fafc; color: #1f2937; padding: 40px; max-width: 1200px; margin: 0 auto;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 10px; color: #1e293b; }
+    h2 { font-size: 1.5rem; margin: 30px 0 15px; color: #334155; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+    .subtitle { color: #64748b; font-size: 1.1rem; margin-bottom: 30px; }
+    .section { background: white; border-radius: 12px; padding: 25px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    .nav { margin-bottom: 30px; }
+    .nav a { color: #3b82f6; text-decoration: none; }
+    .nav a:hover { text-decoration: underline; }
+    .bug { border-left: 4px solid #ef4444; background: #fef2f2; }
+    .improvement { border-left: 4px solid #22c55e; background: #f0fdf4; }
+    .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; margin-right: 8px; }
+    .badge-bug { background: #fee2e2; color: #dc2626; }
+    .badge-improvement { background: #dcfce7; color: #166534; }
+    ul { margin-left: 20px; }
+    li { margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <a href="CommTracker_Interface.html">← Back to CommTracker</a>
+  </div>
+
+  <h1>💡 CommTracker - Suggestions</h1>
+  <p class="subtitle">Bugs, inefficiencies, and ideas for improvement</p>
+
+  <h2>🐛 Bugs & Issues</h2>
+  <div class="section bug">
+    <span class="badge badge-bug">Bug</span>
+    <h3>Calendar shows "Request" instead of event title</h3>
+    <p>Calendar falls back to "Request" when event title is missing. Location: <code>calendar/page.tsx line 344</code></p>
+  </div>
+
+  <h2>💡 Innovations</h2>
+  <div class="section improvement">
+    <span class="badge badge-improvement">New</span>
+    <h3>Keyboard Shortcuts</h3>
+    <p>Add keyboard navigation (j/k for list navigation, / for search).</p>
+  </div>
+
+  <div class="section improvement">
+    <span class="badge badge-improvement">New</span>
+    <h3>Bulk Actions</h3>
+    <p>Allow selecting multiple items for bulk status changes.</p>
+  </div>
+
+  <div class="section improvement">
+    <span class="badge badge-improvement">New</span>
+    <h3>Undo Functionality</h3>
+    <p>Add "undo" for destructive actions.</p>
+  </div>
+
+  <div class="section improvement">
+    <span class="badge badge-improvement">New</span>
+    <h3>Export to CSV</h3>
+    <p>Add CSV export option alongside PDF for reports.</p>
+  </div>
+
+  <p style="margin-top: 40px; color: #9ca3af; font-size: 0.9rem;">
+    Updated: February 27, 2026
+  </p>
+</body>
+</html>
