@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "mode": {
+      "type": "string",
+      "enum": [
+        "sermon_research",
+        "topical_research",
+        "background_research",
+        "series_research",
+        "book_overview_research"
+      ]
+    },
+    "passage_or_topic": {
+      "type": "string"
+    },
+    "direction": {
+      "type": "string"
+    },
+    "audience": {
+      "type": "string"
+    },
+    "series_context": {
+      "type": "string"
+    },
+    "known_needs": {
+      "type": "string"
+    },
+    "desired_output": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "passage_or_topic",
+    "direction"
+  ]
+}

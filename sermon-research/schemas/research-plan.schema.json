@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "assignment_summary": {
+      "type": "string"
+    },
+    "research_mode": {
+      "type": "string"
+    },
+    "main_questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "major_tensions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "final_sections": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "subagent_assignments": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "assignment_summary",
+    "research_mode",
+    "main_questions"
+  ]
+}

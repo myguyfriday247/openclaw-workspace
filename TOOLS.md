@@ -38,3 +38,8 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
+
+## Discord Channels
+
+- sermon-command-center → 1481876729005080636
+- sermon-research → 1486001884320763994

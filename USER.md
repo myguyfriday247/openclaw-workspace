@@ -1,17 +1,16 @@
 # USER.md - About Your Human
 
-*Learn about the person you're helping. Update this as you go.*
-
-- **Name:** 
-- **What to call them:** 
-- **Pronouns:** *(optional)*
-- **Timezone:** 
-- **Notes:** 
+- **Name:** Chris Hopkins
+- **What to call them:** Pastor Chris
+- **Pronouns:** (unknown)
+- **Timezone:** America/New_York (EDT)
+- **Notes:** Lead pastor. Building sermon series for "Defined" identity series and Philippians series.
+- **Communication:** Telegram (8534195399)
 
 ## Context
 
-*(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)*
-
----
-
-The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
+- Running sermon development process with heavy research + illustration focus
+- Likes concise, direct communication
+- Uses "Gizmo" as a coding/research agent
+- Wants sources/links in research
+- Has receipt management system set up (receipts sent to process through OpenClaw)

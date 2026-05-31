@@ -1,0 +1,871 @@
+{
+  "schema": "acpx.session.v1",
+  "acpx_record_id": "agent:claude:acp:bc2aaece-d628-4149-a77a-ebef0c0ad665:oneshot:5b31cb91-7713-4af4-b777-47b70fefcfbd",
+  "acp_session_id": "beef5475-f51d-47bb-bc19-ec3e25d1dded",
+  "agent_command": "npx -y @agentclientprotocol/claude-agent-acp@^0.25.0",
+  "cwd": "/Users/myguyfriday/.openclaw/workspace/claude",
+  "name": "agent:claude:acp:bc2aaece-d628-4149-a77a-ebef0c0ad665",
+  "created_at": "2026-04-21T14:01:55.655Z",
+  "last_used_at": "2026-04-21T14:04:00.832Z",
+  "last_seq": 0,
+  "last_request_id": "a34aecc3-22cf-481b-a709-24a655b8848c",
+  "event_log": {
+    "active_path": "/Users/myguyfriday/.acpx/sessions/agent%3Aclaude%3Aacp%3Abc2aaece-d628-4149-a77a-ebef0c0ad665%3Aoneshot%3A5b31cb91-7713-4af4-b777-47b70fefcfbd.stream.ndjson",
+    "segment_count": 5,
+    "max_segment_bytes": 67108864,
+    "max_segments": 5,
+    "last_write_error": null
+  },
+  "closed": true,
+  "closed_at": "2026-04-21T14:04:00.987Z",
+  "pid": 4872,
+  "agent_started_at": "2026-04-21T14:01:56.056Z",
+  "last_prompt_at": "2026-04-21T14:01:59.807Z",
+  "protocol_version": 1,
+  "agent_capabilities": {
+    "_meta": {
+      "claudeCode": {
+        "promptQueueing": true
+      }
+    },
+    "promptCapabilities": {
+      "image": true,
+      "embeddedContext": true
+    },
+    "mcpCapabilities": {
+      "http": true,
+      "sse": true
+    },
+    "loadSession": true,
+    "sessionCapabilities": {
+      "fork": {},
+      "list": {},
+      "resume": {},
+      "close": {}
+    }
+  },
+  "title": null,
+  "messages": [
+    {
+      "User": {
+        "id": "030f14b6-6d98-409a-a6a4-d3a13c8c6da9",
+        "content": [
+          {
+            "Text": "[Tue 2026-04-21 10:01 EDT] Create a comprehensive research brief for Week 2 of the Philippians series.\n\n**Week**: Week 2\n**Title**: When Life Doesn't Go Your Way\n**Passage**: Philippians 1:12-30\n**Date**: August 9, 2026\n\n**Research Requirements:**\nFollow the sermon development research procedure exactly. Create an HTML research brief that includes:\n\n1. **Introduction & Burden** - The pastor's message burden for this week\n2. **Theological Foundation** - Deep dive into the passage themes\n3. **Biblical Context** - What the passage means\n4. **Key Passages** - Important verses with exposition\n5. **Common Objections** - Address common objections\n6. **Your Content** - Incorporate these observations from the pastor:\n   - What feels like a setback may be strategic for the gospel\n   - Pressure reveals what you truly value\n   - Courage in opposition is a visible sign of deeper reality\n\nSave the output to: /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/research-brief.html\n\nMatch the format from the Defined series research (comprehensive, not just summaries)."
+          }
+        ]
+      }
+    },
+    {
+      "Agent": {
+        "content": [
+          {
+            "Thinking": {
+              "text": "The user wants me to create a comprehensive research brief for a sermon series on Philippians. Let me first understand what's needed:\n\n1. Check if there's an existing research brief from the \"Defined\" series to match the format\n2. Study the passage (Philippians 1:12-30)\n3. Create a comprehensive HTML research brief\n\nLet me start by looking at existing research briefs and any sermon development procedures.",
+              "signature": null
+            }
+          },
+          {
+            "Text": "Let me first look at the existing Defined series research brief for format reference, and check for any sermon development procedures."
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01RUCSG8FfjJuWuJY7czaC9q",
+              "name": "Find sermon research format",
+              "raw_input": "{\"description\":\"Find sermon research format\",\"subagent_type\":\"Explore\",\"prompt\":\"I need to find two things in this workspace:\\n\\n1. Any existing research briefs from a \\\"Defined\\\" sermon series - look for HTML files in paths like sermon-dev, sermons, or similar directories under /Users/myguyfriday/.openclaw/workspace/mission-control/\\n\\n2. Any \\\"sermon development research procedure\\\" documents - could be markdown, HTML, or other formats.\\n\\nSearch thoroughly in /Users/myguyfriday/.openclaw/workspace/mission-control/ and /Users/myguyfriday/.openclaw/workspace/claude/\\n\\nReport back the full paths of any files found, and read the contents of the most relevant research brief HTML file and any procedure documents. I need to see the full HTML structure/format used.\"}",
+              "input": {
+                "description": "Find sermon research format",
+                "subagent_type": "Explore",
+                "prompt": "I need to find two things in this workspace:\n\n1. Any existing research briefs from a \"Defined\" sermon series - look for HTML files in paths like sermon-dev, sermons, or similar directories under /Users/myguyfriday/.openclaw/workspace/mission-control/\n\n2. Any \"sermon development research procedure\" documents - could be markdown, HTML, or other formats.\n\nSearch thoroughly in /Users/myguyfriday/.openclaw/workspace/mission-control/ and /Users/myguyfriday/.openclaw/workspace/claude/\n\nReport back the full paths of any files found, and read the contents of the most relevant research brief HTML file and any procedure documents. I need to see the full HTML structure/format used."
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01CAreiZMqNKcFvyzEKdwWnL",
+              "name": "Check Philippians series context",
+              "raw_input": "{\"description\":\"Check Philippians series context\",\"subagent_type\":\"Explore\",\"prompt\":\"Look in /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/ for any existing files related to the Philippians sermon series. Also check for any series overview, week 1 materials, or planning documents. Report back what exists and read any relevant content that would provide context for Week 2.\"}",
+              "input": {
+                "description": "Check Philippians series context",
+                "subagent_type": "Explore",
+                "prompt": "Look in /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/ for any existing files related to the Philippians sermon series. Also check for any series overview, week 1 materials, or planning documents. Report back what exists and read any relevant content that would provide context for Week 2."
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01WgdLVMsJxdkXAJERyBs4m1",
+              "name": "Find `/Users/myguyfriday/.openclaw/workspace/mission-control` `**/*.html`",
+              "raw_input": "{\"pattern\":\"**/*.html\",\"path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control\"}",
+              "input": {
+                "pattern": "**/*.html",
+                "path": "/Users/myguyfriday/.openclaw/workspace/mission-control"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01LXsuNMNTbfxSMPn18pV8im",
+              "name": "Find `/Users/myguyfriday/.openclaw/workspace/claude` `**/*.html`",
+              "raw_input": "{\"pattern\":\"**/*.html\",\"path\":\"/Users/myguyfriday/.openclaw/workspace/claude\"}",
+              "input": {
+                "pattern": "**/*.html",
+                "path": "/Users/myguyfriday/.openclaw/workspace/claude"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01UEnHQyT55Bb7F9fvwD1P1A",
+              "name": "Find `/Users/myguyfriday/.openclaw/workspace/mission-control` `**/*sermon*`",
+              "raw_input": "{\"pattern\":\"**/*sermon*\",\"path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control\"}",
+              "input": {
+                "pattern": "**/*sermon*",
+                "path": "/Users/myguyfriday/.openclaw/workspace/mission-control"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01CT8j3oLT67Pwk44ADzNrkn",
+              "name": "Find `/Users/myguyfriday/.openclaw/workspace/claude` `**/*sermon*`",
+              "raw_input": "{\"pattern\":\"**/*sermon*\",\"path\":\"/Users/myguyfriday/.openclaw/workspace/claude\"}",
+              "input": {
+                "pattern": "**/*sermon*",
+                "path": "/Users/myguyfriday/.openclaw/workspace/claude"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_016ZVuJY2PeFfPmMqmox1vvG",
+              "name": "Find `/Users/myguyfriday/.openclaw/workspace/mission-control` `**/*research*`",
+              "raw_input": "{\"pattern\":\"**/*research*\",\"path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control\"}",
+              "input": {
+                "pattern": "**/*research*",
+                "path": "/Users/myguyfriday/.openclaw/workspace/mission-control"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01PECe61jUNYkfoz4h32ocFq",
+              "name": "Find `/Users/myguyfriday/.openclaw/workspace/claude` `**/*research*`",
+              "raw_input": "{\"pattern\":\"**/*research*\",\"path\":\"/Users/myguyfriday/.openclaw/workspace/claude\"}",
+              "input": {
+                "pattern": "**/*research*",
+                "path": "/Users/myguyfriday/.openclaw/workspace/claude"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01FCjGEPMW3ALYxAuyEYFRne",
+              "name": "find /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians -type f -name \"*\" 2>/dev/null | head -50",
+              "raw_input": "{\"command\":\"find /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians -type f -name \\\"*\\\" 2>/dev/null | head -50\"}",
+              "input": {
+                "command": "find /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians -type f -name \"*\" 2>/dev/null | head -50"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_017NqvQseKcEufbVuQw68fVD",
+              "name": "Find `/Users/myguyfriday/.openclaw/workspace/mission-control` `**/*procedure*`",
+              "raw_input": "{\"pattern\":\"**/*procedure*\",\"path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control\"}",
+              "input": {
+                "pattern": "**/*procedure*",
+                "path": "/Users/myguyfriday/.openclaw/workspace/mission-control"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01JB3ajEtCZGvGS9vadgSgBX",
+              "name": "Find `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians` `**/*`",
+              "raw_input": "{\"pattern\":\"**/*\",\"path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians\"}",
+              "input": {
+                "pattern": "**/*",
+                "path": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_018HtJYVzQp25g2PWzYHJByf",
+              "name": "Find `/Users/myguyfriday/.openclaw/workspace/claude` `**/*procedure*`",
+              "raw_input": "{\"pattern\":\"**/*procedure*\",\"path\":\"/Users/myguyfriday/.openclaw/workspace/claude\"}",
+              "input": {
+                "pattern": "**/*procedure*",
+                "path": "/Users/myguyfriday/.openclaw/workspace/claude"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01BiRVUhDaqd2uiK6hQVcwum",
+              "name": "Find `/Users/myguyfriday/.openclaw/workspace/mission-control` `**/*development*`",
+              "raw_input": "{\"pattern\":\"**/*development*\",\"path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control\"}",
+              "input": {
+                "pattern": "**/*development*",
+                "path": "/Users/myguyfriday/.openclaw/workspace/mission-control"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01TdSQk1XKTjEp1ENqpXgdFZ",
+              "name": "Find `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev` `**/*.md`",
+              "raw_input": "{\"pattern\":\"**/*.md\",\"path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev\"}",
+              "input": {
+                "pattern": "**/*.md",
+                "path": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01SmSukFtNKj4BghmFzM1pSw",
+              "name": "Find `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians` `*.md`",
+              "raw_input": "{\"pattern\":\"*.md\",\"path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians\"}",
+              "input": {
+                "pattern": "*.md",
+                "path": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_012R9jRKEYkTJuZ72b45PDfP",
+              "name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-1-Joy-Through-Partnership/index.html",
+              "raw_input": "{\"file_path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-1-Joy-Through-Partnership/index.html\"}",
+              "input": {
+                "file_path": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-1-Joy-Through-Partnership/index.html"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01DTgY2uFhgg17tfwcpnZ7D9",
+              "name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/index.html",
+              "raw_input": "{\"file_path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/index.html\"}",
+              "input": {
+                "file_path": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/index.html"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01Dpe6My8sk99DHiweHRuJ84",
+              "name": "ls -la /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/",
+              "raw_input": "{\"command\":\"ls -la /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/\"}",
+              "input": {
+                "command": "ls -la /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_019kdnavuhqtg5t9fMhdcjXk",
+              "name": "find /Users/myguyfriday/.openclaw/workspace/mission-control -name \"*Development*\" -o -name \"*development*\"",
+              "raw_input": "{\"command\":\"find /Users/myguyfriday/.openclaw/workspace/mission-control -name \\\"*Development*\\\" -o -name \\\"*development*\\\"\"}",
+              "input": {
+                "command": "find /Users/myguyfriday/.openclaw/workspace/mission-control -name \"*Development*\" -o -name \"*development*\""
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01VwNgSCVaevizr49Nr9ygdU",
+              "name": "find /Users/myguyfriday/.openclaw/workspace/mission-control -name \"*.md\" | grep -i \"development\\|procedure\"",
+              "raw_input": "{\"command\":\"find /Users/myguyfriday/.openclaw/workspace/mission-control -name \\\"*.md\\\" | grep -i \\\"development\\\\|procedure\\\"\"}",
+              "input": {
+                "command": "find /Users/myguyfriday/.openclaw/workspace/mission-control -name \"*.md\" | grep -i \"development\\|procedure\""
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01TXYYQ5KJa4qCFFmGzKqfh4",
+              "name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-1-Joy-Through-Partnership/research-brief.html",
+              "raw_input": "{\"file_path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-1-Joy-Through-Partnership/research-brief.html\"}",
+              "input": {
+                "file_path": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-1-Joy-Through-Partnership/research-brief.html"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01Sr4QQh8rf1Ci6pXcyht294",
+              "name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/research-brief.html",
+              "raw_input": "{\"file_path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/research-brief.html\"}",
+              "input": {
+                "file_path": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/research-brief.html"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01R9ChuNEhU14cnf1z1z4XJi",
+              "name": "grep -l \"sermon.*development|research.*procedure|development.*procedure\" /Users/myguyfriday/.openclaw/workspace/mission-control",
+              "raw_input": "{\"pattern\":\"sermon.*development|research.*procedure|development.*procedure\",\"path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control\",\"output_mode\":\"files_with_matches\"}",
+              "input": {
+                "pattern": "sermon.*development|research.*procedure|development.*procedure",
+                "path": "/Users/myguyfriday/.openclaw/workspace/mission-control",
+                "output_mode": "files_with_matches"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01ALxZVLycX74dWTYt4vTVEi",
+              "name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/research-brief.html",
+              "raw_input": "{\"file_path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/research-brief.html\"}",
+              "input": {
+                "file_path": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/research-brief.html"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01Jt6FYtUxPzrHxhFJnZXvsn",
+              "name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/Sermon-Development.html",
+              "raw_input": "{\"file_path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/Sermon-Development.html\"}",
+              "input": {
+                "file_path": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/Sermon-Development.html"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01NfhPqQwP1eKBJijaJLuHHj",
+              "name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-2-God-Says-I-Am-His-Ambassador/research-brief.html",
+              "raw_input": "{\"file_path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-2-God-Says-I-Am-His-Ambassador/research-brief.html\"}",
+              "input": {
+                "file_path": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-2-God-Says-I-Am-His-Ambassador/research-brief.html"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "Thinking": {
+              "text": "It looks like there's already a research-brief.html for Week 2. The user is asking me to create one, so let me read the existing one to see what's there, and also read one of the Defined series briefs for format reference. Let me also read the sermon development process.",
+              "signature": null
+            }
+          },
+          {
+            "Text": "There's already a Week 2 research brief in place. Let me read the existing one and a Defined series brief for format reference."
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01PDMpoo7KwBUvBKE3zXByeV",
+              "name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/research-brief.html",
+              "raw_input": "{\"file_path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/research-brief.html\"}",
+              "input": {
+                "file_path": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/research-brief.html"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01FwZ291mEzao3UNY1RGhYn1",
+              "name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/research-brief.html",
+              "raw_input": "{\"file_path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/research-brief.html\"}",
+              "input": {
+                "file_path": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/research-brief.html"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01RoJT23akDSgyUz8aA3zoCm",
+              "name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/Sermon-Development.html",
+              "raw_input": "{\"file_path\":\"/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/Sermon-Development.html\"}",
+              "input": {
+                "file_path": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/Sermon-Development.html"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "Thinking": {
+              "text": "Now I have a clear picture. The existing Week 2 research brief is very basic (122 lines) compared to the Defined series Week 1 brief (320 lines) which is comprehensive with sections for Introduction & Burden, Theological Foundation, Biblical Context, Common Objections, Illustrations, Key Quotes, etc.\n\nThe user wants me to replace the existing brief with a comprehensive one matching the Defined series format. Let me also incorporate the pastor's observations:\n- What feels like a setback may be strategic for the gospel\n- Pressure reveals what you truly value\n- Courage in opposition is a visible sign of deeper reality\n\n\nI'm drawing on my knowledge of Philippians 1:12-30 to build out a comprehensive brief that matches the Defined format with all the key sections, then I'll write it as HTML with the light theme styling.",
+              "signature": null
+            }
+          },
+          {
+            "Text": "Now I have the full picture. The existing Week 2 brief is a skeleton (~120 lines) while the Defined series briefs are comprehensive (~320 lines) with deep theological content. Let me do web research on the passage, then build the comprehensive brief."
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01Ms5CWDnzRYJjiB3aopYLSq",
+              "name": "ToolSearch",
+              "raw_input": "{\"query\":\"select:WebSearch\",\"max_results\":1}",
+              "input": {
+                "query": "select:WebSearch",
+                "max_results": 1
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01QoPsF1iucBTqsHMhA1AjUS",
+              "name": "\"Philippians 1:12-30 commentary theological analysis Paul imprisonment advance gospel\"",
+              "raw_input": "{\"query\":\"Philippians 1:12-30 commentary theological analysis Paul imprisonment advance gospel\"}",
+              "input": {
+                "query": "Philippians 1:12-30 commentary theological analysis Paul imprisonment advance gospel"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01MdJ9WQN59iqV9Q6GPGZbEV",
+              "name": "\"Philippians 1:21 \"to live is Christ to die is gain\" Greek exegesis praetorian guard\"",
+              "raw_input": "{\"query\":\"Philippians 1:21 \\\"to live is Christ to die is gain\\\" Greek exegesis praetorian guard\"}",
+              "input": {
+                "query": "Philippians 1:21 \"to live is Christ to die is gain\" Greek exegesis praetorian guard"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_011o8WaPYZhmB299msitTBu4",
+              "name": "\"Philippians 1:27-30 \"conduct worthy of the gospel\" courage suffering sermon\"",
+              "raw_input": "{\"query\":\"Philippians 1:27-30 \\\"conduct worthy of the gospel\\\" courage suffering sermon\"}",
+              "input": {
+                "query": "Philippians 1:27-30 \"conduct worthy of the gospel\" courage suffering sermon"
+              },
+              "is_input_complete": true,
+              "thought_signature": null
+            }
+          },
+          {
+            "Thinking": {
+              "text": "Web search was denied. I'll proceed with my own deep knowledge of the passage to create the comprehensive research brief. I know Philippians 1:12-30 very well and can write a thorough theological analysis.",
+              "signature": null
+            }
+          },
+          {
+            "Text": "No problem — I'll build the comprehensive brief from my own deep knowledge of this passage. Let me write it now, matching the Defined series format with all the sections requested."
+          },
+          {
+            "ToolUse": {
+              "id": "toolu_01N8zdhBRmnzgvizApr4kziQ",
+              "name": "Write",
+              "raw_input": "{}",
+              "input": {},
+              "is_input_complete": false,
+              "thought_signature": null
+            }
+          }
+        ],
+        "tool_results": {
+          "toolu_01RUCSG8FfjJuWuJY7czaC9q": {
+            "tool_use_id": "toolu_01RUCSG8FfjJuWuJY7czaC9q",
+            "tool_name": "Find sermon research format",
+            "is_error": false,
+            "content": {
+              "Text": "[{\"type\":\"text\",\"text\":\"Perfect! I now have comprehensive findings. Let me compile the final report.\\n\\n## Summary of Findings\\n\\nI found the resources you're looking for in the workspace. Here are the complete findings:\\n\\n### 1. **\\\"Defined\\\" Sermon Series Research Briefs Found:**\\n\\nAll located in `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/`\\n\\n- **Week 1:** `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/research-brief.html`\\n- **Week 2:** `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-2-God-Says-I-Am-His-Ambassador/research-brief.html`\\n- **Week 3:** `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-3-God-Says-I-Am-Sent/research-brief.html`\\n- **Week 4:** `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-4-God-Says-I-Am-More-Than-a-Conqueror/research-brief.html`\\n\\n### 2. **Sermon Development Research Procedure Document:**\\n\\n- **Main Process Document:** `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/Sermon-Development.html`\\n\\nThis is the comprehensive procedure document you need.\\n\\n---\\n\\n## HTML Structure Format Used\\n\\nBoth the **research briefs** and **sermon development process** documents use a consistent professional HTML structure:\\n\\n### Key HTML Elements:\\n\\n**Research Brief Structure:**\\n- DOCTYPE HTML5 with responsive meta viewport\\n- Custom CSS styling in `<style>` tag\\n- `.header` section with title and back link\\n- `.intro-box` with gradient background containing series/week info\\n- Numbered sections (SECTION 1-10+) with `.section` class containers\\n- `.verse` boxes for biblical quotes (indigo border-left, italic)\\n- Hierarchical headings (h1-h4)\\n- `.section` divs with white background, rounded corners, box-shadow\\n- `.quote-author` styling for attribution\\n- `.footer` with metadata\\n\\n**Sermon Development Process Structure:**\\n- Dark theme (`#1a1a2e`, `#16213e` background gradient)\\n- `.section` containers with semi-transparent backgrounds\\n- `.stage` divs with numbered stages (orange left border)\\n- Tables for task breakdowns with color-coded role indicators:\\n  - `.owner-me` (red) = You do it\\n  - `.owner-you` (blue) = I do it\\n  - `.owner-both` (purple) = Collaborative\\n  - `.owner-ai` (green) = Claude does it\\n- `.input-output` boxes documenting inputs/outputs per stage\\n- `.note` and `.warning` boxes for contextual information\\n\\n### Common Styling Patterns:\\n- **Font:** System fonts (`-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`)\\n- **Colors:** Indigo/purple accents (`#6366f1`, `#667eea`)\\n- **Spacing:** Consistent padding (16-24px), margins (15-30px)\\n- **Borders:** Subtle shadows, rounded corners (8-12px radius)\\n- **Responsive:** Meta viewport for mobile\\n\\nBoth documents are self-contained, well-structured HTML files ready for viewing in browsers or conversion to other formats.\"}]"
+            },
+            "output": [
+              {
+                "type": "text",
+                "text": "Perfect! I now have comprehensive findings. Let me compile the final report.\n\n## Summary of Findings\n\nI found the resources you're looking for in the workspace. Here are the complete findings:\n\n### 1. **\"Defined\" Sermon Series Research Briefs Found:**\n\nAll located in `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/`\n\n- **Week 1:** `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/research-brief.html`\n- **Week 2:** `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-2-God-Says-I-Am-His-Ambassador/research-brief.html`\n- **Week 3:** `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-3-God-Says-I-Am-Sent/research-brief.html`\n- **Week 4:** `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-4-God-Says-I-Am-More-Than-a-Conqueror/research-brief.html`\n\n### 2. **Sermon Development Research Procedure Document:**\n\n- **Main Process Document:** `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/Sermon-Development.html`\n\nThis is the comprehensive procedure document you need.\n\n---\n\n## HTML Structure Format Used\n\nBoth the **research briefs** and **sermon development process** documents use a consistent professional HTML structure:\n\n### Key HTML Elements:\n\n**Research Brief Structure:**\n- DOCTYPE HTML5 with responsive meta viewport\n- Custom CSS styling in `<style>` tag\n- `.header` section with title and back link\n- `.intro-box` with gradient background containing series/week info\n- Numbered sections (SECTION 1-10+) with `.section` class containers\n- `.verse` boxes for biblical quotes (indigo border-left, italic)\n- Hierarchical headings (h1-h4)\n- `.section` divs with white background, rounded corners, box-shadow\n- `.quote-author` styling for attribution\n- `.footer` with metadata\n\n**Sermon Development Process Structure:**\n- Dark theme (`#1a1a2e`, `#16213e` background gradient)\n- `.section` containers with semi-transparent backgrounds\n- `.stage` divs with numbered stages (orange left border)\n- Tables for task breakdowns with color-coded role indicators:\n  - `.owner-me` (red) = You do it\n  - `.owner-you` (blue) = I do it\n  - `.owner-both` (purple) = Collaborative\n  - `.owner-ai` (green) = Claude does it\n- `.input-output` boxes documenting inputs/outputs per stage\n- `.note` and `.warning` boxes for contextual information\n\n### Common Styling Patterns:\n- **Font:** System fonts (`-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`)\n- **Colors:** Indigo/purple accents (`#6366f1`, `#667eea`)\n- **Spacing:** Consistent padding (16-24px), margins (15-30px)\n- **Borders:** Subtle shadows, rounded corners (8-12px radius)\n- **Responsive:** Meta viewport for mobile\n\nBoth documents are self-contained, well-structured HTML files ready for viewing in browsers or conversion to other formats."
+              }
+            ]
+          },
+          "toolu_01CAreiZMqNKcFvyzEKdwWnL": {
+            "tool_use_id": "toolu_01CAreiZMqNKcFvyzEKdwWnL",
+            "tool_name": "Check Philippians series context",
+            "is_error": false,
+            "content": {
+              "Text": "[{\"type\":\"text\",\"text\":\"Perfect! I've found all the materials. Here's what exists in the Philippians sermon directory:\\n\\n## Existing Philippians Sermon Series Materials\\n\\n**Directory Structure:**\\nThe Philippians series has 6 complete week folders with consistent structure:\\n\\n**Files Found:**\\n- `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-1-Joy-Through-Partnership/`\\n  - `index.html` (dashboard/tracker)\\n  - `research-brief.html` (completed research)\\n\\n- `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/`\\n  - `index.html` (dashboard/tracker)\\n  - `research-brief.html` (completed research)\\n\\n- Plus Weeks 3-6 with the same structure (all research stages completed)\\n\\n**Note:** There is no series-level overview document at the root level—each week is self-contained.\\n\\n---\\n\\n## Week 2 Context for Sermon Development\\n\\n**Week 2: \\\"When Life Doesn't Go Your Way\\\"**\\n- **Passage:** Philippians 1:12-30\\n- **Date:** August 9\\n- **Current Status:** Research stage complete, awaiting Stage 2 input on points\\n\\n**Key Message Framework:**\\nPaul is in prison in Rome but demonstrates that setbacks become gospel platforms. The passage shows how constraints paradoxically accelerate God's purposes while simultaneously establishing a rubric for faithful living regardless of circumstances.\\n\\n**Scriptural Focus:**\\nThe core verse is Philippians 1:12: \\\"I want you to know, brothers, that what has happened to me has really served to advance the gospel.\\\"\\n\\n**Three Suggested Points (from research brief):**\\n1. **When Plans Fail, God's Purpose Continues** - Your setback might be God's setup; Paul's prison became the palace's hearing room\\n2. **Your Life Is Not About You** - \\\"To live is Christ\\\" establishes identity in mission (vv. 21); neither life nor death is a loss when Christ is central\\n3. **Courage Is Contagious** - Bold witness makes Christ visible; your steadfastness evangelizes those watching\\n\\n**Passage Structure:**\\n- vv. 12-14: Chains advanced gospel to palace guard\\n- vv. 15-18: Mixed-motive preachers; Paul rejoices anyway\\n- vv. 19-26: Life or death dichotomy; Christ is all\\n- vv. 27-30: Living worthily of the heavenly calling\\n\\n**Thematic Connection to Week 1:**\\nWeek 1 established \\\"joy through partnership\\\" and God's guaranteed completion (Philippians 1:6). Week 2 deepens this by showing what that joy looks like under pressure—when external circumstances oppose your plans. The series progression moves from joy in community to joy in adversity.\\n\\n**Next Action for Week 2:** Stage 2 requires your input on the three points—confirm, adjust, or redirect toward different themes, plus develop attention-grabbing point titles and quotable lines.\"}]"
+            },
+            "output": [
+              {
+                "type": "text",
+                "text": "Perfect! I've found all the materials. Here's what exists in the Philippians sermon directory:\n\n## Existing Philippians Sermon Series Materials\n\n**Directory Structure:**\nThe Philippians series has 6 complete week folders with consistent structure:\n\n**Files Found:**\n- `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-1-Joy-Through-Partnership/`\n  - `index.html` (dashboard/tracker)\n  - `research-brief.html` (completed research)\n\n- `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/`\n  - `index.html` (dashboard/tracker)\n  - `research-brief.html` (completed research)\n\n- Plus Weeks 3-6 with the same structure (all research stages completed)\n\n**Note:** There is no series-level overview document at the root level—each week is self-contained.\n\n---\n\n## Week 2 Context for Sermon Development\n\n**Week 2: \"When Life Doesn't Go Your Way\"**\n- **Passage:** Philippians 1:12-30\n- **Date:** August 9\n- **Current Status:** Research stage complete, awaiting Stage 2 input on points\n\n**Key Message Framework:**\nPaul is in prison in Rome but demonstrates that setbacks become gospel platforms. The passage shows how constraints paradoxically accelerate God's purposes while simultaneously establishing a rubric for faithful living regardless of circumstances.\n\n**Scriptural Focus:**\nThe core verse is Philippians 1:12: \"I want you to know, brothers, that what has happened to me has really served to advance the gospel.\"\n\n**Three Suggested Points (from research brief):**\n1. **When Plans Fail, God's Purpose Continues** - Your setback might be God's setup; Paul's prison became the palace's hearing room\n2. **Your Life Is Not About You** - \"To live is Christ\" establishes identity in mission (vv. 21); neither life nor death is a loss when Christ is central\n3. **Courage Is Contagious** - Bold witness makes Christ visible; your steadfastness evangelizes those watching\n\n**Passage Structure:**\n- vv. 12-14: Chains advanced gospel to palace guard\n- vv. 15-18: Mixed-motive preachers; Paul rejoices anyway\n- vv. 19-26: Life or death dichotomy; Christ is all\n- vv. 27-30: Living worthily of the heavenly calling\n\n**Thematic Connection to Week 1:**\nWeek 1 established \"joy through partnership\" and God's guaranteed completion (Philippians 1:6). Week 2 deepens this by showing what that joy looks like under pressure—when external circumstances oppose your plans. The series progression moves from joy in community to joy in adversity.\n\n**Next Action for Week 2:** Stage 2 requires your input on the three points—confirm, adjust, or redirect toward different themes, plus develop attention-grabbing point titles and quotable lines."
+              }
+            ]
+          },
+          "toolu_01WgdLVMsJxdkXAJERyBs4m1": {
+            "tool_use_id": "toolu_01WgdLVMsJxdkXAJERyBs4m1",
+            "tool_name": "Find `/Users/myguyfriday/.openclaw/workspace/mission-control` `**/*.html`",
+            "is_error": false,
+            "content": {
+              "Text": "/Users/myguyfriday/.openclaw/workspace/mission-control/projects/gospel-share-tracker.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/commtracker/CommTracker-Suggestions.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/commtracker/CommTracker-Progress.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/commtracker/CommTracker_Interface.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/Series-Planning.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/Semester-Planning.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/nahum-god-who-wont-look-away/Week-3_Coming-Soon/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/nahum-god-who-wont-look-away/Week-1-The-Heart-of-God/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/nahum-god-who-wont-look-away/Week-2_The-Leash-on-Chaos/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/OpenClaw-Game-Plan.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/receipts.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/nahum-god-who-wont-look-away/Week-1-The-Heart-of-God/Manuscript.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Semesters/Summer-2026-Planning/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/god-is-names-of-god/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/nahum-god-who-wont-look-away/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Semesters/Fall-2026-Planning/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Semesters/Spring-2027-Planning/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/identity-in-christ/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-2-God-Says-I-Am-His-Ambassador/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-3-God-Says-I-Am-Sent/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-4-God-Says-I-Am-More-Than-a-Conqueror/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-2-God-Says-I-Am-His-Ambassador/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-3-God-Says-I-Am-Sent/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-4-God-Says-I-Am-More-Than-a-Conqueror/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-1-The-Bible-is-Gods-Source-of-Truth/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-1-The-Bible-is-Gods-Source-of-Truth/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-2-Jesus-Only-Way/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-2-Jesus-Only-Way/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-3-Gospel-Your-Hope/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-3-Gospel-Your-Hope/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-4-Chur..."
+            },
+            "output": "/Users/myguyfriday/.openclaw/workspace/mission-control/projects/gospel-share-tracker.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/commtracker/CommTracker-Suggestions.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/commtracker/CommTracker-Progress.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/commtracker/CommTracker_Interface.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/Series-Planning.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/Semester-Planning.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/nahum-god-who-wont-look-away/Week-3_Coming-Soon/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/nahum-god-who-wont-look-away/Week-1-The-Heart-of-God/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/nahum-god-who-wont-look-away/Week-2_The-Leash-on-Chaos/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/OpenClaw-Game-Plan.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/receipts.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/nahum-god-who-wont-look-away/Week-1-The-Heart-of-God/Manuscript.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Semesters/Summer-2026-Planning/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/god-is-names-of-god/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/nahum-god-who-wont-look-away/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Semesters/Fall-2026-Planning/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Semesters/Spring-2027-Planning/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/identity-in-christ/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-2-God-Says-I-Am-His-Ambassador/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-3-God-Says-I-Am-Sent/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-4-God-Says-I-Am-More-Than-a-Conqueror/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-2-God-Says-I-Am-His-Ambassador/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-3-God-Says-I-Am-Sent/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-4-God-Says-I-Am-More-Than-a-Conqueror/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-1-The-Bible-is-Gods-Source-of-Truth/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-1-The-Bible-is-Gods-Source-of-Truth/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-2-Jesus-Only-Way/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-2-Jesus-Only-Way/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-3-Gospel-Your-Hope/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-3-Gospel-Your-Hope/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-4-Chur..."
+          },
+          "toolu_01LXsuNMNTbfxSMPn18pV8im": {
+            "tool_use_id": "toolu_01LXsuNMNTbfxSMPn18pV8im",
+            "tool_name": "Find `/Users/myguyfriday/.openclaw/workspace/claude` `**/*.html`",
+            "is_error": false,
+            "content": {
+              "Text": "No files found"
+            },
+            "output": "No files found"
+          },
+          "toolu_01UEnHQyT55Bb7F9fvwD1P1A": {
+            "tool_use_id": "toolu_01UEnHQyT55Bb7F9fvwD1P1A",
+            "tool_name": "Find `/Users/myguyfriday/.openclaw/workspace/mission-control` `**/*sermon*`",
+            "is_error": false,
+            "content": {
+              "Text": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-points.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-outline.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-outline.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-points.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-first-draft.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-first-draft.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-edit-1.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-edit-1.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-final.md"
+            },
+            "output": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-points.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-outline.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-outline.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-points.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-first-draft.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-first-draft.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-edit-1.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-edit-1.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-final.md"
+          },
+          "toolu_01CT8j3oLT67Pwk44ADzNrkn": {
+            "tool_use_id": "toolu_01CT8j3oLT67Pwk44ADzNrkn",
+            "tool_name": "Find `/Users/myguyfriday/.openclaw/workspace/claude` `**/*sermon*`",
+            "is_error": false,
+            "content": {
+              "Text": "No files found"
+            },
+            "output": "No files found"
+          },
+          "toolu_016ZVuJY2PeFfPmMqmox1vvG": {
+            "tool_use_id": "toolu_016ZVuJY2PeFfPmMqmox1vvG",
+            "tool_name": "Find `/Users/myguyfriday/.openclaw/workspace/mission-control` `**/*research*`",
+            "is_error": false,
+            "content": {
+              "Text": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-2-God-Says-I-Am-His-Ambassador/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-3-God-Says-I-Am-Sent/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-4-God-Says-I-Am-More-Than-a-Conqueror/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-1-The-Bible-is-Gods-Source-of-Truth/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-2-Jesus-Only-Way/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-3-Gospel-Your-Hope/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-4-Church-Gospel-Creates/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-1-Joy-Through-Partnership/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-3-A-Different-Way-to-Live/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-4-God-Is-Working-in-You/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-5-What-Really-Matters/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-6-Life-That-Stands-Firm/research-brief.html"
+            },
+            "output": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-2-God-Says-I-Am-His-Ambassador/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-3-God-Says-I-Am-Sent/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-4-God-Says-I-Am-More-Than-a-Conqueror/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-1-The-Bible-is-Gods-Source-of-Truth/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-2-Jesus-Only-Way/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-3-Gospel-Your-Hope/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/we-hold-these-truths/Week-4-Church-Gospel-Creates/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-1-Joy-Through-Partnership/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-3-A-Different-Way-to-Live/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-4-God-Is-Working-in-You/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-5-What-Really-Matters/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-6-Life-That-Stands-Firm/research-brief.html"
+          },
+          "toolu_01PECe61jUNYkfoz4h32ocFq": {
+            "tool_use_id": "toolu_01PECe61jUNYkfoz4h32ocFq",
+            "tool_name": "Find `/Users/myguyfriday/.openclaw/workspace/claude` `**/*research*`",
+            "is_error": false,
+            "content": {
+              "Text": "No files found"
+            },
+            "output": "No files found"
+          },
+          "toolu_01FCjGEPMW3ALYxAuyEYFRne": {
+            "tool_use_id": "toolu_01FCjGEPMW3ALYxAuyEYFRne",
+            "tool_name": "find /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians -type f -name \"*\" 2>/dev/null | head -50",
+            "is_error": true,
+            "content": {
+              "Text": "Tool permission request failed: Error: Tool use aborted"
+            },
+            "output": "Tool permission request failed: Error: Tool use aborted"
+          },
+          "toolu_017NqvQseKcEufbVuQw68fVD": {
+            "tool_use_id": "toolu_017NqvQseKcEufbVuQw68fVD",
+            "tool_name": "Find `/Users/myguyfriday/.openclaw/workspace/mission-control` `**/*procedure*`",
+            "is_error": false,
+            "content": {
+              "Text": "No files found"
+            },
+            "output": "No files found"
+          },
+          "toolu_01JB3ajEtCZGvGS9vadgSgBX": {
+            "tool_use_id": "toolu_01JB3ajEtCZGvGS9vadgSgBX",
+            "tool_name": "Find `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians` `**/*`",
+            "is_error": false,
+            "content": {
+              "Text": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-1-Joy-Through-Partnership/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-1-Joy-Through-Partnership/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-3-A-Different-Way-to-Live/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-3-A-Different-Way-to-Live/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-4-God-Is-Working-in-You/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-4-God-Is-Working-in-You/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-5-What-Really-Matters/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-5-What-Really-Matters/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-6-Life-That-Stands-Firm/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-6-Life-That-Stands-Firm/index.html"
+            },
+            "output": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-1-Joy-Through-Partnership/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-1-Joy-Through-Partnership/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-3-A-Different-Way-to-Live/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-3-A-Different-Way-to-Live/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-4-God-Is-Working-in-You/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-4-God-Is-Working-in-You/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-5-What-Really-Matters/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-5-What-Really-Matters/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-6-Life-That-Stands-Firm/research-brief.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-6-Life-That-Stands-Firm/index.html"
+          },
+          "toolu_018HtJYVzQp25g2PWzYHJByf": {
+            "tool_use_id": "toolu_018HtJYVzQp25g2PWzYHJByf",
+            "tool_name": "Find `/Users/myguyfriday/.openclaw/workspace/claude` `**/*procedure*`",
+            "is_error": false,
+            "content": {
+              "Text": "No files found"
+            },
+            "output": "No files found"
+          },
+          "toolu_01BiRVUhDaqd2uiK6hQVcwum": {
+            "tool_use_id": "toolu_01BiRVUhDaqd2uiK6hQVcwum",
+            "tool_name": "Find `/Users/myguyfriday/.openclaw/workspace/mission-control` `**/*development*`",
+            "is_error": false,
+            "content": {
+              "Text": "No files found"
+            },
+            "output": "No files found"
+          },
+          "toolu_01TdSQk1XKTjEp1ENqpXgdFZ": {
+            "tool_use_id": "toolu_01TdSQk1XKTjEp1ENqpXgdFZ",
+            "tool_name": "Find `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev` `**/*.md`",
+            "is_error": false,
+            "content": {
+              "Text": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-points.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-outline.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-first-draft.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/edit1-prompt.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/edit1-prompt-v2.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-edit-1.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-final.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/philippians/Research-Brief.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/philippians/Series-Framework.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/philippians/Big-Idea.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/philippians/Week-1-Research.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/philippians/Week-2-Research.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/philippians/Week-3-Research.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/philippians/Week-4-Research.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/philippians/Week-5-Research.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/philippians/Week-6-Research.md"
+            },
+            "output": "/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-points.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-outline.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-first-draft.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/edit1-prompt.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/edit1-prompt-v2.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-edit-1.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/sermon-final.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/philippians/Research-Brief.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/philippians/Series-Framework.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/philippians/Big-Idea.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/philippians/Week-1-Research.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/philippians/Week-2-Research.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/philippians/Week-3-Research.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/philippians/Week-4-Research.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/philippians/Week-5-Research.md\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Series/philippians/Week-6-Research.md"
+          },
+          "toolu_01SmSukFtNKj4BghmFzM1pSw": {
+            "tool_use_id": "toolu_01SmSukFtNKj4BghmFzM1pSw",
+            "tool_name": "Find `/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians` `*.md`",
+            "is_error": false,
+            "content": {
+              "Text": "No files found"
+            },
+            "output": "No files found"
+          },
+          "toolu_012R9jRKEYkTJuZ72b45PDfP": {
+            "tool_use_id": "toolu_012R9jRKEYkTJuZ72b45PDfP",
+            "tool_name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-1-Joy-Through-Partnership/index.html",
+            "is_error": false,
+            "content": {
+              "Text": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Week 1 - Joy Through Partnership | Philippians</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #333; min-height: 100vh; }\n10\t    .header { background: white; border-bottom: 1px solid #e0e0e0; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }\n11\t    .header h1 { font-size: 18px; font-weight: 600; color: #1a1a2e; }\n12\t    .header a { color: #666; text-decoration: none; font-size: 14px; }\n13\t    .content { padding: 24px; max-width: 800px; margin: 0 auto; }\n14\t    .back-link { color: #666; text-decoration: none; font-size: 14px; margin-bottom: 20px; display: inline-block; }\n15\t    h2 { font-size: 1.5rem; margin-bottom: 10px; }\n16\t    .passage { background: #f0f4ff; padding: 16px; border-radius: 8px; margin-bottom: 20px; }\n17\t    .passage code { color: #4f46e5; font-weight: 500; }\n18\t    .stage { background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }\n19\t    .stage h3 { font-size: 16px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }\n20\t    .status { font-size: 12px; padding: 4px 10px; border-radius: 20px; font-weight: 500; }\n21\t    .status-complete { background: rgba(34, 197, 94, 0.15); color: #16a34a; }\n22\t    .status-in-progress { background: rgba(251, 191, 36, 0.15); color: #d97706; }\n23\t    .status-not-started { background: rgba(239, 68, 68, 0.15); color: #dc2626; }\n24\t    .status-waiting { background: rgba(59, 130, 246, 0.15); color: #2563eb; }\n25\t    .file-link { display: block; padding: 10px 14px; background: #f9fafb; border-radius: 6px; text-decoration: none; color: #333; margin-bottom: 8px; }\n26\t    .file-link:hover { background: #f0f0f0; }\n27\t    .next-action { background: rgba(59, 130, 246, 0.1); border-left: 3px solid #3b82f6; padding: 12px 15px; margin-top: 20px; border-radius: 0 8px 8px 0; }\n28\t  </style>\n29\t</head>\n30\t<body>\n31\t  <div class=\"header\">\n32\t    <h1>Philippians Series</h1>\n33\t    <a href=\"../../Series/philippians/index.html\">← Back to Series</a>\n34\t  </div>\n35\t\n36\t  <div class=\"content\">\n37\t    <a href=\"../../Series/philippians/index.html\" class=\"back-link\">← Back to Series</a>\n38\t    \n39\t    <h2>Week 1 — Joy Through Partnership</h2>\n40\t    <div class=\"passage\">\n41\t      <strong>Passage:</strong> <code>Philippians 1:1-11</code> • <strong>Date:</strong> August 2\n42\t    </div>\n43\t\n44\t    <div class=\"stage\">\n45\t      <h3>Stage 1: Research <span class=\"status status-complete\">Complete</span></h3>\n46\t      <a href=\"research-brief.html\" class=\"file-link\">📄 Research Brief</a>\n47\t    </div>\n48\t\n49\t    <div class=\"stage\">\n50\t      <h3>Stage 2: Points <span class=\"status status-waiting\">Your Input Needed</span></h3>\n51\t      <p style=\"font-size: 14px; color: #666; margin-bottom: 12px;\">I need your input on:</p>\n52\t      <ul style=\"font-size: 14px; color: #666; margin-left: 20px; margin-bottom: 12px;\">\n53\t        <li>Confirm the 3 suggested points or adjust</li>\n54\t        <li>Point titles that will grab attention</li>\n55\t        <li>2-3 punchy quotable lines per point</li>\n56\t      </ul>\n57\t    </div>\n58\t\n59\t    <div class=\"stage\">\n60\t      <h3>Stage 3: Application/Illustration <span class=\"status status-not-started\">Not Started</span></h3>\n61\t    </div>\n62\t\n63\t    <div class=\"stage\">\n64\t      <h3>Stage 4: Bookends <span class=\"status status-not-started\">Not Started</span></h3>\n65\t    </div>\n66\t\n67\t    <div class=\"stage\">\n68\t      <h3>Stage 5: Outline <span class=\"status status-not-started\">Not Started</span></h3>\n69\t    </div>\n70\t\n71\t    <div class=\"stage\">\n72\t      <h3>Stage 6: First Draft <span class=\"status status-not-started\">Not Started</span></h3>\n73\t    </div>\n74\t\n75\t    <div..."
+            },
+            "output": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Week 1 - Joy Through Partnership | Philippians</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #333; min-height: 100vh; }\n10\t    .header { background: white; border-bottom: 1px solid #e0e0e0; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }\n11\t    .header h1 { font-size: 18px; font-weight: 600; color: #1a1a2e; }\n12\t    .header a { color: #666; text-decoration: none; font-size: 14px; }\n13\t    .content { padding: 24px; max-width: 800px; margin: 0 auto; }\n14\t    .back-link { color: #666; text-decoration: none; font-size: 14px; margin-bottom: 20px; display: inline-block; }\n15\t    h2 { font-size: 1.5rem; margin-bottom: 10px; }\n16\t    .passage { background: #f0f4ff; padding: 16px; border-radius: 8px; margin-bottom: 20px; }\n17\t    .passage code { color: #4f46e5; font-weight: 500; }\n18\t    .stage { background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }\n19\t    .stage h3 { font-size: 16px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }\n20\t    .status { font-size: 12px; padding: 4px 10px; border-radius: 20px; font-weight: 500; }\n21\t    .status-complete { background: rgba(34, 197, 94, 0.15); color: #16a34a; }\n22\t    .status-in-progress { background: rgba(251, 191, 36, 0.15); color: #d97706; }\n23\t    .status-not-started { background: rgba(239, 68, 68, 0.15); color: #dc2626; }\n24\t    .status-waiting { background: rgba(59, 130, 246, 0.15); color: #2563eb; }\n25\t    .file-link { display: block; padding: 10px 14px; background: #f9fafb; border-radius: 6px; text-decoration: none; color: #333; margin-bottom: 8px; }\n26\t    .file-link:hover { background: #f0f0f0; }\n27\t    .next-action { background: rgba(59, 130, 246, 0.1); border-left: 3px solid #3b82f6; padding: 12px 15px; margin-top: 20px; border-radius: 0 8px 8px 0; }\n28\t  </style>\n29\t</head>\n30\t<body>\n31\t  <div class=\"header\">\n32\t    <h1>Philippians Series</h1>\n33\t    <a href=\"../../Series/philippians/index.html\">← Back to Series</a>\n34\t  </div>\n35\t\n36\t  <div class=\"content\">\n37\t    <a href=\"../../Series/philippians/index.html\" class=\"back-link\">← Back to Series</a>\n38\t    \n39\t    <h2>Week 1 — Joy Through Partnership</h2>\n40\t    <div class=\"passage\">\n41\t      <strong>Passage:</strong> <code>Philippians 1:1-11</code> • <strong>Date:</strong> August 2\n42\t    </div>\n43\t\n44\t    <div class=\"stage\">\n45\t      <h3>Stage 1: Research <span class=\"status status-complete\">Complete</span></h3>\n46\t      <a href=\"research-brief.html\" class=\"file-link\">📄 Research Brief</a>\n47\t    </div>\n48\t\n49\t    <div class=\"stage\">\n50\t      <h3>Stage 2: Points <span class=\"status status-waiting\">Your Input Needed</span></h3>\n51\t      <p style=\"font-size: 14px; color: #666; margin-bottom: 12px;\">I need your input on:</p>\n52\t      <ul style=\"font-size: 14px; color: #666; margin-left: 20px; margin-bottom: 12px;\">\n53\t        <li>Confirm the 3 suggested points or adjust</li>\n54\t        <li>Point titles that will grab attention</li>\n55\t        <li>2-3 punchy quotable lines per point</li>\n56\t      </ul>\n57\t    </div>\n58\t\n59\t    <div class=\"stage\">\n60\t      <h3>Stage 3: Application/Illustration <span class=\"status status-not-started\">Not Started</span></h3>\n61\t    </div>\n62\t\n63\t    <div class=\"stage\">\n64\t      <h3>Stage 4: Bookends <span class=\"status status-not-started\">Not Started</span></h3>\n65\t    </div>\n66\t\n67\t    <div class=\"stage\">\n68\t      <h3>Stage 5: Outline <span class=\"status status-not-started\">Not Started</span></h3>\n69\t    </div>\n70\t\n71\t    <div class=\"stage\">\n72\t      <h3>Stage 6: First Draft <span class=\"status status-not-started\">Not Started</span></h3>\n73\t    </div>\n74\t\n75\t    <div..."
+          },
+          "toolu_01DTgY2uFhgg17tfwcpnZ7D9": {
+            "tool_use_id": "toolu_01DTgY2uFhgg17tfwcpnZ7D9",
+            "tool_name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/index.html",
+            "is_error": false,
+            "content": {
+              "Text": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Week 2 - When Life Doesn't Go Your Way | Philippians</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #333; min-height: 100vh; }\n10\t    .header { background: white; border-bottom: 1px solid #e0e0e0; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }\n11\t    .header h1 { font-size: 18px; font-weight: 600; color: #1a1a2e; }\n12\t    .header a { color: #666; text-decoration: none; font-size: 14px; }\n13\t    .content { padding: 24px; max-width: 800px; margin: 0 auto; }\n14\t    .back-link { color: #666; text-decoration: none; font-size: 14px; margin-bottom: 20px; display: inline-block; }\n15\t    h2 { font-size: 1.5rem; margin-bottom: 10px; }\n16\t    .passage { background: #f0f4ff; padding: 16px; border-radius: 8px; margin-bottom: 20px; }\n17\t    .passage code { color: #4f46e5; font-weight: 500; }\n18\t    .stage { background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }\n19\t    .stage h3 { font-size: 16px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }\n20\t    .status { font-size: 12px; padding: 4px 10px; border-radius: 20px; font-weight: 500; }\n21\t    .status-complete { background: rgba(34, 197, 94, 0.15); color: #16a34a; }\n22\t    .status-in-progress { background: rgba(251, 191, 36, 0.15); color: #d97706; }\n23\t    .status-not-started { background: rgba(239, 68, 68, 0.15); color: #dc2626; }\n24\t    .status-waiting { background: rgba(59, 130, 246, 0.15); color: #2563eb; }\n25\t    .file-link { display: block; padding: 10px 14px; background: #f9fafb; border-radius: 6px; text-decoration: none; color: #333; margin-bottom: 8px; }\n26\t    .file-link:hover { background: #f0f0f0; }\n27\t    .next-action { background: rgba(59, 130, 246, 0.1); border-left: 3px solid #3b82f6; padding: 12px 15px; margin-top: 20px; border-radius: 0 8px 8px 0; }\n28\t  </style>\n29\t</head>\n30\t<body>\n31\t  <div class=\"header\">\n32\t    <h1>Philippians Series</h1>\n33\t    <a href=\"../../Series/philippians/index.html\">← Back to Series</a>\n34\t  </div>\n35\t\n36\t  <div class=\"content\">\n37\t    <a href=\"../../Series/philippians/index.html\" class=\"back-link\">← Back to Series</a>\n38\t    \n39\t    <h2>Week 2 — When Life Doesn't Go Your Way</h2>\n40\t    <div class=\"passage\">\n41\t      <strong>Passage:</strong> <code>Philippians 1:12-30</code> • <strong>Date:</strong> August 9\n42\t    </div>\n43\t\n44\t    <div class=\"stage\">\n45\t      <h3>Stage 1: Research <span class=\"status status-complete\">Complete</span></h3>\n46\t      <a href=\"research-brief.html\" class=\"file-link\">📄 Research Brief</a>\n47\t    </div>\n48\t\n49\t    <div class=\"stage\">\n50\t      <h3>Stage 2: Points <span class=\"status status-waiting\">Your Input Needed</span></h3>\n51\t      <p style=\"font-size: 14px; color: #666; margin-bottom: 12px;\">I need your input on:</p>\n52\t      <ul style=\"font-size: 14px; color: #666; margin-left: 20px; margin-bottom: 12px;\">\n53\t        <li>Confirm the 3 suggested points or adjust</li>\n54\t        <li>Point titles that will grab attention</li>\n55\t        <li>2-3 punchy quotable lines per point</li>\n56\t      </ul>\n57\t    </div>\n58\t\n59\t    <div class=\"stage\">\n60\t      <h3>Stage 3: Application/Illustration <span class=\"status status-not-started\">Not Started</span></h3>\n61\t    </div>\n62\t\n63\t    <div class=\"stage\">\n64\t      <h3>Stage 4: Bookends <span class=\"status status-not-started\">Not Started</span></h3>\n65\t    </div>\n66\t\n67\t    <div class=\"stage\">\n68\t      <h3>Stage 5: Outline <span class=\"status status-not-started\">Not Started</span></h3>\n69\t    </div>\n70\t\n71\t    <div class=\"stage\">\n72\t      <h3>Stage 6: First Draft <span class=\"status status-not-started\">Not Started</span></h3>\n73\t    </div>\n74..."
+            },
+            "output": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Week 2 - When Life Doesn't Go Your Way | Philippians</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #333; min-height: 100vh; }\n10\t    .header { background: white; border-bottom: 1px solid #e0e0e0; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }\n11\t    .header h1 { font-size: 18px; font-weight: 600; color: #1a1a2e; }\n12\t    .header a { color: #666; text-decoration: none; font-size: 14px; }\n13\t    .content { padding: 24px; max-width: 800px; margin: 0 auto; }\n14\t    .back-link { color: #666; text-decoration: none; font-size: 14px; margin-bottom: 20px; display: inline-block; }\n15\t    h2 { font-size: 1.5rem; margin-bottom: 10px; }\n16\t    .passage { background: #f0f4ff; padding: 16px; border-radius: 8px; margin-bottom: 20px; }\n17\t    .passage code { color: #4f46e5; font-weight: 500; }\n18\t    .stage { background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }\n19\t    .stage h3 { font-size: 16px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }\n20\t    .status { font-size: 12px; padding: 4px 10px; border-radius: 20px; font-weight: 500; }\n21\t    .status-complete { background: rgba(34, 197, 94, 0.15); color: #16a34a; }\n22\t    .status-in-progress { background: rgba(251, 191, 36, 0.15); color: #d97706; }\n23\t    .status-not-started { background: rgba(239, 68, 68, 0.15); color: #dc2626; }\n24\t    .status-waiting { background: rgba(59, 130, 246, 0.15); color: #2563eb; }\n25\t    .file-link { display: block; padding: 10px 14px; background: #f9fafb; border-radius: 6px; text-decoration: none; color: #333; margin-bottom: 8px; }\n26\t    .file-link:hover { background: #f0f0f0; }\n27\t    .next-action { background: rgba(59, 130, 246, 0.1); border-left: 3px solid #3b82f6; padding: 12px 15px; margin-top: 20px; border-radius: 0 8px 8px 0; }\n28\t  </style>\n29\t</head>\n30\t<body>\n31\t  <div class=\"header\">\n32\t    <h1>Philippians Series</h1>\n33\t    <a href=\"../../Series/philippians/index.html\">← Back to Series</a>\n34\t  </div>\n35\t\n36\t  <div class=\"content\">\n37\t    <a href=\"../../Series/philippians/index.html\" class=\"back-link\">← Back to Series</a>\n38\t    \n39\t    <h2>Week 2 — When Life Doesn't Go Your Way</h2>\n40\t    <div class=\"passage\">\n41\t      <strong>Passage:</strong> <code>Philippians 1:12-30</code> • <strong>Date:</strong> August 9\n42\t    </div>\n43\t\n44\t    <div class=\"stage\">\n45\t      <h3>Stage 1: Research <span class=\"status status-complete\">Complete</span></h3>\n46\t      <a href=\"research-brief.html\" class=\"file-link\">📄 Research Brief</a>\n47\t    </div>\n48\t\n49\t    <div class=\"stage\">\n50\t      <h3>Stage 2: Points <span class=\"status status-waiting\">Your Input Needed</span></h3>\n51\t      <p style=\"font-size: 14px; color: #666; margin-bottom: 12px;\">I need your input on:</p>\n52\t      <ul style=\"font-size: 14px; color: #666; margin-left: 20px; margin-bottom: 12px;\">\n53\t        <li>Confirm the 3 suggested points or adjust</li>\n54\t        <li>Point titles that will grab attention</li>\n55\t        <li>2-3 punchy quotable lines per point</li>\n56\t      </ul>\n57\t    </div>\n58\t\n59\t    <div class=\"stage\">\n60\t      <h3>Stage 3: Application/Illustration <span class=\"status status-not-started\">Not Started</span></h3>\n61\t    </div>\n62\t\n63\t    <div class=\"stage\">\n64\t      <h3>Stage 4: Bookends <span class=\"status status-not-started\">Not Started</span></h3>\n65\t    </div>\n66\t\n67\t    <div class=\"stage\">\n68\t      <h3>Stage 5: Outline <span class=\"status status-not-started\">Not Started</span></h3>\n69\t    </div>\n70\t\n71\t    <div class=\"stage\">\n72\t      <h3>Stage 6: First Draft <span class=\"status status-not-started\">Not Started</span></h3>\n73\t    </div>\n74..."
+          },
+          "toolu_01Dpe6My8sk99DHiweHRuJ84": {
+            "tool_use_id": "toolu_01Dpe6My8sk99DHiweHRuJ84",
+            "tool_name": "ls -la /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/",
+            "is_error": true,
+            "content": {
+              "Text": "Tool permission request failed: Error: Tool use aborted"
+            },
+            "output": "Tool permission request failed: Error: Tool use aborted"
+          },
+          "toolu_019kdnavuhqtg5t9fMhdcjXk": {
+            "tool_use_id": "toolu_019kdnavuhqtg5t9fMhdcjXk",
+            "tool_name": "find /Users/myguyfriday/.openclaw/workspace/mission-control -name \"*Development*\" -o -name \"*development*\"",
+            "is_error": true,
+            "content": {
+              "Text": "<tool_use_error>Cancelled: parallel tool call Bash(ls -la /Users/myguyfriday/.openclaw/work…) errored</tool_use_error>"
+            },
+            "output": "<tool_use_error>Cancelled: parallel tool call Bash(ls -la /Users/myguyfriday/.openclaw/work…) errored</tool_use_error>"
+          },
+          "toolu_01VwNgSCVaevizr49Nr9ygdU": {
+            "tool_use_id": "toolu_01VwNgSCVaevizr49Nr9ygdU",
+            "tool_name": "find /Users/myguyfriday/.openclaw/workspace/mission-control -name \"*.md\" | grep -i \"development\\|procedure\"",
+            "is_error": true,
+            "content": {
+              "Text": "<tool_use_error>Cancelled: parallel tool call Bash(ls -la /Users/myguyfriday/.openclaw/work…) errored</tool_use_error>"
+            },
+            "output": "<tool_use_error>Cancelled: parallel tool call Bash(ls -la /Users/myguyfriday/.openclaw/work…) errored</tool_use_error>"
+          },
+          "toolu_01TXYYQ5KJa4qCFFmGzKqfh4": {
+            "tool_use_id": "toolu_01TXYYQ5KJa4qCFFmGzKqfh4",
+            "tool_name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-1-Joy-Through-Partnership/research-brief.html",
+            "is_error": false,
+            "content": {
+              "Text": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Week 1 - Joy Through Partnership | Research Brief</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: white; padding: 40px; }\n10\t    h1 { font-size: 1.8rem; margin-bottom: 8px; color: #a5b4fc; }\n11\t    h2 { font-size: 1.3rem; margin: 30px 0 15px; color: #a5b4fc; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; }\n12\t    h3 { font-size: 1.1rem; margin: 20px 0 10px; color: #c4b5fd; }\n13\t    .subtitle { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 30px; }\n14\t    .section { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; margin-bottom: 20px; }\n15\t    .key-passage { background: rgba(59, 130, 246, 0.15); border-left: 4px solid #3b82f6; padding: 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }\n16\t    .key-passage p { font-size: 1.1rem; line-height: 1.6; color: #dbeafe; }\n17\t    .key-passage cite { display: block; margin-top: 10px; color: #93c5fd; font-size: 0.9rem; }\n18\t    .point { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 15px; margin-bottom: 12px; border-left: 3px solid #8b5cf6; }\n19\t    .point-title { font-weight: 600; color: #c4b5fd; margin-bottom: 8px; }\n20\t    ul { margin-left: 20px; }\n21\t    li { margin-bottom: 8px; color: rgba(255,255,255,0.9); }\n22\t    .note { background: rgba(251, 191, 36, 0.1); border-left: 3px solid #fbbf24; padding: 12px 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }\n23\t    .warning { background: rgba(239, 68, 68, 0.1); border-left: 3px solid #ef4444; padding: 12px 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }\n24\t    .back-link { color: rgba(255,255,255,0.7); text-decoration: none; margin-bottom: 20px; display: inline-block; }\n25\t    .back-link:hover { color: white; }\n26\t  </style>\n27\t</head>\n28\t<body>\n29\t  <a href=\"index.html\" class=\"back-link\">← Back to Week 1</a>\n30\t  \n31\t  <h1>Week 1 — Joy Through Partnership</h1>\n32\t  <p class=\"subtitle\">Philippians 1:1-11 • August 2</p>\n33\t\n34\t  <div class=\"key-passage\">\n35\t    <p>\"because of your partnership in the gospel from the first day until now.\"</p>\n36\t    <cite>— Philippians 1:5</cite>\n37\t  </div>\n38\t\n39\t  <div class=\"section\">\n40\t    <h2>1. Passage Overview</h2>\n41\t    <p>Paul writes to the Philippians from prison, expressing joy despite his chains. This letter is different from his other epistles—it's personal, warm, and filled with thanksgiving. The theme of joy runs throughout (Greek: chairo), appearing in every chapter. The partnership Paul celebrates isn't just financial—it's gospel-centered fellowship.</p>\n42\t  </div>\n43\t\n44\t  <div class=\"section\">\n45\t    <h2>2. Cultural Context</h2>\n46\t    <h3>Philippi in the 1st Century</h3>\n47\t    <ul>\n48\t      <li><strong>Roman Colony:</strong> Philippi was a Roman colony with Roman citizens, voting rights, and Latin as the official language</li>\n49\t      <li><strong>Strategic City:</strong> Major trade route, gold mining center, key military outpost</li>\n50\t      <li><strong>Jewish Minority:</strong> Small Jewish population, no synagogue—prayer meetings by the river</li>\n51\t      <li><strong>Paul's Visit:</strong> Paul's Second Missionary Journey (~50 AD), he visited on a vision (Acts 16:9)</li>\n52\t    </ul>\n53\t    \n54\t    <h3>Why Partnership Matters</h3>\n55\t    <ul>\n56\t      <li><strong>Koinonia:</strong> Greek word for fellowship/partnership—deep sharing, not casual</li>\n57\t      <li><strong>Financial Support:</strong> Philippians supported Paul financially in Thessalonica (4:15-16) and Corinth (2 Corinthians 11:9)</li>\n58\t      <li><strong>This was unusual:</strong> Paul typically supported himself (Acts 18:3, 1 Thessalonians 2:9)</li>\n59\t    </ul..."
+            },
+            "output": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Week 1 - Joy Through Partnership | Research Brief</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: white; padding: 40px; }\n10\t    h1 { font-size: 1.8rem; margin-bottom: 8px; color: #a5b4fc; }\n11\t    h2 { font-size: 1.3rem; margin: 30px 0 15px; color: #a5b4fc; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; }\n12\t    h3 { font-size: 1.1rem; margin: 20px 0 10px; color: #c4b5fd; }\n13\t    .subtitle { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 30px; }\n14\t    .section { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; margin-bottom: 20px; }\n15\t    .key-passage { background: rgba(59, 130, 246, 0.15); border-left: 4px solid #3b82f6; padding: 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }\n16\t    .key-passage p { font-size: 1.1rem; line-height: 1.6; color: #dbeafe; }\n17\t    .key-passage cite { display: block; margin-top: 10px; color: #93c5fd; font-size: 0.9rem; }\n18\t    .point { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 15px; margin-bottom: 12px; border-left: 3px solid #8b5cf6; }\n19\t    .point-title { font-weight: 600; color: #c4b5fd; margin-bottom: 8px; }\n20\t    ul { margin-left: 20px; }\n21\t    li { margin-bottom: 8px; color: rgba(255,255,255,0.9); }\n22\t    .note { background: rgba(251, 191, 36, 0.1); border-left: 3px solid #fbbf24; padding: 12px 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }\n23\t    .warning { background: rgba(239, 68, 68, 0.1); border-left: 3px solid #ef4444; padding: 12px 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }\n24\t    .back-link { color: rgba(255,255,255,0.7); text-decoration: none; margin-bottom: 20px; display: inline-block; }\n25\t    .back-link:hover { color: white; }\n26\t  </style>\n27\t</head>\n28\t<body>\n29\t  <a href=\"index.html\" class=\"back-link\">← Back to Week 1</a>\n30\t  \n31\t  <h1>Week 1 — Joy Through Partnership</h1>\n32\t  <p class=\"subtitle\">Philippians 1:1-11 • August 2</p>\n33\t\n34\t  <div class=\"key-passage\">\n35\t    <p>\"because of your partnership in the gospel from the first day until now.\"</p>\n36\t    <cite>— Philippians 1:5</cite>\n37\t  </div>\n38\t\n39\t  <div class=\"section\">\n40\t    <h2>1. Passage Overview</h2>\n41\t    <p>Paul writes to the Philippians from prison, expressing joy despite his chains. This letter is different from his other epistles—it's personal, warm, and filled with thanksgiving. The theme of joy runs throughout (Greek: chairo), appearing in every chapter. The partnership Paul celebrates isn't just financial—it's gospel-centered fellowship.</p>\n42\t  </div>\n43\t\n44\t  <div class=\"section\">\n45\t    <h2>2. Cultural Context</h2>\n46\t    <h3>Philippi in the 1st Century</h3>\n47\t    <ul>\n48\t      <li><strong>Roman Colony:</strong> Philippi was a Roman colony with Roman citizens, voting rights, and Latin as the official language</li>\n49\t      <li><strong>Strategic City:</strong> Major trade route, gold mining center, key military outpost</li>\n50\t      <li><strong>Jewish Minority:</strong> Small Jewish population, no synagogue—prayer meetings by the river</li>\n51\t      <li><strong>Paul's Visit:</strong> Paul's Second Missionary Journey (~50 AD), he visited on a vision (Acts 16:9)</li>\n52\t    </ul>\n53\t    \n54\t    <h3>Why Partnership Matters</h3>\n55\t    <ul>\n56\t      <li><strong>Koinonia:</strong> Greek word for fellowship/partnership—deep sharing, not casual</li>\n57\t      <li><strong>Financial Support:</strong> Philippians supported Paul financially in Thessalonica (4:15-16) and Corinth (2 Corinthians 11:9)</li>\n58\t      <li><strong>This was unusual:</strong> Paul typically supported himself (Acts 18:3, 1 Thessalonians 2:9)</li>\n59\t    </ul..."
+          },
+          "toolu_01Sr4QQh8rf1Ci6pXcyht294": {
+            "tool_use_id": "toolu_01Sr4QQh8rf1Ci6pXcyht294",
+            "tool_name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/research-brief.html",
+            "is_error": false,
+            "content": {
+              "Text": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Week 1 - Joy Through Partnership | Research Brief</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: white; padding: 40px; }\n10\t    h1 { font-size: 1.8rem; margin-bottom: 8px; color: #a5b4fc; }\n11\t    h2 { font-size: 1.3rem; margin: 30px 0 15px; color: #a5b4fc; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; }\n12\t    h3 { font-size: 1.1rem; margin: 20px 0 10px; color: #c4b5fd; }\n13\t    .subtitle { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 30px; }\n14\t    .section { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; margin-bottom: 20px; }\n15\t    .key-passage { background: rgba(59, 130, 246, 0.15); border-left: 4px solid #3b82f6; padding: 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }\n16\t    .key-passage p { font-size: 1.1rem; line-height: 1.6; color: #dbeafe; }\n17\t    .key-passage cite { display: block; margin-top: 10px; color: #93c5fd; font-size: 0.9rem; }\n18\t    .point { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 15px; margin-bottom: 12px; border-left: 3px solid #8b5cf6; }\n19\t    .point-title { font-weight: 600; color: #c4b5fd; margin-bottom: 8px; }\n20\t    ul { margin-left: 20px; }\n21\t    li { margin-bottom: 8px; color: rgba(255,255,255,0.9); }\n22\t    .note { background: rgba(251, 191, 36, 0.1); border-left: 3px solid #fbbf24; padding: 12px 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }\n23\t    .back-link { color: rgba(255,255,255,0.7); text-decoration: none; margin-bottom: 20px; display: inline-block; }\n24\t    .back-link:hover { color: white; }\n25\t  </style>\n26\t</head>\n27\t<body>\n28\t  <a href=\"index.html\" class=\"back-link\">← Back to Week 2</a>\n29\t  \n30\t  <h1>Week 2 — When Life Doesn't Go Your Way</h1>\n31\t  <p class=\"subtitle\">Philippians 1:12-30 • August 9</p>\n32\t\n33\t  <div class=\"key-passage\">\n34\t    <p>\"I want you to know, brothers, that what has happened to me has really served to advance the gospel.\"</p>\n35\t    <cite>— Philippians 1:12</cite>\n36\t  </div>\n37\t\n38\t  <div class=\"section\">\n39\t    <h2>1. Passage Overview</h2>\n40\t    <p>Paul shifts from thanksgiving to his current situation—imprisonment in Rome. Instead of complaint, he shows how his chains became gospel advance. He addresses two groups: those preaching from envy/strife (v. 15-17) and those preaching from love (v. 18). His response: Christ is proclaimed either way—so he rejoice!</p>\n41\t  </div>\n42\t\n43\t  <div class=\"section\">\n44\t    <h2>2. Key Themes</h2>\n45\t    \n46\t    <div class=\"point\">\n47\t      <div class=\"point-title\">Theme A: Setbacks Become Platforms</div>\n48\t      <ul>\n49\t        <li>Paul in prison = gospel spread to Caesar's household (v. 13)</li>\n50\t        <li>\"What has happened to me\" — imprisonment intended to stop the gospel反而 advanced it</li>\n51\t        <li>This shows God's purposes not limited by our circumstances</li>\n52\t      </ul>\n53\t    </div>\n54\t\n55\t    <div class=\"point\">\n56\t      <div class=\"point-title\">Theme B: Pressure Reveals Values</div>\n57\t      <ul>\n58\t        <li>\"For to me, to live is Christ, and to die is gain\" (v. 21)</li>\n59\t        <li>Pressures strips away distractions, exposes what is central</li>\n60\t        <li>Paul is open - either outcome brings gospel fruit</li>\n61\t      </ul>\n62\t    </div>\n63\t\n64\t    <div class=\"point\">\n65\t      <div class=\"point-title\">Theme C: Boldness as Witness</div>\n66\t      <ul>\n67\t        <li>\"standing firm in one spirit, with one mind, fighting together\" (v. 27)</li>\n68\t        <li>\"being courageous for Christ\" — visible evidence of deeper reality</li>\n69\t        <li>\"it has become clear throughout the whole imperial guard\" (v. 13)</li>\n70\t..."
+            },
+            "output": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Week 1 - Joy Through Partnership | Research Brief</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: white; padding: 40px; }\n10\t    h1 { font-size: 1.8rem; margin-bottom: 8px; color: #a5b4fc; }\n11\t    h2 { font-size: 1.3rem; margin: 30px 0 15px; color: #a5b4fc; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; }\n12\t    h3 { font-size: 1.1rem; margin: 20px 0 10px; color: #c4b5fd; }\n13\t    .subtitle { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 30px; }\n14\t    .section { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; margin-bottom: 20px; }\n15\t    .key-passage { background: rgba(59, 130, 246, 0.15); border-left: 4px solid #3b82f6; padding: 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }\n16\t    .key-passage p { font-size: 1.1rem; line-height: 1.6; color: #dbeafe; }\n17\t    .key-passage cite { display: block; margin-top: 10px; color: #93c5fd; font-size: 0.9rem; }\n18\t    .point { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 15px; margin-bottom: 12px; border-left: 3px solid #8b5cf6; }\n19\t    .point-title { font-weight: 600; color: #c4b5fd; margin-bottom: 8px; }\n20\t    ul { margin-left: 20px; }\n21\t    li { margin-bottom: 8px; color: rgba(255,255,255,0.9); }\n22\t    .note { background: rgba(251, 191, 36, 0.1); border-left: 3px solid #fbbf24; padding: 12px 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }\n23\t    .back-link { color: rgba(255,255,255,0.7); text-decoration: none; margin-bottom: 20px; display: inline-block; }\n24\t    .back-link:hover { color: white; }\n25\t  </style>\n26\t</head>\n27\t<body>\n28\t  <a href=\"index.html\" class=\"back-link\">← Back to Week 2</a>\n29\t  \n30\t  <h1>Week 2 — When Life Doesn't Go Your Way</h1>\n31\t  <p class=\"subtitle\">Philippians 1:12-30 • August 9</p>\n32\t\n33\t  <div class=\"key-passage\">\n34\t    <p>\"I want you to know, brothers, that what has happened to me has really served to advance the gospel.\"</p>\n35\t    <cite>— Philippians 1:12</cite>\n36\t  </div>\n37\t\n38\t  <div class=\"section\">\n39\t    <h2>1. Passage Overview</h2>\n40\t    <p>Paul shifts from thanksgiving to his current situation—imprisonment in Rome. Instead of complaint, he shows how his chains became gospel advance. He addresses two groups: those preaching from envy/strife (v. 15-17) and those preaching from love (v. 18). His response: Christ is proclaimed either way—so he rejoice!</p>\n41\t  </div>\n42\t\n43\t  <div class=\"section\">\n44\t    <h2>2. Key Themes</h2>\n45\t    \n46\t    <div class=\"point\">\n47\t      <div class=\"point-title\">Theme A: Setbacks Become Platforms</div>\n48\t      <ul>\n49\t        <li>Paul in prison = gospel spread to Caesar's household (v. 13)</li>\n50\t        <li>\"What has happened to me\" — imprisonment intended to stop the gospel反而 advanced it</li>\n51\t        <li>This shows God's purposes not limited by our circumstances</li>\n52\t      </ul>\n53\t    </div>\n54\t\n55\t    <div class=\"point\">\n56\t      <div class=\"point-title\">Theme B: Pressure Reveals Values</div>\n57\t      <ul>\n58\t        <li>\"For to me, to live is Christ, and to die is gain\" (v. 21)</li>\n59\t        <li>Pressures strips away distractions, exposes what is central</li>\n60\t        <li>Paul is open - either outcome brings gospel fruit</li>\n61\t      </ul>\n62\t    </div>\n63\t\n64\t    <div class=\"point\">\n65\t      <div class=\"point-title\">Theme C: Boldness as Witness</div>\n66\t      <ul>\n67\t        <li>\"standing firm in one spirit, with one mind, fighting together\" (v. 27)</li>\n68\t        <li>\"being courageous for Christ\" — visible evidence of deeper reality</li>\n69\t        <li>\"it has become clear throughout the whole imperial guard\" (v. 13)</li>\n70\t..."
+          },
+          "toolu_01R9ChuNEhU14cnf1z1z4XJi": {
+            "tool_use_id": "toolu_01R9ChuNEhU14cnf1z1z4XJi",
+            "tool_name": "grep -l \"sermon.*development|research.*procedure|development.*procedure\" /Users/myguyfriday/.openclaw/workspace/mission-control",
+            "is_error": false,
+            "content": {
+              "Text": "Found 3 files\n/Users/myguyfriday/.openclaw/workspace/mission-control/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/Semester-Planning.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/Series-Planning.html"
+            },
+            "output": "Found 3 files\n/Users/myguyfriday/.openclaw/workspace/mission-control/index.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/Semester-Planning.html\n/Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/Series-Planning.html"
+          },
+          "toolu_01ALxZVLycX74dWTYt4vTVEi": {
+            "tool_use_id": "toolu_01ALxZVLycX74dWTYt4vTVEi",
+            "tool_name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/research-brief.html",
+            "is_error": false,
+            "content": {
+              "Text": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Research: Week 1 - God Says I Am His Child | Defined Series</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { \n10\t      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n11\t      background: #f5f5f5; color: #333; line-height: 1.6;\n12\t    }\n13\t    .header {\n14\t      background: white;\n15\t      border-bottom: 1px solid #e0e0e0;\n16\t      padding: 16px 24px;\n17\t    }\n18\t    .header h1 { font-size: 18px; font-weight: 600; color: #1a1a2e; }\n19\t    .header a { color: #6366f1; text-decoration: none; font-size: 14px; }\n20\t    .header a:hover { text-decoration: underline; }\n21\t    .content { padding: 24px; max-width: 800px; margin: 0 auto; }\n22\t    \n23\t    h2 { font-size: 20px; font-weight: 600; color: #1a1a2e; margin: 30px 0 15px 0; }\n24\t    h3 { font-size: 16px; font-weight: 600; color: #333; margin: 20px 0 10px 0; }\n25\t    h4 { font-size: 15px; font-weight: 600; color: #444; margin: 15px 0 8px 0; }\n26\t    p { margin-bottom: 12px; }\n27\t    ul, ol { margin: 10px 0 15px 25px; }\n28\t    li { margin-bottom: 6px; }\n29\t    \n30\t    .verse {\n31\t      background: #f0f4ff;\n32\t      border-left: 4px solid #6366f1;\n33\t      padding: 12px 16px;\n34\t      margin: 15px 0;\n35\t      font-style: italic;\n36\t    }\n37\t    \n38\t    .section {\n39\t      background: white;\n40\t      border-radius: 12px;\n41\t      padding: 24px;\n42\t      margin-bottom: 24px;\n43\t      box-shadow: 0 1px 3px rgba(0,0,0,0.08);\n44\t    }\n45\t    \n46\t    .intro-box {\n47\t      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n48\t      color: white;\n49\t      padding: 24px;\n50\t      border-radius: 12px;\n51\t      margin-bottom: 24px;\n52\t    }\n53\t    .intro-box h1 { color: white; font-size: 22px; margin-bottom: 8px; }\n54\t    .intro-box p { opacity: 0.9; margin: 0; }\n55\t    \n56\t    .key-passages {\n57\t      background: #fafafa;\n58\t      border: 1px solid #eee;\n59\t      padding: 16px;\n60\t      border-radius: 8px;\n61\t      margin: 15px 0;\n62\t    }\n63\t    .key-passages strong { color: #333; }\n64\t    \n65\t    blockquote {\n66\t      border-left: 3px solid #6366f1;\n67\t      padding-left: 16px;\n68\t      margin: 15px 0;\n69\t      color: #555;\n70\t      font-style: italic;\n71\t    }\n72\t    \n73\t    .quote-author {\n74\t      font-size: 13px;\n75\t      color: #666;\n76\t      margin-top: 8px;\n77\t    }\n78\t    \n79\t    .footer {\n80\t      text-align: center;\n81\t      color: #999;\n82\t      font-size: 12px;\n83\t      padding: 20px;\n84\t      border-top: 1px solid #eee;\n85\t      margin-top: 40px;\n86\t    }\n87\t  </style>\n88\t</head>\n89\t<body>\n90\t  <div class=\"header\">\n91\t    <h1>📖 Research Brief: Week 1 - God Says I Am His Child</h1>\n92\t    <p><a href=\"../../Series/identity-in-christ/index.html\">← Back to Series</a></p>\n93\t  </div>\n94\t  \n95\t  <div class=\"content\">\n96\t    <div class=\"intro-box\">\n97\t      <h1>Week 1: God Says I Am His Child</h1>\n98\t      <p><strong>Series:</strong> Defined - Who God Says You Are | <strong>Date:</strong> April 12, 2026</p>\n99\t      <p><strong>Key Passages:</strong> John 1:12, Ephesians 1:4-5, 2 Corinthians 5:17</p>\n100\t    </div>\n101\t\n102\t    <h2>INTRODUCTION & BURDEN</h2>\n103\t    <div class=\"section\">\n104\t      <p>At the core of the gospel is not just forgiveness—it's adoption. God doesn't just save us from sin; He brings us into His family. This means your identity is no longer defined by your past, your performance, or others' opinions, but by the Father who chose you and calls you His own.</p>\n105\t      <p>Many people live as spiritual orphans—constantly striving for approval, afraid of failure, and unsure of their worth. But in Christ, we are fully known and fully loved. This message invites us to stop performing for identity and start living from it, resting in the truth that we are sons and daughters of God.</p>\n106\t      <p><strong>The burden:</st..."
+            },
+            "output": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Research: Week 1 - God Says I Am His Child | Defined Series</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { \n10\t      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n11\t      background: #f5f5f5; color: #333; line-height: 1.6;\n12\t    }\n13\t    .header {\n14\t      background: white;\n15\t      border-bottom: 1px solid #e0e0e0;\n16\t      padding: 16px 24px;\n17\t    }\n18\t    .header h1 { font-size: 18px; font-weight: 600; color: #1a1a2e; }\n19\t    .header a { color: #6366f1; text-decoration: none; font-size: 14px; }\n20\t    .header a:hover { text-decoration: underline; }\n21\t    .content { padding: 24px; max-width: 800px; margin: 0 auto; }\n22\t    \n23\t    h2 { font-size: 20px; font-weight: 600; color: #1a1a2e; margin: 30px 0 15px 0; }\n24\t    h3 { font-size: 16px; font-weight: 600; color: #333; margin: 20px 0 10px 0; }\n25\t    h4 { font-size: 15px; font-weight: 600; color: #444; margin: 15px 0 8px 0; }\n26\t    p { margin-bottom: 12px; }\n27\t    ul, ol { margin: 10px 0 15px 25px; }\n28\t    li { margin-bottom: 6px; }\n29\t    \n30\t    .verse {\n31\t      background: #f0f4ff;\n32\t      border-left: 4px solid #6366f1;\n33\t      padding: 12px 16px;\n34\t      margin: 15px 0;\n35\t      font-style: italic;\n36\t    }\n37\t    \n38\t    .section {\n39\t      background: white;\n40\t      border-radius: 12px;\n41\t      padding: 24px;\n42\t      margin-bottom: 24px;\n43\t      box-shadow: 0 1px 3px rgba(0,0,0,0.08);\n44\t    }\n45\t    \n46\t    .intro-box {\n47\t      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n48\t      color: white;\n49\t      padding: 24px;\n50\t      border-radius: 12px;\n51\t      margin-bottom: 24px;\n52\t    }\n53\t    .intro-box h1 { color: white; font-size: 22px; margin-bottom: 8px; }\n54\t    .intro-box p { opacity: 0.9; margin: 0; }\n55\t    \n56\t    .key-passages {\n57\t      background: #fafafa;\n58\t      border: 1px solid #eee;\n59\t      padding: 16px;\n60\t      border-radius: 8px;\n61\t      margin: 15px 0;\n62\t    }\n63\t    .key-passages strong { color: #333; }\n64\t    \n65\t    blockquote {\n66\t      border-left: 3px solid #6366f1;\n67\t      padding-left: 16px;\n68\t      margin: 15px 0;\n69\t      color: #555;\n70\t      font-style: italic;\n71\t    }\n72\t    \n73\t    .quote-author {\n74\t      font-size: 13px;\n75\t      color: #666;\n76\t      margin-top: 8px;\n77\t    }\n78\t    \n79\t    .footer {\n80\t      text-align: center;\n81\t      color: #999;\n82\t      font-size: 12px;\n83\t      padding: 20px;\n84\t      border-top: 1px solid #eee;\n85\t      margin-top: 40px;\n86\t    }\n87\t  </style>\n88\t</head>\n89\t<body>\n90\t  <div class=\"header\">\n91\t    <h1>📖 Research Brief: Week 1 - God Says I Am His Child</h1>\n92\t    <p><a href=\"../../Series/identity-in-christ/index.html\">← Back to Series</a></p>\n93\t  </div>\n94\t  \n95\t  <div class=\"content\">\n96\t    <div class=\"intro-box\">\n97\t      <h1>Week 1: God Says I Am His Child</h1>\n98\t      <p><strong>Series:</strong> Defined - Who God Says You Are | <strong>Date:</strong> April 12, 2026</p>\n99\t      <p><strong>Key Passages:</strong> John 1:12, Ephesians 1:4-5, 2 Corinthians 5:17</p>\n100\t    </div>\n101\t\n102\t    <h2>INTRODUCTION & BURDEN</h2>\n103\t    <div class=\"section\">\n104\t      <p>At the core of the gospel is not just forgiveness—it's adoption. God doesn't just save us from sin; He brings us into His family. This means your identity is no longer defined by your past, your performance, or others' opinions, but by the Father who chose you and calls you His own.</p>\n105\t      <p>Many people live as spiritual orphans—constantly striving for approval, afraid of failure, and unsure of their worth. But in Christ, we are fully known and fully loved. This message invites us to stop performing for identity and start living from it, resting in the truth that we are sons and daughters of God.</p>\n106\t      <p><strong>The burden:</st..."
+          },
+          "toolu_01Jt6FYtUxPzrHxhFJnZXvsn": {
+            "tool_use_id": "toolu_01Jt6FYtUxPzrHxhFJnZXvsn",
+            "tool_name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/Sermon-Development.html",
+            "is_error": false,
+            "content": {
+              "Text": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Sermon Development Process</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { \n10\t      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n11\t      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);\n12\t      min-height: 100vh; color: white; padding: 40px;\n13\t    }\n14\t    h1 { font-size: 2rem; margin-bottom: 10px; color: #a5b4fc; }\n15\t    h2 { font-size: 1.3rem; margin: 30px 0 15px; color: #a5b4fc; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; }\n16\t    h3 { font-size: 1.1rem; margin: 20px 0 10px; color: #c4b5fd; }\n17\t    .subtitle { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 30px; }\n18\t    .section { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; margin-bottom: 20px; }\n19\t    .stage { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 20px; margin-bottom: 15px; border-left: 4px solid #f59e0b; }\n20\t    .stage-num { font-size: 0.85rem; color: #f59e0b; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }\n21\t    .stage-name { font-size: 1.2rem; font-weight: 600; margin: 5px 0; }\n22\t    table { width: 100%; border-collapse: collapse; margin: 15px 0; }\n23\t    th, td { padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }\n24\t    th { color: #a5b4fc; font-weight: 600; }\n25\t    .owner-me { background: rgba(239, 68, 68, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n26\t    .owner-you { background: rgba(59, 130, 246, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n27\t    .owner-both { background: rgba(168, 85, 247, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n28\t    .owner-ai { background: rgba(34, 197, 94, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n29\t    .owner-unsure { background: rgba(251, 191, 36, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n30\t    .input-output { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-top: 10px; }\n31\t    .input-output h4 { color: #c4b5fd; font-size: 0.9rem; margin-bottom: 8px; }\n32\t    .questions { background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 8px; padding: 15px; margin-top: 20px; }\n33\t    .questions h4 { color: #fbbf24; margin-bottom: 10px; }\n34\t    .questions ul { margin-left: 20px; }\n35\t    .questions li { margin-bottom: 8px; color: rgba(255,255,255,0.9); }\n36\t    .nav { margin-bottom: 30px; }\n37\t    .nav a { color: rgba(255,255,255,0.7); text-decoration: none; margin-right: 20px; }\n38\t    .nav a:hover { color: white; }\n39\t    .note { background: rgba(59, 130, 246, 0.1); border-left: 3px solid #3b82f6; padding: 12px 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }\n40\t    .warning { background: rgba(239, 68, 68, 0.1); border-left: 3px solid #ef4444; padding: 12px 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }\n41\t    ul { margin-left: 20px; }\n42\t    li { margin-bottom: 8px; }\n43\t  </style>\n44\t</head>\n45\t<body>\n46\t  <div class=\"nav\">\n47\t    <a href=\"../sermon-dev/\">← Back to SermonDev</a>\n48\t  </div>\n49\t  \n50\t  <h1>🎙️ Sermon Development Process</h1>\n51\t  <p class=\"subtitle\">How we develop individual sermons week to week (11 stages)</p>\n52\t\n53\t  <div class=\"section\">\n54\t    <h2>1. Overview</h2>\n55\t    <p>Sermon Development takes a confirmed week from the Series Teaching Map and develops it into a finalized manuscript ready for delivery. This follows the fixed 11-stage process below.</p>\n56\t    <p style=\"margin-top: 15px;\"><strong>Goal:</strong> Create a disciple-forming sermon that follows the sermon flow (Intro → Scripture → Points with Observation, Application, Next Steps → Conclusion with Decision, \"I Will\", Share, Prayer).</p>\n57\t    <div class=\"note\">\n58\t     ..."
+            },
+            "output": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Sermon Development Process</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { \n10\t      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n11\t      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);\n12\t      min-height: 100vh; color: white; padding: 40px;\n13\t    }\n14\t    h1 { font-size: 2rem; margin-bottom: 10px; color: #a5b4fc; }\n15\t    h2 { font-size: 1.3rem; margin: 30px 0 15px; color: #a5b4fc; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; }\n16\t    h3 { font-size: 1.1rem; margin: 20px 0 10px; color: #c4b5fd; }\n17\t    .subtitle { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 30px; }\n18\t    .section { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; margin-bottom: 20px; }\n19\t    .stage { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 20px; margin-bottom: 15px; border-left: 4px solid #f59e0b; }\n20\t    .stage-num { font-size: 0.85rem; color: #f59e0b; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }\n21\t    .stage-name { font-size: 1.2rem; font-weight: 600; margin: 5px 0; }\n22\t    table { width: 100%; border-collapse: collapse; margin: 15px 0; }\n23\t    th, td { padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }\n24\t    th { color: #a5b4fc; font-weight: 600; }\n25\t    .owner-me { background: rgba(239, 68, 68, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n26\t    .owner-you { background: rgba(59, 130, 246, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n27\t    .owner-both { background: rgba(168, 85, 247, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n28\t    .owner-ai { background: rgba(34, 197, 94, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n29\t    .owner-unsure { background: rgba(251, 191, 36, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n30\t    .input-output { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-top: 10px; }\n31\t    .input-output h4 { color: #c4b5fd; font-size: 0.9rem; margin-bottom: 8px; }\n32\t    .questions { background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 8px; padding: 15px; margin-top: 20px; }\n33\t    .questions h4 { color: #fbbf24; margin-bottom: 10px; }\n34\t    .questions ul { margin-left: 20px; }\n35\t    .questions li { margin-bottom: 8px; color: rgba(255,255,255,0.9); }\n36\t    .nav { margin-bottom: 30px; }\n37\t    .nav a { color: rgba(255,255,255,0.7); text-decoration: none; margin-right: 20px; }\n38\t    .nav a:hover { color: white; }\n39\t    .note { background: rgba(59, 130, 246, 0.1); border-left: 3px solid #3b82f6; padding: 12px 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }\n40\t    .warning { background: rgba(239, 68, 68, 0.1); border-left: 3px solid #ef4444; padding: 12px 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }\n41\t    ul { margin-left: 20px; }\n42\t    li { margin-bottom: 8px; }\n43\t  </style>\n44\t</head>\n45\t<body>\n46\t  <div class=\"nav\">\n47\t    <a href=\"../sermon-dev/\">← Back to SermonDev</a>\n48\t  </div>\n49\t  \n50\t  <h1>🎙️ Sermon Development Process</h1>\n51\t  <p class=\"subtitle\">How we develop individual sermons week to week (11 stages)</p>\n52\t\n53\t  <div class=\"section\">\n54\t    <h2>1. Overview</h2>\n55\t    <p>Sermon Development takes a confirmed week from the Series Teaching Map and develops it into a finalized manuscript ready for delivery. This follows the fixed 11-stage process below.</p>\n56\t    <p style=\"margin-top: 15px;\"><strong>Goal:</strong> Create a disciple-forming sermon that follows the sermon flow (Intro → Scripture → Points with Observation, Application, Next Steps → Conclusion with Decision, \"I Will\", Share, Prayer).</p>\n57\t    <div class=\"note\">\n58\t     ..."
+          },
+          "toolu_01NfhPqQwP1eKBJijaJLuHHj": {
+            "tool_use_id": "toolu_01NfhPqQwP1eKBJijaJLuHHj",
+            "tool_name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-2-God-Says-I-Am-His-Ambassador/research-brief.html",
+            "is_error": false,
+            "content": {
+              "Text": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Research: Week 2 - God Says I Am His Ambassador | Defined Series</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }\n10\t    .header { background: white; border-bottom: 1px solid #e0e0e0; padding: 16px 24px; }\n11\t    .header h1 { font-size: 18px; font-weight: 600; color: #1a1a2e; }\n12\t    .header a { color: #6366f1; text-decoration: none; font-size: 14px; }\n13\t    .content { padding: 24px; max-width: 800px; margin: 0 auto; }\n14\t    h2 { font-size: 20px; font-weight: 600; color: #1a1a2e; margin: 30px 0 15px 0; }\n15\t    h3 { font-size: 16px; font-weight: 600; color: #333; margin: 20px 0 10px 0; }\n16\t    h4 { font-size: 15px; font-weight: 600; color: #444; margin: 15px 0 8px 0; }\n17\t    p { margin-bottom: 12px; }\n18\t    ul, ol { margin: 10px 0 15px 25px; }\n19\t    li { margin-bottom: 6px; }\n20\t    .verse { background: #f0f4ff; border-left: 4px solid #6366f1; padding: 12px 16px; margin: 15px 0; font-style: italic; }\n21\t    .section { background: white; border-radius: 12px; padding: 24px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }\n22\t    .intro-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 24px; border-radius: 12px; margin-bottom: 24px; }\n23\t    .intro-box h1 { color: white; font-size: 22px; margin-bottom: 8px; }\n24\t    .intro-box p { opacity: 0.9; margin: 0; }\n25\t    blockquote { border-left: 3px solid #6366f1; padding-left: 16px; margin: 15px 0; color: #555; font-style: italic; }\n26\t    .quote-author { font-size: 13px; color: #666; margin-top: 8px; }\n27\t    .footer { text-align: center; color: #999; font-size: 12px; padding: 20px; border-top: 1px solid #eee; margin-top: 40px; }\n28\t  </style>\n29\t</head>\n30\t<body>\n31\t  <div class=\"header\">\n32\t    <h1>📖 Research Brief: Week 2 - God Says I Am His Ambassador</h1>\n33\t    <p><a href=\"../../Series/identity-in-christ/index.html\">← Back to Series</a></p>\n34\t  </div>\n35\t  <div class=\"content\">\n36\t    <div class=\"intro-box\">\n37\t      <h1>Week 2: God Says I Am His Ambassador</h1>\n38\t      <p><strong>Series:</strong> Defined - Who God Says You Are | <strong>Date:</strong> April 19, 2026</p>\n39\t      <p><strong>Key Passages:</strong> 2 Corinthians 5:20, 1 Peter 2:9, Philippians 3:20</p>\n40\t    </div>\n41\t\n42\t    <h2>INTRODUCTION & BURDEN</h2>\n43\t    <div class=\"section\">\n44\t      <p>You were not just saved from something—you were saved for something. God has given every believer a purpose: to represent Him in the world. As ambassadors of Christ, we carry His message, reflect His character, and invite others into His Kingdom.</p>\n45\t      <p>This means your life has meaning beyond your job, your routine, or your circumstances. You are part of something eternal. When you understand that you belong to God's Kingdom, your perspective shifts—you begin to live with intentionality.</p>\n46\t      <p><strong>The burden:</strong> To help people understand that they are ambassadors of Christ wherever they are, and that this gives their everyday life eternal significance.</p>\n47\t    </div>\n48\t\n49\t    <h2>SECTION 1: THEOLOGICAL FOUNDATION</h2>\n50\t    <div class=\"section\">\n51\t      <h3>1.1 The Concept of Ambassadorship</h3>\n52\t      <p>An ambassador is a representative who speaks and acts on behalf of a ruler or nation. In the ancient world, ambassadors carried the full authority of the one who sent them.</p>\n53\t      <p><strong>Biblical usage:</strong> The Greek word for ambassador is \"presbeutes\" (πρεσβευτής), used only in Ephesians 6:20 and 2 Corinthians 5:20.</p>\n54\t      <p>Paul writes: \"We are therefore Christ's ambassadors, as though God were making his appeal through us\" (2 Corinthians 5:20).</p>\n55\t\n56\t     ..."
+            },
+            "output": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Research: Week 2 - God Says I Am His Ambassador | Defined Series</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }\n10\t    .header { background: white; border-bottom: 1px solid #e0e0e0; padding: 16px 24px; }\n11\t    .header h1 { font-size: 18px; font-weight: 600; color: #1a1a2e; }\n12\t    .header a { color: #6366f1; text-decoration: none; font-size: 14px; }\n13\t    .content { padding: 24px; max-width: 800px; margin: 0 auto; }\n14\t    h2 { font-size: 20px; font-weight: 600; color: #1a1a2e; margin: 30px 0 15px 0; }\n15\t    h3 { font-size: 16px; font-weight: 600; color: #333; margin: 20px 0 10px 0; }\n16\t    h4 { font-size: 15px; font-weight: 600; color: #444; margin: 15px 0 8px 0; }\n17\t    p { margin-bottom: 12px; }\n18\t    ul, ol { margin: 10px 0 15px 25px; }\n19\t    li { margin-bottom: 6px; }\n20\t    .verse { background: #f0f4ff; border-left: 4px solid #6366f1; padding: 12px 16px; margin: 15px 0; font-style: italic; }\n21\t    .section { background: white; border-radius: 12px; padding: 24px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }\n22\t    .intro-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 24px; border-radius: 12px; margin-bottom: 24px; }\n23\t    .intro-box h1 { color: white; font-size: 22px; margin-bottom: 8px; }\n24\t    .intro-box p { opacity: 0.9; margin: 0; }\n25\t    blockquote { border-left: 3px solid #6366f1; padding-left: 16px; margin: 15px 0; color: #555; font-style: italic; }\n26\t    .quote-author { font-size: 13px; color: #666; margin-top: 8px; }\n27\t    .footer { text-align: center; color: #999; font-size: 12px; padding: 20px; border-top: 1px solid #eee; margin-top: 40px; }\n28\t  </style>\n29\t</head>\n30\t<body>\n31\t  <div class=\"header\">\n32\t    <h1>📖 Research Brief: Week 2 - God Says I Am His Ambassador</h1>\n33\t    <p><a href=\"../../Series/identity-in-christ/index.html\">← Back to Series</a></p>\n34\t  </div>\n35\t  <div class=\"content\">\n36\t    <div class=\"intro-box\">\n37\t      <h1>Week 2: God Says I Am His Ambassador</h1>\n38\t      <p><strong>Series:</strong> Defined - Who God Says You Are | <strong>Date:</strong> April 19, 2026</p>\n39\t      <p><strong>Key Passages:</strong> 2 Corinthians 5:20, 1 Peter 2:9, Philippians 3:20</p>\n40\t    </div>\n41\t\n42\t    <h2>INTRODUCTION & BURDEN</h2>\n43\t    <div class=\"section\">\n44\t      <p>You were not just saved from something—you were saved for something. God has given every believer a purpose: to represent Him in the world. As ambassadors of Christ, we carry His message, reflect His character, and invite others into His Kingdom.</p>\n45\t      <p>This means your life has meaning beyond your job, your routine, or your circumstances. You are part of something eternal. When you understand that you belong to God's Kingdom, your perspective shifts—you begin to live with intentionality.</p>\n46\t      <p><strong>The burden:</strong> To help people understand that they are ambassadors of Christ wherever they are, and that this gives their everyday life eternal significance.</p>\n47\t    </div>\n48\t\n49\t    <h2>SECTION 1: THEOLOGICAL FOUNDATION</h2>\n50\t    <div class=\"section\">\n51\t      <h3>1.1 The Concept of Ambassadorship</h3>\n52\t      <p>An ambassador is a representative who speaks and acts on behalf of a ruler or nation. In the ancient world, ambassadors carried the full authority of the one who sent them.</p>\n53\t      <p><strong>Biblical usage:</strong> The Greek word for ambassador is \"presbeutes\" (πρεσβευτής), used only in Ephesians 6:20 and 2 Corinthians 5:20.</p>\n54\t      <p>Paul writes: \"We are therefore Christ's ambassadors, as though God were making his appeal through us\" (2 Corinthians 5:20).</p>\n55\t\n56\t     ..."
+          },
+          "toolu_01PDMpoo7KwBUvBKE3zXByeV": {
+            "tool_use_id": "toolu_01PDMpoo7KwBUvBKE3zXByeV",
+            "tool_name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/philippians/Week-2-When-Life-Doesnt-Go-Your-Way/research-brief.html",
+            "is_error": false,
+            "content": {
+              "Text": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Week 1 - Joy Through Partnership | Research Brief</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: white; padding: 40px; }\n10\t    h1 { font-size: 1.8rem; margin-bottom: 8px; color: #a5b4fc; }\n11\t    h2 { font-size: 1.3rem; margin: 30px 0 15px; color: #a5b4fc; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; }\n12\t    h3 { font-size: 1.1rem; margin: 20px 0 10px; color: #c4b5fd; }\n13\t    .subtitle { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 30px; }\n14\t    .section { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; margin-bottom: 20px; }\n15\t    .key-passage { background: rgba(59, 130, 246, 0.15); border-left: 4px solid #3b82f6; padding: 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }\n16\t    .key-passage p { font-size: 1.1rem; line-height: 1.6; color: #dbeafe; }\n17\t    .key-passage cite { display: block; margin-top: 10px; color: #93c5fd; font-size: 0.9rem; }\n18\t    .point { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 15px; margin-bottom: 12px; border-left: 3px solid #8b5cf6; }\n19\t    .point-title { font-weight: 600; color: #c4b5fd; margin-bottom: 8px; }\n20\t    ul { margin-left: 20px; }\n21\t    li { margin-bottom: 8px; color: rgba(255,255,255,0.9); }\n22\t    .note { background: rgba(251, 191, 36, 0.1); border-left: 3px solid #fbbf24; padding: 12px 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }\n23\t    .back-link { color: rgba(255,255,255,0.7); text-decoration: none; margin-bottom: 20px; display: inline-block; }\n24\t    .back-link:hover { color: white; }\n25\t  </style>\n26\t</head>\n27\t<body>\n28\t  <a href=\"index.html\" class=\"back-link\">← Back to Week 2</a>\n29\t  \n30\t  <h1>Week 2 — When Life Doesn't Go Your Way</h1>\n31\t  <p class=\"subtitle\">Philippians 1:12-30 • August 9</p>\n32\t\n33\t  <div class=\"key-passage\">\n34\t    <p>\"I want you to know, brothers, that what has happened to me has really served to advance the gospel.\"</p>\n35\t    <cite>— Philippians 1:12</cite>\n36\t  </div>\n37\t\n38\t  <div class=\"section\">\n39\t    <h2>1. Passage Overview</h2>\n40\t    <p>Paul shifts from thanksgiving to his current situation—imprisonment in Rome. Instead of complaint, he shows how his chains became gospel advance. He addresses two groups: those preaching from envy/strife (v. 15-17) and those preaching from love (v. 18). His response: Christ is proclaimed either way—so he rejoice!</p>\n41\t  </div>\n42\t\n43\t  <div class=\"section\">\n44\t    <h2>2. Key Themes</h2>\n45\t    \n46\t    <div class=\"point\">\n47\t      <div class=\"point-title\">Theme A: Setbacks Become Platforms</div>\n48\t      <ul>\n49\t        <li>Paul in prison = gospel spread to Caesar's household (v. 13)</li>\n50\t        <li>\"What has happened to me\" — imprisonment intended to stop the gospel反而 advanced it</li>\n51\t        <li>This shows God's purposes not limited by our circumstances</li>\n52\t      </ul>\n53\t    </div>\n54\t\n55\t    <div class=\"point\">\n56\t      <div class=\"point-title\">Theme B: Pressure Reveals Values</div>\n57\t      <ul>\n58\t        <li>\"For to me, to live is Christ, and to die is gain\" (v. 21)</li>\n59\t        <li>Pressures strips away distractions, exposes what is central</li>\n60\t        <li>Paul is open - either outcome brings gospel fruit</li>\n61\t      </ul>\n62\t    </div>\n63\t\n64\t    <div class=\"point\">\n65\t      <div class=\"point-title\">Theme C: Boldness as Witness</div>\n66\t      <ul>\n67\t        <li>\"standing firm in one spirit, with one mind, fighting together\" (v. 27)</li>\n68\t        <li>\"being courageous for Christ\" — visible evidence of deeper reality</li>\n69\t        <li>\"it has become clear throughout the whole imperial guard\" (v. 13)</li>\n70\t..."
+            },
+            "output": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Week 1 - Joy Through Partnership | Research Brief</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: white; padding: 40px; }\n10\t    h1 { font-size: 1.8rem; margin-bottom: 8px; color: #a5b4fc; }\n11\t    h2 { font-size: 1.3rem; margin: 30px 0 15px; color: #a5b4fc; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; }\n12\t    h3 { font-size: 1.1rem; margin: 20px 0 10px; color: #c4b5fd; }\n13\t    .subtitle { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 30px; }\n14\t    .section { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; margin-bottom: 20px; }\n15\t    .key-passage { background: rgba(59, 130, 246, 0.15); border-left: 4px solid #3b82f6; padding: 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }\n16\t    .key-passage p { font-size: 1.1rem; line-height: 1.6; color: #dbeafe; }\n17\t    .key-passage cite { display: block; margin-top: 10px; color: #93c5fd; font-size: 0.9rem; }\n18\t    .point { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 15px; margin-bottom: 12px; border-left: 3px solid #8b5cf6; }\n19\t    .point-title { font-weight: 600; color: #c4b5fd; margin-bottom: 8px; }\n20\t    ul { margin-left: 20px; }\n21\t    li { margin-bottom: 8px; color: rgba(255,255,255,0.9); }\n22\t    .note { background: rgba(251, 191, 36, 0.1); border-left: 3px solid #fbbf24; padding: 12px 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }\n23\t    .back-link { color: rgba(255,255,255,0.7); text-decoration: none; margin-bottom: 20px; display: inline-block; }\n24\t    .back-link:hover { color: white; }\n25\t  </style>\n26\t</head>\n27\t<body>\n28\t  <a href=\"index.html\" class=\"back-link\">← Back to Week 2</a>\n29\t  \n30\t  <h1>Week 2 — When Life Doesn't Go Your Way</h1>\n31\t  <p class=\"subtitle\">Philippians 1:12-30 • August 9</p>\n32\t\n33\t  <div class=\"key-passage\">\n34\t    <p>\"I want you to know, brothers, that what has happened to me has really served to advance the gospel.\"</p>\n35\t    <cite>— Philippians 1:12</cite>\n36\t  </div>\n37\t\n38\t  <div class=\"section\">\n39\t    <h2>1. Passage Overview</h2>\n40\t    <p>Paul shifts from thanksgiving to his current situation—imprisonment in Rome. Instead of complaint, he shows how his chains became gospel advance. He addresses two groups: those preaching from envy/strife (v. 15-17) and those preaching from love (v. 18). His response: Christ is proclaimed either way—so he rejoice!</p>\n41\t  </div>\n42\t\n43\t  <div class=\"section\">\n44\t    <h2>2. Key Themes</h2>\n45\t    \n46\t    <div class=\"point\">\n47\t      <div class=\"point-title\">Theme A: Setbacks Become Platforms</div>\n48\t      <ul>\n49\t        <li>Paul in prison = gospel spread to Caesar's household (v. 13)</li>\n50\t        <li>\"What has happened to me\" — imprisonment intended to stop the gospel反而 advanced it</li>\n51\t        <li>This shows God's purposes not limited by our circumstances</li>\n52\t      </ul>\n53\t    </div>\n54\t\n55\t    <div class=\"point\">\n56\t      <div class=\"point-title\">Theme B: Pressure Reveals Values</div>\n57\t      <ul>\n58\t        <li>\"For to me, to live is Christ, and to die is gain\" (v. 21)</li>\n59\t        <li>Pressures strips away distractions, exposes what is central</li>\n60\t        <li>Paul is open - either outcome brings gospel fruit</li>\n61\t      </ul>\n62\t    </div>\n63\t\n64\t    <div class=\"point\">\n65\t      <div class=\"point-title\">Theme C: Boldness as Witness</div>\n66\t      <ul>\n67\t        <li>\"standing firm in one spirit, with one mind, fighting together\" (v. 27)</li>\n68\t        <li>\"being courageous for Christ\" — visible evidence of deeper reality</li>\n69\t        <li>\"it has become clear throughout the whole imperial guard\" (v. 13)</li>\n70\t..."
+          },
+          "toolu_01FwZ291mEzao3UNY1RGhYn1": {
+            "tool_use_id": "toolu_01FwZ291mEzao3UNY1RGhYn1",
+            "tool_name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/Sermons/defined-who-god-says-you-are/Week-1-God-Says-I-Am-His-Child/research-brief.html",
+            "is_error": false,
+            "content": {
+              "Text": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Research: Week 1 - God Says I Am His Child | Defined Series</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { \n10\t      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n11\t      background: #f5f5f5; color: #333; line-height: 1.6;\n12\t    }\n13\t    .header {\n14\t      background: white;\n15\t      border-bottom: 1px solid #e0e0e0;\n16\t      padding: 16px 24px;\n17\t    }\n18\t    .header h1 { font-size: 18px; font-weight: 600; color: #1a1a2e; }\n19\t    .header a { color: #6366f1; text-decoration: none; font-size: 14px; }\n20\t    .header a:hover { text-decoration: underline; }\n21\t    .content { padding: 24px; max-width: 800px; margin: 0 auto; }\n22\t    \n23\t    h2 { font-size: 20px; font-weight: 600; color: #1a1a2e; margin: 30px 0 15px 0; }\n24\t    h3 { font-size: 16px; font-weight: 600; color: #333; margin: 20px 0 10px 0; }\n25\t    h4 { font-size: 15px; font-weight: 600; color: #444; margin: 15px 0 8px 0; }\n26\t    p { margin-bottom: 12px; }\n27\t    ul, ol { margin: 10px 0 15px 25px; }\n28\t    li { margin-bottom: 6px; }\n29\t    \n30\t    .verse {\n31\t      background: #f0f4ff;\n32\t      border-left: 4px solid #6366f1;\n33\t      padding: 12px 16px;\n34\t      margin: 15px 0;\n35\t      font-style: italic;\n36\t    }\n37\t    \n38\t    .section {\n39\t      background: white;\n40\t      border-radius: 12px;\n41\t      padding: 24px;\n42\t      margin-bottom: 24px;\n43\t      box-shadow: 0 1px 3px rgba(0,0,0,0.08);\n44\t    }\n45\t    \n46\t    .intro-box {\n47\t      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n48\t      color: white;\n49\t      padding: 24px;\n50\t      border-radius: 12px;\n51\t      margin-bottom: 24px;\n52\t    }\n53\t    .intro-box h1 { color: white; font-size: 22px; margin-bottom: 8px; }\n54\t    .intro-box p { opacity: 0.9; margin: 0; }\n55\t    \n56\t    .key-passages {\n57\t      background: #fafafa;\n58\t      border: 1px solid #eee;\n59\t      padding: 16px;\n60\t      border-radius: 8px;\n61\t      margin: 15px 0;\n62\t    }\n63\t    .key-passages strong { color: #333; }\n64\t    \n65\t    blockquote {\n66\t      border-left: 3px solid #6366f1;\n67\t      padding-left: 16px;\n68\t      margin: 15px 0;\n69\t      color: #555;\n70\t      font-style: italic;\n71\t    }\n72\t    \n73\t    .quote-author {\n74\t      font-size: 13px;\n75\t      color: #666;\n76\t      margin-top: 8px;\n77\t    }\n78\t    \n79\t    .footer {\n80\t      text-align: center;\n81\t      color: #999;\n82\t      font-size: 12px;\n83\t      padding: 20px;\n84\t      border-top: 1px solid #eee;\n85\t      margin-top: 40px;\n86\t    }\n87\t  </style>\n88\t</head>\n89\t<body>\n90\t  <div class=\"header\">\n91\t    <h1>📖 Research Brief: Week 1 - God Says I Am His Child</h1>\n92\t    <p><a href=\"../../Series/identity-in-christ/index.html\">← Back to Series</a></p>\n93\t  </div>\n94\t  \n95\t  <div class=\"content\">\n96\t    <div class=\"intro-box\">\n97\t      <h1>Week 1: God Says I Am His Child</h1>\n98\t      <p><strong>Series:</strong> Defined - Who God Says You Are | <strong>Date:</strong> April 12, 2026</p>\n99\t      <p><strong>Key Passages:</strong> John 1:12, Ephesians 1:4-5, 2 Corinthians 5:17</p>\n100\t    </div>\n101\t\n102\t    <h2>INTRODUCTION & BURDEN</h2>\n103\t    <div class=\"section\">\n104\t      <p>At the core of the gospel is not just forgiveness—it's adoption. God doesn't just save us from sin; He brings us into His family. This means your identity is no longer defined by your past, your performance, or others' opinions, but by the Father who chose you and calls you His own.</p>\n105\t      <p>Many people live as spiritual orphans—constantly striving for approval, afraid of failure, and unsure of their worth. But in Christ, we are fully known and fully loved. This message invites us to stop performing for identity and start living from it, resting in the truth that we are sons and daughters of God.</p>\n106\t      <p><strong>The burden:</st..."
+            },
+            "output": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Research: Week 1 - God Says I Am His Child | Defined Series</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { \n10\t      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n11\t      background: #f5f5f5; color: #333; line-height: 1.6;\n12\t    }\n13\t    .header {\n14\t      background: white;\n15\t      border-bottom: 1px solid #e0e0e0;\n16\t      padding: 16px 24px;\n17\t    }\n18\t    .header h1 { font-size: 18px; font-weight: 600; color: #1a1a2e; }\n19\t    .header a { color: #6366f1; text-decoration: none; font-size: 14px; }\n20\t    .header a:hover { text-decoration: underline; }\n21\t    .content { padding: 24px; max-width: 800px; margin: 0 auto; }\n22\t    \n23\t    h2 { font-size: 20px; font-weight: 600; color: #1a1a2e; margin: 30px 0 15px 0; }\n24\t    h3 { font-size: 16px; font-weight: 600; color: #333; margin: 20px 0 10px 0; }\n25\t    h4 { font-size: 15px; font-weight: 600; color: #444; margin: 15px 0 8px 0; }\n26\t    p { margin-bottom: 12px; }\n27\t    ul, ol { margin: 10px 0 15px 25px; }\n28\t    li { margin-bottom: 6px; }\n29\t    \n30\t    .verse {\n31\t      background: #f0f4ff;\n32\t      border-left: 4px solid #6366f1;\n33\t      padding: 12px 16px;\n34\t      margin: 15px 0;\n35\t      font-style: italic;\n36\t    }\n37\t    \n38\t    .section {\n39\t      background: white;\n40\t      border-radius: 12px;\n41\t      padding: 24px;\n42\t      margin-bottom: 24px;\n43\t      box-shadow: 0 1px 3px rgba(0,0,0,0.08);\n44\t    }\n45\t    \n46\t    .intro-box {\n47\t      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n48\t      color: white;\n49\t      padding: 24px;\n50\t      border-radius: 12px;\n51\t      margin-bottom: 24px;\n52\t    }\n53\t    .intro-box h1 { color: white; font-size: 22px; margin-bottom: 8px; }\n54\t    .intro-box p { opacity: 0.9; margin: 0; }\n55\t    \n56\t    .key-passages {\n57\t      background: #fafafa;\n58\t      border: 1px solid #eee;\n59\t      padding: 16px;\n60\t      border-radius: 8px;\n61\t      margin: 15px 0;\n62\t    }\n63\t    .key-passages strong { color: #333; }\n64\t    \n65\t    blockquote {\n66\t      border-left: 3px solid #6366f1;\n67\t      padding-left: 16px;\n68\t      margin: 15px 0;\n69\t      color: #555;\n70\t      font-style: italic;\n71\t    }\n72\t    \n73\t    .quote-author {\n74\t      font-size: 13px;\n75\t      color: #666;\n76\t      margin-top: 8px;\n77\t    }\n78\t    \n79\t    .footer {\n80\t      text-align: center;\n81\t      color: #999;\n82\t      font-size: 12px;\n83\t      padding: 20px;\n84\t      border-top: 1px solid #eee;\n85\t      margin-top: 40px;\n86\t    }\n87\t  </style>\n88\t</head>\n89\t<body>\n90\t  <div class=\"header\">\n91\t    <h1>📖 Research Brief: Week 1 - God Says I Am His Child</h1>\n92\t    <p><a href=\"../../Series/identity-in-christ/index.html\">← Back to Series</a></p>\n93\t  </div>\n94\t  \n95\t  <div class=\"content\">\n96\t    <div class=\"intro-box\">\n97\t      <h1>Week 1: God Says I Am His Child</h1>\n98\t      <p><strong>Series:</strong> Defined - Who God Says You Are | <strong>Date:</strong> April 12, 2026</p>\n99\t      <p><strong>Key Passages:</strong> John 1:12, Ephesians 1:4-5, 2 Corinthians 5:17</p>\n100\t    </div>\n101\t\n102\t    <h2>INTRODUCTION & BURDEN</h2>\n103\t    <div class=\"section\">\n104\t      <p>At the core of the gospel is not just forgiveness—it's adoption. God doesn't just save us from sin; He brings us into His family. This means your identity is no longer defined by your past, your performance, or others' opinions, but by the Father who chose you and calls you His own.</p>\n105\t      <p>Many people live as spiritual orphans—constantly striving for approval, afraid of failure, and unsure of their worth. But in Christ, we are fully known and fully loved. This message invites us to stop performing for identity and start living from it, resting in the truth that we are sons and daughters of God.</p>\n106\t      <p><strong>The burden:</st..."
+          },
+          "toolu_01RoJT23akDSgyUz8aA3zoCm": {
+            "tool_use_id": "toolu_01RoJT23akDSgyUz8aA3zoCm",
+            "tool_name": "Read /Users/myguyfriday/.openclaw/workspace/mission-control/sermon-dev/processes/Sermon-Development.html",
+            "is_error": false,
+            "content": {
+              "Text": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Sermon Development Process</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { \n10\t      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n11\t      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);\n12\t      min-height: 100vh; color: white; padding: 40px;\n13\t    }\n14\t    h1 { font-size: 2rem; margin-bottom: 10px; color: #a5b4fc; }\n15\t    h2 { font-size: 1.3rem; margin: 30px 0 15px; color: #a5b4fc; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; }\n16\t    h3 { font-size: 1.1rem; margin: 20px 0 10px; color: #c4b5fd; }\n17\t    .subtitle { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 30px; }\n18\t    .section { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; margin-bottom: 20px; }\n19\t    .stage { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 20px; margin-bottom: 15px; border-left: 4px solid #f59e0b; }\n20\t    .stage-num { font-size: 0.85rem; color: #f59e0b; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }\n21\t    .stage-name { font-size: 1.2rem; font-weight: 600; margin: 5px 0; }\n22\t    table { width: 100%; border-collapse: collapse; margin: 15px 0; }\n23\t    th, td { padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }\n24\t    th { color: #a5b4fc; font-weight: 600; }\n25\t    .owner-me { background: rgba(239, 68, 68, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n26\t    .owner-you { background: rgba(59, 130, 246, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n27\t    .owner-both { background: rgba(168, 85, 247, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n28\t    .owner-ai { background: rgba(34, 197, 94, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n29\t    .owner-unsure { background: rgba(251, 191, 36, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n30\t    .input-output { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-top: 10px; }\n31\t    .input-output h4 { color: #c4b5fd; font-size: 0.9rem; margin-bottom: 8px; }\n32\t    .questions { background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 8px; padding: 15px; margin-top: 20px; }\n33\t    .questions h4 { color: #fbbf24; margin-bottom: 10px; }\n34\t    .questions ul { margin-left: 20px; }\n35\t    .questions li { margin-bottom: 8px; color: rgba(255,255,255,0.9); }\n36\t    .nav { margin-bottom: 30px; }\n37\t    .nav a { color: rgba(255,255,255,0.7); text-decoration: none; margin-right: 20px; }\n38\t    .nav a:hover { color: white; }\n39\t    .note { background: rgba(59, 130, 246, 0.1); border-left: 3px solid #3b82f6; padding: 12px 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }\n40\t    .warning { background: rgba(239, 68, 68, 0.1); border-left: 3px solid #ef4444; padding: 12px 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }\n41\t    ul { margin-left: 20px; }\n42\t    li { margin-bottom: 8px; }\n43\t  </style>\n44\t</head>\n45\t<body>\n46\t  <div class=\"nav\">\n47\t    <a href=\"../sermon-dev/\">← Back to SermonDev</a>\n48\t  </div>\n49\t  \n50\t  <h1>🎙️ Sermon Development Process</h1>\n51\t  <p class=\"subtitle\">How we develop individual sermons week to week (11 stages)</p>\n52\t\n53\t  <div class=\"section\">\n54\t    <h2>1. Overview</h2>\n55\t    <p>Sermon Development takes a confirmed week from the Series Teaching Map and develops it into a finalized manuscript ready for delivery. This follows the fixed 11-stage process below.</p>\n56\t    <p style=\"margin-top: 15px;\"><strong>Goal:</strong> Create a disciple-forming sermon that follows the sermon flow (Intro → Scripture → Points with Observation, Application, Next Steps → Conclusion with Decision, \"I Will\", Share, Prayer).</p>\n57\t    <div class=\"note\">\n58\t     ..."
+            },
+            "output": "1\t<!DOCTYPE html>\n2\t<html lang=\"en\">\n3\t<head>\n4\t  <meta charset=\"UTF-8\">\n5\t  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6\t  <title>Sermon Development Process</title>\n7\t  <style>\n8\t    * { box-sizing: border-box; margin: 0; padding: 0; }\n9\t    body { \n10\t      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n11\t      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);\n12\t      min-height: 100vh; color: white; padding: 40px;\n13\t    }\n14\t    h1 { font-size: 2rem; margin-bottom: 10px; color: #a5b4fc; }\n15\t    h2 { font-size: 1.3rem; margin: 30px 0 15px; color: #a5b4fc; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; }\n16\t    h3 { font-size: 1.1rem; margin: 20px 0 10px; color: #c4b5fd; }\n17\t    .subtitle { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 30px; }\n18\t    .section { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; margin-bottom: 20px; }\n19\t    .stage { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 20px; margin-bottom: 15px; border-left: 4px solid #f59e0b; }\n20\t    .stage-num { font-size: 0.85rem; color: #f59e0b; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }\n21\t    .stage-name { font-size: 1.2rem; font-weight: 600; margin: 5px 0; }\n22\t    table { width: 100%; border-collapse: collapse; margin: 15px 0; }\n23\t    th, td { padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }\n24\t    th { color: #a5b4fc; font-weight: 600; }\n25\t    .owner-me { background: rgba(239, 68, 68, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n26\t    .owner-you { background: rgba(59, 130, 246, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n27\t    .owner-both { background: rgba(168, 85, 247, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n28\t    .owner-ai { background: rgba(34, 197, 94, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n29\t    .owner-unsure { background: rgba(251, 191, 36, 0.2); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }\n30\t    .input-output { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-top: 10px; }\n31\t    .input-output h4 { color: #c4b5fd; font-size: 0.9rem; margin-bottom: 8px; }\n32\t    .questions { background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 8px; padding: 15px; margin-top: 20px; }\n33\t    .questions h4 { color: #fbbf24; margin-bottom: 10px; }\n34\t    .questions ul { margin-left: 20px; }\n35\t    .questions li { margin-bottom: 8px; color: rgba(255,255,255,0.9); }\n36\t    .nav { margin-bottom: 30px; }\n37\t    .nav a { color: rgba(255,255,255,0.7); text-decoration: none; margin-right: 20px; }\n38\t    .nav a:hover { color: white; }\n39\t    .note { background: rgba(59, 130, 246, 0.1); border-left: 3px solid #3b82f6; padding: 12px 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }\n40\t    .warning { background: rgba(239, 68, 68, 0.1); border-left: 3px solid #ef4444; padding: 12px 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }\n41\t    ul { margin-left: 20px; }\n42\t    li { margin-bottom: 8px; }\n43\t  </style>\n44\t</head>\n45\t<body>\n46\t  <div class=\"nav\">\n47\t    <a href=\"../sermon-dev/\">← Back to SermonDev</a>\n48\t  </div>\n49\t  \n50\t  <h1>🎙️ Sermon Development Process</h1>\n51\t  <p class=\"subtitle\">How we develop individual sermons week to week (11 stages)</p>\n52\t\n53\t  <div class=\"section\">\n54\t    <h2>1. Overview</h2>\n55\t    <p>Sermon Development takes a confirmed week from the Series Teaching Map and develops it into a finalized manuscript ready for delivery. This follows the fixed 11-stage process below.</p>\n56\t    <p style=\"margin-top: 15px;\"><strong>Goal:</strong> Create a disciple-forming sermon that follows the sermon flow (Intro → Scripture → Points with Observation, Application, Next Steps → Conclusion with Decision, \"I Will\", Share, Prayer).</p>\n57\t    <div class=\"note\">\n58\t     ..."
+          },
+          "toolu_01Ms5CWDnzRYJjiB3aopYLSq": {
+            "tool_use_id": "toolu_01Ms5CWDnzRYJjiB3aopYLSq",
+            "tool_name": "ToolSearch",
+            "is_error": false,
+            "content": {
+              "Text": "[{\"type\":\"tool_reference\",\"tool_name\":\"WebSearch\"}]"
+            },
+            "output": [
+              {
+                "type": "tool_reference",
+                "tool_name": "WebSearch"
+              }
+            ]
+          },
+          "toolu_01QoPsF1iucBTqsHMhA1AjUS": {
+            "tool_use_id": "toolu_01QoPsF1iucBTqsHMhA1AjUS",
+            "tool_name": "\"Philippians 1:12-30 commentary theological analysis Paul imprisonment advance gospel\"",
+            "is_error": true,
+            "content": {
+              "Text": "Tool permission request failed: Error: Tool use aborted"
+            },
+            "output": "Tool permission request failed: Error: Tool use aborted"
+          },
+          "toolu_01MdJ9WQN59iqV9Q6GPGZbEV": {
+            "tool_use_id": "toolu_01MdJ9WQN59iqV9Q6GPGZbEV",
+            "tool_name": "\"Philippians 1:21 \"to live is Christ to die is gain\" Greek exegesis praetorian guard\"",
+            "is_error": true,
+            "content": {
+              "Text": "Tool permission request failed: Error: Tool use aborted"
+            },
+            "output": "Tool permission request failed: Error: Tool use aborted"
+          },
+          "toolu_011o8WaPYZhmB299msitTBu4": {
+            "tool_use_id": "toolu_011o8WaPYZhmB299msitTBu4",
+            "tool_name": "\"Philippians 1:27-30 \"conduct worthy of the gospel\" courage suffering sermon\"",
+            "is_error": true,
+            "content": {
+              "Text": "Tool permission request failed: Error: Tool use aborted"
+            },
+            "output": "Tool permission request failed: Error: Tool use aborted"
+          },
+          "toolu_01N8zdhBRmnzgvizApr4kziQ": {
+            "tool_use_id": "toolu_01N8zdhBRmnzgvizApr4kziQ",
+            "tool_name": "Write",
+            "is_error": false,
+            "content": {
+              "Text": ""
+            }
+          }
+        }
+      }
+    }
+  ],
+  "updated_at": "2026-04-21T14:03:11.588Z",
+  "cumulative_token_usage": {},
+  "request_token_usage": {},
+  "acpx": {
+    "available_commands": [
+      "update-config",
+      "debug",
+      "simplify",
+      "batch",
+      "loop",
+      "schedule",
+      "claude-api",
+      "compact",
+      "context",
+      "heapdump",
+      "init",
+      "review",
+      "security-review",
+      "extra-usage",
+      "insights"
+    ]
+  }
+}

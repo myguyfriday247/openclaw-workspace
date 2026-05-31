@@ -1,0 +1,63 @@
+{
+  // Copy into ~/.openclaw/openclaw.json and adapt to your environment.
+  agents: {
+    defaults: {
+      workspace: "~/.openclaw/workspace/sermon-research",
+      model: { primary: "gizmo-planner" }
+    }
+  },
+
+  tools: {
+    exec: {
+      host: "gateway",
+      security: "full",
+      ask: "off"
+    }
+  },
+
+  models: {
+    providers: {
+      "openai-codex": {
+        models: [
+          { id: "gpt-5.4", name: "GPT-5.4" }
+        ]
+      },
+      anthropic: {
+        models: [
+          { id: "claude-opus-4-6", name: "Claude Opus 4.6" }
+        ]
+      },
+      minimax: {
+        models: [
+          { id: "MiniMax-M2.7", name: "MiniMax M2.7" }
+        ]
+      }
+    },
+
+    aliases: {
+      // ChatGPT / OpenAI Codex is the main planner, researcher, synthesizer, and first-draft writer.
+      "gizmo-planner": "openai-codex/gpt-5.4",
+
+      // Claude CLI is reserved for final polish after the markdown brief already exists.
+      "gizmo-writer": "anthropic/claude-opus-4-6",
+
+      // Optional lower-cost support layer.
+      "gizmo-support": "minimax/MiniMax-M2.7"
+    }
+  },
+
+  channels: {
+    defaults: {
+      groupPolicy: "allowlist",
+      contextVisibility: "all"
+    },
+
+    // Replace these example IDs with your actual Discord channel/thread IDs.
+    // Keep sermon research channels pinned to gizmo-planner by default.
+    modelByChannel: {
+      discord: {
+        "123456789012345678": "gizmo-planner"
+      }
+    }
+  }
+}

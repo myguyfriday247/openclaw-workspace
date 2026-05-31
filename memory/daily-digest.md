@@ -1,51 +1,72 @@
 # Daily Discipleship Digest
-**Tuesday, March 31st, 2026**
+**May 31, 2026 | Sunday Morning**
 
 ---
 
-## ✝️ INSIGHTS FOR TODAY
-
-### 1. The Gospel Coalition — Intergenerational Discipleship
-*"God used life-on-life discipleship to grow my faith. He placed an older and wiser man in my life who somehow knew everything I needed to hear, even when I didn't want to hear it."*
-
-**Key Insight:** Intergenerational discipleship integrates younger believers into relationships with older saints—not just for ministry, but for intentional life-on-life mentorship. Every church member is called to make disciples, and churches should provide clear paths for all to pass on their faith to the next generation.
-
-→ [Implement Intergenerational Discipleship in Your Church](https://www.thegospelcoalition.org/article/intergenerational-discipleship-church/)
+## 🔑 Key Insights from the Discipleship Movement
 
 ---
 
-### 2. DMMs Frontier Movements — Beyond 4G
-*"4G is not a magic number. The real aim is to see rapid, organic, sustained growth where disciples naturally make more disciples, and churches start new churches without heavy top-down involvement."*
+### 1. East-West | "Why the Great Commission Needs Multiplication"
 
-**Key Insight:** When movements plateau, refocus on six key areas: organic growth, church functions, leadership training, apostolic passion, release vs. control, and belief barriers. The goal isn't generational milestones—it's Spirit-led transformation that reaches entire regions.
+> *"Multiplication starts slower than addition at first, yet it's the groundwork in the beginning—the process of God-glorifying discipleship—that will cause an unleashing of the Holy Spirit."*
 
-→ [Beyond 4G: Refocusing on What Truly Drives Movement Growth](https://www.dmmsfrontiermissions.com/rapid-organic-multiplication/)
+**The Insight:** Jesus invested His last three years in a select few. Those disciples were used in a great movement where thousands came to faith in one day. Multiplication isn't about speed—it's about faithful, patient investment in people who then reproduce the same disciple-making culture.
 
----
-
-### 3. Ken Adams / Impact Discipleship Ministries
-*"Impact Discipleship Ministries exists to inspire people and churches to be and build disciples of Jesus Christ."*
-
-**Key Insight:** Ken Adams hosts one of the top disciple-making podcasts, providing practical tools, skills, and strategies for multiplying disciples. His co-hosts include Ron Cansler, Mike Keaton, and Lance Summer—equipping leaders with actionable disciple-making frameworks.
-
-→ [60 Best Disciple Podcasts to Listen to in 2026](https://podcast.feedspot.com/disciple_podcasts/)
+📖 [Read the full article](https://www.eastwest.org/blog/why-the-great-commission-needs-multiplication/)
 
 ---
 
-### 4. Multiply Movements — 2026 National Disciple Making Forum
-*"You won't just hear theory—you'll learn from practitioners who are living out Jesus-style disciple making every day."*
+### 2. Novo | "Rooted to Multiply" — Cynthia Anderson
 
-**Key Insight:** The 2026 National Disciple Making Forum features breakout tracks focused on multiplying disciples in local churches and communities. Movement leaders are gathering to share practitioner insights, not just theory.
+> *"Multiplication often begins with a simple step of obedience."*
 
-→ [Discipleship.org](https://discipleship.org/blog/get-an-early-look-at-the-breakout-tracks-at-the-2026-national-disciple-making-forum/)
+**The Insight:** In 2019, Cynthia Anderson sensed God prompting her to move her disciple-making training online. She had no experience, no roadmap, no guarantee. She said yes anyway. That training grew into a global movement reaching 5,000+ people across 122 nations, with hundreds of thousands coming to faith. The lesson? You don't need to have it all figured out—just take the next step of faith.
 
----
-
-## 📖 CLOSING THOUGHT
-
-*"Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you."*
-— **Matthew 28:19-20**
+📖 [Listen/Read at novo.org](https://novo.org/discipleship-blog/2026/5/6/-rooted-to-multiply)
 
 ---
 
-*Daily Digest • March 31, 2026*
+### 3. Send Network | "One Day" Church Multiplication Event
+
+> *"More than 100 pastors, church planters, and ministry leaders gathered to embrace a culture of multiplication through disciple-making and church planting."*
+
+**The Insight:** The Send Network's "One Day" event highlights a growing movement where local churches are shifting from attraction models to multiplication cultures. The key phrase: *discipleship multiplication leads to church multiplication*—not the other way around.
+
+📖 [Learn about Send Network](https://christianindex.org/stories/send-network-one-day-challenges-churches-to-embrace-multiplication,106778)
+
+---
+
+### 4. The Movement Conference | November 3-5, 2026
+
+> *"Created for pastors and their church leadership teams who are pursuing the missions model of multiplication."*
+
+**The Insight:** This conference is specifically designed for churches wanting to build systems and cultures where disciple-making and leader multiplication become the normal rhythm of church life—not a special program.
+
+📖 [Explore The Movement Conference](https://livethemovement.org/)
+
+---
+
+### 5. J.D. Greear | Multiply Movement (Gospel City Network)
+
+> *"The Why of Multiplication"* — Keynote emphasis
+
+**The Insight:** Greear continues to emphasize that the local church's primary mission is gospel multiplication—not just addition. The upcoming Multiply conference in September (Malaysia) reflects the global hunger for practical disciple-making frameworks that produce reproducing disciples, leaders, and churches.
+
+📖 [Explore Multiply](https://gospelcitynetwork.com/multiply/)
+
+---
+
+## 📝 Closing Thought
+
+*"Jesus invested His last three years on Earth in a select few people in the slow process of discipleship. These disciples were then used in a great movement of God where thousands more came to worship Him in one day."*
+— East-West Ministry
+
+**Ask yourself this week:**
+- Where is God calling me to take a simple step of obedience in disciple-making?
+- Who has He already placed in my life to invest in?
+
+---
+
+*Digest compiled: May 31, 2026*
+*Sources: East-West, Novo, Send Network, The Movement Conference, Gospel City Network/J.D. Greear*

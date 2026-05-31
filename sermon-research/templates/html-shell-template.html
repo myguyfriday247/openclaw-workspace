@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ title }}</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      background: #f6f6f6;
+      color: #1a1a1a;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 48px;
+      background: white;
+      box-shadow: 0 8px 30px rgba(0,0,0,.08);
+      border-radius: 16px;
+    }
+    h1, h2, h3 { line-height: 1.2; margin-top: 1.4em; }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.45rem; border-bottom: 1px solid #e6e6e6; padding-bottom: .3rem; }
+    h3 { font-size: 1.1rem; }
+    p, li { font-size: 1rem; }
+    sup { font-size: .72em; }
+    .footnotes { margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid #ddd; }
+    .bibliography { margin-top: 2rem; }
+    blockquote {
+      border-left: 4px solid #ddd;
+      margin: 1rem 0;
+      padding: .3rem 1rem;
+      color: #555;
+      background: #fafafa;
+    }
+    code, pre {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    {{ content }}
+  </main>
+</body>
+</html>

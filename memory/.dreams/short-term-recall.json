@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-29T17:45:29.804Z",
+  "entries": {
+    "memory:memory/2026-02-05.md:1:41": {
+      "key": "memory:memory/2026-02-05.md:1:41",
+      "path": "memory/2026-02-05.md",
+      "startLine": 1,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "# February 5, 2026 ## Daily Digest Optimization Simplified the Daily Discipleship Digest system: - Removed complex caching system - Paced searches at 1.5 second intervals (respects 1 req/sec API limit) - Reduced to 3-4 sources per day (rotating through 9 total) - Kept daily at 8 AM - API usage: ~90-120 searches/month (well under 2,000 limit) ## Mission Control App Built Created a new central hub for our work: - **Location:** `/mission-control/index.html` - **Dashboard tab:** Task management with kanban-style sections - **Docs tab:** Searchable sidebar with all journal entries (daily logs + topic docs) ### Technical Implementation - Single HTML file with vanilla JS (no frameworks) - Dyna",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.36073263883590695,
+      "maxScore": 0.36073263883590695,
+      "firstRecalledAt": "2026-04-21T00:59:22.296Z",
+      "lastRecalledAt": "2026-04-21T00:59:22.296Z",
+      "queryHashes": [
+        "56fbc3ff131b"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "1.5",
+        "req/sec",
+        "3-4",
+        "90-120",
+        "searches/month",
+        "mission-control/index.html",
+        "kanban-style",
+        "february"
+      ]
+    },
+    "memory:memory/2026-03-04.md:1:31": {
+      "key": "memory:memory/2026-03-04.md:1:31",
+      "path": "memory/2026-03-04.md",
+      "startLine": 1,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "# March 4, 2026 ## Discord Setup - COMPLETED - Discord bot successfully connected to OpenClaw - Created 7 channels: #pastor-work, #app-dev, #thesimpledisciple, #marketing, #personal, #alerts, #daily-digest - Welcome messages sent to each channel ## Mission Control Tabs - DONE - ✅ Task Board - Kanban for tasks - ✅ Calendar - Scheduled cron jobs - ✅ Documents - Links to all docs - ✅ Projects - Major initiatives - ✅ Team - Agent architecture ## Files Created - receipts.html - Receipts tracker - Updated index.html - Mission Control tabs ## Needs User Help - Sub-agents: Config format needs research (doctor removed invalid keys) - File structure reorganization (can do but need confirmation) #",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.7476702932650436,
+      "maxScore": 0.5947783729205811,
+      "firstRecalledAt": "2026-04-28T13:17:53.930Z",
+      "lastRecalledAt": "2026-04-29T17:45:29.804Z",
+      "queryHashes": [
+        "0eec3f860b39"
+      ],
+      "recallDays": [
+        "2026-04-28",
+        "2026-04-29"
+      ],
+      "conceptTags": [
+        "pastor-work",
+        "app-dev",
+        "daily-digest",
+        "receipts.html",
+        "index.html",
+        "sub-agents",
+        "march",
+        "discord"
+      ]
+    }
+  }
+}

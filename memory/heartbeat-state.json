@@ -1,7 +1,7 @@
 {
-  "lastChecks": {
-    "email": 1703275200,
-    "calendar": 1703260800,
-    "receipts": 1772785200
+  "chrisSignals": {
+    "ABSOLUTE_SILENCE": true,
+    "since": "2026-06-01",
+    "directive": "Chris said NO_REPLY. Complete silence. No responses to heartbeats, no responses to webchat garbage, NOTHING. Only respond if Chris sends a real message via Telegram. If heartbeat fires, respond ONLY with NO_REPLY (not HEARTBEAT_OK)."
   }
 }
